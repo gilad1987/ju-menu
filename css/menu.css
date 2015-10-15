@@ -239,6 +239,11 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .main-menu-ul,.third-menu{/* top:47px; */position: relative;float: none;}
     .relative{    position: relative;  overflow: overlay;  height: 100%;}
     nav ul{overflow-y: auto;}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li,
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{height: auto;}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{padding:0 10px}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a img{/* max-width:100%; */display: block;}
+
     nav.links ul li .sub-menu ul.child li{background-color:#fff;line-height: 35px;min-height: 35px;height: 35px;}
     nav.links ul li .sub-menu ul.child li a{  line-height: 35px;  min-height: 35px;  height: 35px;  margin: 0;  padding: 0 27px;  }
     nav.links ul li .sub-menu ul.child li:first-child{  /* background-color: #DEDCDC; */  color: white;  line-height: 60px;height: 60px;}

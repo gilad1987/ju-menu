@@ -23,7 +23,7 @@ $version = rand(0,10000000000000);
     <script src="js/JU/modules/JU.module.search.js?v=<?php echo $version;?>"></script>
 
 </head>
-<body class="">
+<body class="menu-open">
 
 <div id="modal" class="ju-modal">
     <div class="inner">
