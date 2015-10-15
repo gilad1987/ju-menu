@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,100italic,900,900italic);
+
+html{height:100%;}
+body{height: 100%;margin: 0; padding: 0; background: #2a8ecd;/* min-height: 3000px; */font-family: 'Lato';}
+
+article.login{height: 100%; color: white;text-align: center;}
+article.login .logo{display: block; margin: 0 auto 23px;}
+
+article.login .forms-wrapper{
+    max-width: 619px;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 112123;
+    top: 0px;
+    opacity: 1;
+    -webkit-transition: all 800ms ease-out 300ms;
+    -moz-transition: all 800ms ease-out 300ms;
+    -o-transition: all 800ms ease-out 300ms;
+    transition: all 800ms ease-out  300ms;
+    background: url('../images/login-shadow.png') bottom center;
+    /* bottom: -12px; */
+}
+article.login .forms-wrapper.signup{max-width: 450px;-webkit-transition: all 800ms ease-out 700ms;      -moz-transition: all 800ms ease-out 700ms;      -o-transition: all 800ms ease-out 700ms;      transition: all 800ms ease-out 700ms;}
+article.login .forms-wrapper .inner{  width: 100%;  height: 100%;  background-color: white;  position: relative;}
+article.login.before-show .forms-wrapper{  top: -150px;  opacity: 0.1;  }
+article.login .following-project{ text-align: center;margin: 40px 0 20px; opacity: 1; font-size: 20px;}
+
+article.login .ju-logo a{height:100%}
+article.login .ju-logo{  max-width: 660px;  margin: 25px  auto;  /* height: 86px; */  }
+article.login .ju-logo:hover .azure,
+article.login .ju-logo:hover .blue,
+article.login .ju-logo  span{color: white; }
+article.login .ju-logo  span{font-size: 45px;height: 100%;}
+article.login .ju-logo svg g polygon,
+article.login .ju-logo svg g path{fill: #fff}
+article.login .ju-logo svg{  height: 86px;  }
+
+article.login .ju-logo,
+article.login .bottom-logos,
+article.login .following-project {
+    opacity: 1;
+    -webkit-transition: all 900ms ease-out 500ms;
+    -moz-transition: all 900ms ease-out 500ms;
+    -o-transition: all 900ms ease-out 500ms;
+    transition: all 900ms ease-out 500ms;
+}
+article.login.before-show .ju-logo,
+article.login.before-show .bottom-logos,
+article.login.before-show .following-project{ opacity: 0.3}
+article.login .bottom-logos{display: inline-block; margin: 0 30px;}
+article.login .bottom-logos img{max-width:100%}
+
+article.login .inner{padding: 30px 40px; box-sizing: border-box; font-size: 30px;}
+article.login .inner .title{/* transform: scale(.1); */color: #2a4c93; text-align: center;margin-bottom: 30px;-webkit-transition: all 800ms ease-out;      -moz-transition: all 800ms ease-out;      -o-transition: all 800ms ease-out;      transition: all 800ms ease-out;}
+article.login .input-wrapper{  position: relative;  height: 50px;  margin: 2px 0 28px;  }
+article.login .input-wrapper label,
+article.login .input-wrapper input{
+    color: #a7a7a7;
+    padding-left: 10px;
+    font-size: 18px;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 300ms cubic-bezier(0, 0.82, 1, 1);
+    -moz-transition: all 300ms cubic-bezier(0, 0.82, 1, 1);
+    -o-transition: all 300ms cubic-bezier(0, 0.82, 1, 1);
+    transition: all 300ms cubic-bezier(0, 0.82, 1, 1);
+}
+article.login .input-wrapper label{  position: absolute;  line-height: 50px;  padding-left: 10px;  }
+article.login .input-wrapper input{  height: 100%;  width: 100%;  border: 1px solid #e1e1e1;  position: absolute;  background-color: transparent;  outline: none;box-sizing: border-box;z-index: 10;}
+article.login .input-wrapper.dirty label{  font-size: 16px;  top: -36px;  padding: 0;  color: #807C7C;  }
+article.login .input-wrapper.dirty input{color: #807C7C;/* border-color: #228CD0; */}
+article.login .input-wrapper input:hover{border-color:#807C7C}
+article.login .input-wrapper input:focus{border-color: #228CD0;}
+article.login .input-wrapper.error input{border-color: red;}
+article.login .forgot-password{  color: #a7a7a7;  font-size: 15px;  text-align: left;}
+article.login .forgot-password a{color: #228CD0;text-decoration: underline;cursor: pointer;}
+article.login .send.btn{max-width: 314px;display: block;width: 80%;height: 55px;margin: 28px auto 0;color: white;font-size: 25px;line-height: 46px;overflow: hidden;}
+article.login .fa{  position: absolute;  right: 14px;  top: 14px; /* z-index: 5; */  color: #e1e1e1;  font-size: 26px;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+article.login input:hover ~ .fa{color: #807C7C;}
+article.login input:focus ~ .fa{color: #228CD0;}
+
+.forms-wrapper .form{
+    height:0;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 800ms ease-out;
+    -moz-transition: all 800ms ease-out;
+    -o-transition: all 800ms ease-out;
+    transition: all 800ms ease-out;
+}
+article.login .forms-wrapper.login .login-form{height: 332px;opacity: 1;}
+article.login .forms-wrapper.signup .signup-form{height: 481px;opacity: 1;}
+article.login .forms-wrapper.signup .forgot-password{  text-align:center; margin:10px 0}
+article.login .forms-wrapper.reset-password .reset-password-form{height: 218px; opacity: 1;}
+article.login .forms-wrapper.reset-password .reset-password-form .fa-arrow-left{  color: #807C7C;  cursor: pointer;  opacity: 1;
+    -ms-transform: rotate(180deg);/* IE 9 */
+    -webkit-transform: rotate(0deg);/* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+}
+
+article.login .forms-wrapper .reset-password-form .fa-arrow-left{  left: 20px;  top: 20px;  right: inherit;
+    -ms-transform: rotate(180deg);/* IE 9 */
+    -webkit-transform: rotate(180deg);/* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    -webkit-transition: all 300ms ease-out 700ms;
+    -moz-transition: all 300ms ease-out 750ms;
+    -o-transition: all 300ms ease-out 750ms;
+    transition: all 300ms ease-out 750ms;
+    opacity: 0;
+}
+article.login .forms-wrapper.reset-password .reset-password-form .fa-arrow-left{left: 21px;}
+article.login .forms-wrapper.reset-password .reset-password-form .fa-arrow-left:hover{
+    left: 15px;
+    -webkit-transition: all 300ms ease-out ;
+    -moz-transition: all 300ms ease-out ;
+    -o-transition: all 300ms ease-out ;
+    transition: all 300ms ease-out ;
+}
+article.login .shadow{position: absolute;bottom: -22px;right: 0;left: 0;margin: 0 auto;max-width: 100%;}
+
+footer.login{height: 10%; background-color: #2a4c93;display: none;}
+
+
+
+@media (max-width:700px){
+    article.login .inner .title{margin-bottom: 20px;font-size: 23px;}
+    article.login .shadow{display:none}
+    article.login .logo{max-width:80%;margin-top:20px}
+    article.login .send.btn{/* width: 800px; */max-width: 100%;width: 100%;}
+    article.login .forms-wrapper .inner{padding:20px}
+    article.login .bottom-logos{  margin: 30px auto;  display: block;  max-width: 90%;  overflow: hidden;  }
+}
+
+@media (max-width:400px){
+    article.login .ju-logo svg {   height: 56px;}
+    article.login .ju-logo span {   font-size: 35px;   height: 100%;}
+    article.login .forgot-password {  font-size: 14px;  }
+}
