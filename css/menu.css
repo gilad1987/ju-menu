@@ -26,7 +26,6 @@ nav.links .ju-logo {  float: left;  height: 100%;  position: relative;  overflow
 .sticky .scroll-top{bottom:40px}
 .scroll-top:hover{height: 60px;}
 
-nav ul{}
 nav ul li{display: inline-block;height: 100%;}
 nav ul li a{width:100%; height:100%;display: inline-block;box-sizing: border-box;text-decoration: none;}
 nav.social-and-login{background: #2a8ecd;height: 42px; font-size:15px;position: relative;z-index: 9;}
@@ -34,6 +33,11 @@ nav.social-and-login{background: #2a8ecd;height: 42px; font-size:15px;position: 
 nav ul{height: 100%;/* position: relative; *//* z-index: 1; */}
 nav.social-and-login ul li{border-right: 1px solid #1d6796;float: left;}
 nav.social-and-login ul li a{padding: 0 15px;-webkit-transition: all 400ms ease-out 100ms;      -moz-transition: all 400ms ease-out 100ms;      -o-transition: all 400ms ease-out 100ms;      transition: all 400ms ease-out 100ms;}
+
+nav.social-and-login ul li a.search-bar-close-button{display:none}
+.search-open nav.social-and-login ul li a.search-bar-open-button{display:none}
+.search-open nav.social-and-login ul li a.search-bar-close-button{display:inline-block}
+
 nav.social-and-login ul li a.search i{display:none}
 nav.social-and-login ul li a.search i.fa-search{display:inline-block}
 .search-open nav.social-and-login ul li a.search i.fa-search{display:none}
@@ -94,7 +98,7 @@ nav.links ul li .sub-menu{
     transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
 }
 
-nav.links ul li.video-course .search-place{width:277px; height:300px; background-color: white;text-align: center;padding-top: 39px;box-sizing: border-box;float: left;}
+nav.links ul li.video-course .search-place{width: 280px; height:300px; background-color: white;text-align: center;padding-top: 39px;box-sizing: border-box;float: left;}
 nav.links ul li.video-course .search-place i.fa-search{font-size: 53px;padding-bottom: 25px;margin-bottom: 25px;border-bottom: 1px solid #194f9b;}
 nav.links ul li.video-course .search-place .title{  font-weight: 600;  margin-bottom: 15px;  }
 nav.links ul li.video-course .search-place .sub-title{  font-size: 15px;  font-weight: 600;  }
@@ -264,7 +268,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links .ju-logo{height: 47px;width: 100%;padding-left: 10px;box-sizing: border-box;border-bottom: 1px solid #C1C0C0;border-right: 1px solid #C1C0C0;float: none;position: fixed;top: 0;background-color: white;display: none;}
     nav.links ul li{  width: 100%;  /* background-color: #5D6E80; */  border-right: none;  /* height: 60px; */  display: block;border-bottom: 1px solid #c2c2c2;min-height: 60px;}
     nav.links ul li.open >  a{  background-color: #EEE;  }
-    nav.links ul li.donate{  background-color: #EEE;  }
+    nav.links ul li.films{  background-color: #EEE;  }
 
 
     nav.links ul li.donate i.fa,

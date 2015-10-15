@@ -34,10 +34,6 @@
         isOpen = true;
     }
 
-    function onModalOpen(){
-        closeSearchBar();
-    }
-
     function onNewsletterOpen(e){
         closeSearchBar();
     }

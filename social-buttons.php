@@ -1,10 +1,17 @@
 <ul class="social">
 
     <li class="search desktop-only">
-        <a href="#search" class="search">
+        <a href="#search" class="search search-bar-open-button">
             <span class="table">
                 <span class="cell">
                     <i class="fa fa-search"></i>
+                </span>
+            </span>
+        </a>
+
+        <a  class="search search-bar-close-button">
+            <span class="table">
+                <span class="cell">
                     <i class="fa fa-times"></i>
                 </span>
             </span>

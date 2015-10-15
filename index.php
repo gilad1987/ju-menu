@@ -204,7 +204,7 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li class="has-sub-menu ">
+                   <li class="films has-sub-menu ">
                        <a href="#" class="main-menu-link">
                     <span class="table">
                         <span class="cell">
@@ -293,7 +293,7 @@ $version = rand(0,10000000000000);
                        </div>
                    </li>
 
-                   <li class="donate ">
+                   <li class="donate">
                        <a href="#">
                             <span class="table">
                                 <span class="cell">
