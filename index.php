@@ -217,30 +217,7 @@ $version = rand(0,10000000000000);
 
 
                            <div class="parent-ul-wrapper">
-                               <?php for($i=1; $i<5; $i++):?>
-                                   <ul class="parent">
-                                       <li>
-                                           <ul class="child">
-                                               <li class="title blue">
-                                                   <a href="#">STIPEND 18-26</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-
-                                           </ul>
-                                       </li>
-                                   </ul>
-                               <?php endfor; ?>
+                               <?php require_once 'films-menu.php'; ?>
                            </div>
                        </div>
                    </li>
