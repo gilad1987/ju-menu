@@ -41,7 +41,7 @@ $version = rand(0,10000000000000);
     <div class="max-width-content">
         <ul class="login">
             <li >
-                <a href="#modal/login" class="modal-button show-login" data-content-id="modal-forms">
+                <a href="#!modal/forms/login" class="modal-button show-login" data-content-id="modal-forms">
                     <span class="table">
                         <span class="cell">
                             <i class="fa fa-user"></i>

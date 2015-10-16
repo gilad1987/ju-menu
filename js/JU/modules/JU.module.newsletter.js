@@ -35,6 +35,7 @@
 
             $parent.trigger(JU.events.newsletterOpen);
             isOpen = !open;
+
             $parent.toggleClass('open',open);
 
         }

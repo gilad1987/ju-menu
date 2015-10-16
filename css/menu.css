@@ -102,7 +102,13 @@ nav.links ul li.films{}
 nav.links ul li.films li a{padding:0}
 
 nav.links ul li.video-course .search-place{width: 280px; height:300px; background-color: white;text-align: center;padding-top: 39px;box-sizing: border-box;float: left;}
-nav.links ul li.video-course .search-place i.fa-search{font-size: 53px;padding-bottom: 25px;margin-bottom: 25px;border-bottom: 1px solid #194f9b;}
+nav.links ul li.video-course .search-place i.fa-search{font-size: 53px;padding-bottom: 25px;margin-bottom: 25px;border-bottom: 1px solid #194f9b;transform:scale(.4);
+    -webkit-transition: transform 400ms ease-out 500ms;
+    -moz-transition: transform 400ms ease-out 500ms;
+    -o-transition: transform 400ms ease-out 500ms;
+    transition: transform 300ms ease-out 500ms;
+}
+nav.links ul li.video-course:hover .search-place i.fa-search{transform:scale(1)}
 nav.links ul li.video-course .search-place .title{  font-weight: 600;  margin-bottom: 15px;  }
 nav.links ul li.video-course .search-place .sub-title{  font-size: 15px;  font-weight: 600;  }
 nav.links ul li.video-course .search-place a{  height: 37px;  text-decoration: none;  background-color: #2a8ecd;  color: white;  line-height: 37px;  text-align: left;  font-weight: 500;  text-transform: none;  margin-top: 26px;  }
@@ -119,7 +125,7 @@ nav.links ul li .sub-menu ul.child .title a{  color: #2a8ecd;  font-size: 17px;/
 nav.links ul li .sub-menu ul.child a:hover{  color: #194f9b;  }
 nav.links ul li .sub-menu ul li{  border: none;  float: none;  display: inline-block;  width: 100%;  line-height: 28px;}
 nav.links ul li .sub-menu ul.child li{float:none;/* display: block; *//* border: none; */height: auto;/* margin-bottom: 8px; */}
-nav.links ul li .sub-menu ul.child li:last-child a{border:none}
+nav.links ul li.films .sub-menu ul.child li:last-child a{border:none}
 nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
 .third-menu{display:none}
 
@@ -147,7 +153,7 @@ nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
 .search-bar .center{    max-width: 20px;  margin: 0 auto;   }
 .open-search-btn{height: 100%;width: 67px;z-index: 100;position: relative;float: left;cursor: pointer;text-align: center;}
 .search-open .search-bar{  width: 100%;  height: 100%;  position: absolute;  right: 0;  background-color: #194f9b;    overflow: inherit;}
-.sticky.search-open .search-bar{display:none}
+
 .mobile-search-bar{height: 67px;background-color: #eee;padding: 0 20px;box-sizing: border-box;color: #a9b0b0;}
 .mobile-search-bar .fa-search{  color: #194F9B;}
 .mobile-search-bar .fa-times-circle{  display: none;  font-size: 22px;  }
@@ -164,6 +170,7 @@ nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
 nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  position: relative;  }
 .contact i{display: inline-block}
 @media (min-width: 1002px){
+    .menu-open .mask, .sub-menu-open .mask{display: none}
     .sign-up-to-newsletter .wrapper {  margin-right: -1px;  margin-left: -1px;  border: 1px solid #9A9A9A;  border-top: 0;  }
     nav.links ul li .sub-menu{  margin-top: -2px; }
     .main-menu-ul > li{ margin-left: -3px;}
@@ -190,7 +197,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .sticky .third-menu{height: 45px;}
     nav.links ul li:hover .sub-menu{height:300px;box-shadow: 0px 1px 2px #616060;}
     nav.links ul li .sub-menu .parent-ul-wrapper{  overflow: hidden;  padding: 28px 0;  height: 100%;  box-sizing: border-box;  }
-    nav.links ul li.films .sub-menu .parent-ul-wrapper{padding-bottom:0}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper{padding-bottom: 25px;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul:nth-child(2){width:50%;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul:nth-child(2) .child li{float:left;width: 50%;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper > ul:last-child{
@@ -221,6 +228,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
 }
 
 @media (min-width: 1002px) and (max-width: 1350px){
+    .sticky.search-open .search-bar{ display:none }
     nav.links ul li.donate{border-right: 1px solid #c2c2c2;}
     .search-bar{right:0; width:0}
     .open-search-btn{}
@@ -229,6 +237,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .search-open nav.social-and-login ul li.search a:hover{  background: #194f9b;  color: white;  }
     .search-bar .close-btn{right:0;display: none;}
     .search-bar .input-wrapper{}
+
 }
 
 @media (max-width: 1002px){
@@ -241,12 +250,19 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav ul{overflow-y: auto;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li,
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{height: auto;}
-    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{padding:0 10px}
-    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a img{/* max-width:100%; */display: block;}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{padding: 0 27px;border-bottom: 0;}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a img{max-width:100%;display: block;}
 
     nav.links ul li .sub-menu ul.child li{background-color:#fff;line-height: 35px;min-height: 35px;height: 35px;}
     nav.links ul li .sub-menu ul.child li a{  line-height: 35px;  min-height: 35px;  height: 35px;  margin: 0;  padding: 0 27px;  }
     nav.links ul li .sub-menu ul.child li:first-child{  /* background-color: #DEDCDC; */  color: white;  line-height: 60px;height: 60px;}
+
+    nav.links ul li .sub-menu ul.parent:first-child .child li:last-child{
+        /* padding: 0 27px; */
+        box-sizing: border-box;
+        line-height: 20px;
+    }
+    .parent-ul-wrapper ul:first-child{}
     nav.links ul li .sub-menu ul.parent{  display: block;  float: none;  padding: 0;  border: none;  }
     nav.links ul li.video-course .search-place{display:none}
     .max-width-content{/* overflow-y: auto; */}
@@ -318,7 +334,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.sign-up-to-newsletter.open{height: 140px;}
     nav.links ul li.has-sub-menu i{float: right;}
     nav.links ul li .sub-menu ul li{display:block}
-    nav.links ul li a{padding: 0 25px;color: #5D6E80;border-bottom: 1px solid #FFF;display: block;height: 60px;}
+    nav.links ul li a{padding: 0 25px;color: #5D6E80;/* border-bottom: 1px solid #FFF; */display: block;height: 60px;}
     header.mobile-menu{  position: fixed;  top: 0;  width: 100%; z-index: 3;  height: 67px;  right: 0;  overflow: hidden;  }
     header.mobile-menu button{
         -ms-transform: translateX(0px);
