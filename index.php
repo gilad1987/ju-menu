@@ -341,7 +341,7 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li>
+                   <li class="video-series ">
                        <a href="#">
                         <span class="table">
                             <span class="cell">
@@ -354,24 +354,15 @@ $version = rand(0,10000000000000);
 
 
                            <div class="parent-ul-wrapper">
-                               <?php for($i=1; $i<5; $i++):?>
+                               <?php for($i=0; $i<5; $i++):?>
                                    <ul class="parent">
                                        <li>
                                            <ul class="child">
-                                               <li class="title blue">
-                                                   <a href="#">STIPEND 18-26</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
-                                               </li>
-                                               <li >
-                                                   <a href="#">Video Series</a>
+                                               <li class="title blue" style="background-image: url('images/menu/videos/third/CINEMA_THE_JEWISH_LENs.jpg')">
+                                                   <a href="#" >
+                                                       <span class="title">HABITS OF HAPPINESS</span>
+                                                       <span class="sub-title">The Science of Happiness taught by Harvard's most popular professor </span>
+                                                   </a>
                                                </li>
 
                                            </ul>

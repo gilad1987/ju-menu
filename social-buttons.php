@@ -10,13 +10,6 @@
             </span>
         </a>
 
-<!--        <a class="search search-bar-close-button">-->
-<!--            <span class="table">-->
-<!--                <span class="cell">-->
-<!--                    <i class="fa fa-times"></i>-->
-<!--                </span>-->
-<!--            </span>-->
-<!--        </a>-->
     </li>
 
     <li class="youtube">

@@ -83,16 +83,7 @@ nav.links ul li.donate a{  color: #EE7624;  }
 
 nav.links ul li{border-right: 1px solid #c2c2c2;/* float: right; */}
 nav.links ul li.donate{border:none}
-nav.links ul li .sub-menu{
-    /* display: none; */
-    position: absolute;
-    right: 0;
-    left: 0;
-    /* top: 67px; */
-    background-color: #f3f4f5;
-    height: 0px;
-    overflow: hidden;
-    /* box-shadow: 1px 1px 1px #4E4D4D; */
+nav.links ul li .sub-menu{  position: absolute;  right: 0;  left: 0;  background-color: #f3f4f5;  height: 0px;  overflow: hidden;
     -webkit-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
     -moz-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
     -o-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
@@ -122,13 +113,18 @@ nav.links ul li .sub-menu  ul.parent:last-child{border:none}
 nav.links ul li .sub-menu ul.child{  width: 100%;  height: 100%;  float: none;  color: black;  /* padding: 12px 0; */}
 nav.links ul li .sub-menu ul.child li a{  font-weight: 500;  }
 nav.links ul li .sub-menu ul.child .title a{  color: #2a8ecd;  font-size: 17px;/* margin-left: 10px; */font-weight: 700;/* padding: 0; */}
-
 nav.links ul li .sub-menu ul.child a:hover{  color: #194f9b;  }
 nav.links ul li .sub-menu ul li{  border: none;  float: none;  display: inline-block;  width: 100%;  line-height: 28px;}
 nav.links ul li .sub-menu ul.child li{float:none;/* display: block; *//* border: none; */height: auto;/* margin-bottom: 8px; */}
 nav.links ul li.films .sub-menu ul.child li:last-child a{border:none}
 nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
 .third-menu{display:none}
+nav.links .third-menu ul li.video-series .sub-menu ul.child .title a{  height: 100%;  display: inline-block;  padding: 0 10px;  color: white;padding-top: 14%;text-align: center;background: rgba(0, 0, 0, 0.25);}
+nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .title{  font-size: 26px;  font-weight: bold;  }
+nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .sub-title{  font-size: 16px;  }
+nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  border-right: 0;  }
+nav.links .third-menu ul li.video-series .sub-menu ul.parent .child > li{height:100%;background-position: center;      background-size: cover;}
+nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;}
 
 #page{  padding-bottom: 350px;  background-color: #8A8A8A;}
 .sticky #page{  padding-top: 50px;  }
@@ -181,7 +177,6 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links .third-menu ul a{color:#685959;font-size: 14px;}
     nav.links .third-menu ul li:first-child a{color:#194f9b;font-size: 26px;padding-left: 0;-webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;}
     .sticky nav.links .third-menu ul li:first-child a{font-size: 22px;}
-    nav.links .third-menu ul li{}
     .main-menu{   height: 67px;   -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;   z-index: 2;   position: relative;}
     .third-menu{
         height: 50px;
@@ -197,14 +192,14 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .sticky .main-menu{   height: 55px;}
     .sticky .third-menu{height: 45px;}
     nav.links ul li:hover .sub-menu{height:300px;box-shadow: 0px 1px 2px #616060;}
+    nav.links ul li.active .sub-menu{height:300px;box-shadow: 0px 1px 2px #616060;}
+    nav.links ul li.video-series:hover .sub-menu,
+    nav.links ul li.video-series.active .sub-menu{  height: 225px;  }
     nav.links ul li .sub-menu .parent-ul-wrapper{  overflow: hidden;  padding: 28px 0;  height: 100%;  box-sizing: border-box;  }
     nav.links ul li.films .sub-menu .parent-ul-wrapper{padding-bottom: 25px;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul:nth-child(2){width:50%;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul:nth-child(2) .child li{float:left;width: 50%;}
-    nav.links ul li.films .sub-menu .parent-ul-wrapper > ul:last-child{
-        padding-left: 30px;
-        box-sizing: border-box;
-    }
+    nav.links ul li.films .sub-menu .parent-ul-wrapper > ul:last-child{  padding-left: 30px;  box-sizing: border-box;  }
     nav.links ul li.films .sub-menu .parent-ul-wrapper > ul:last-child a{font-weight: bold; width: 70%;line-height: 17px;}
 
     nav.links ul li.films .sub-menu .parent-ul-wrapper > ul:last-child li{margin:4px 0}
@@ -216,9 +211,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li:hover a{  color: #194f9b;  background-color: #f3f4f5;  }
     nav.links ul li a.main-menu-link{   position: relative;top: 1px;border-bottom: 1px solid #C2C2C2;z-index: 3;}
     nav.links ul li.has-sub-menu:hover a.main-menu-link{   border-bottom: 1px solid #F3F4F5;}
-    nav.links ul li.donate:hover a{
-        color: #EE7624;
-    }
+    nav.links ul li.donate:hover a{  color: #EE7624;  }
     nav.links ul li:hover .sub-menu a{color:black;}
     nav.links ul li.video-course:hover .search-place a{color:white}
     .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px 1px 1px 1px #D6D5D5;}
@@ -258,11 +251,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li .sub-menu ul.child li a{  line-height: 35px;  min-height: 35px;  height: 35px;  margin: 0;  padding: 0 27px;  }
     nav.links ul li .sub-menu ul.child li:first-child{  /* background-color: #DEDCDC; */  color: white;  line-height: 60px;height: 60px;}
 
-    nav.links ul li .sub-menu ul.parent:first-child .child li:last-child{
-        /* padding: 0 27px; */
-        box-sizing: border-box;
-        line-height: 20px;
-    }
+    nav.links ul li .sub-menu ul.parent:first-child .child li:last-child{  box-sizing: border-box;  line-height: 20px;  }
     .parent-ul-wrapper ul:first-child{}
     nav.links ul li .sub-menu ul.parent{  display: block;  float: none;  padding: 0;  border: none;  }
     nav.links ul li.video-course .search-place{display:none}
