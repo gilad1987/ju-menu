@@ -20,9 +20,9 @@
         function JUExpandableModule(e){
 
             var $target,
-                targetNotExpandable;
+                targetExpandable;
 
-            targetNotExpandable = false;
+            targetExpandable = true;
             $target = $(e.target);
 
             if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
@@ -30,14 +30,14 @@
 
                 $targetParent = $target.closest('.'+CLASS_NAMES.JUexpander);
                 if($targetParent.length==0){
-                    targetNotExpandable = true;
+                    targetExpandable = false;
                 }else{
                     var $parenExpander;
                     $parenExpander = $targetParent.closest('.'+CLASS_NAMES.JUexpandable);
                 }
             }
 
-            if(targetNotExpandable){
+            if(targetExpandable==false){
                 return;
             }
 
