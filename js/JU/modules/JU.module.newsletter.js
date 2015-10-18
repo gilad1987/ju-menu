@@ -19,12 +19,15 @@
 
     function onDOMReady(){
 
+        var addClass;
+
         function changeState(e,open){
             var $parent;
 
-            if(typeof open == 'boolean' && ( (isOpen && open) || (!isOpen && !open) )){
+            if(typeof open == 'boolean' && !open && !isOpen){
                 return false;
             }
+
             if(typeof open == 'boolean'){
                 $parent = $('.sign-up-to-newsletter');
             }
@@ -33,11 +36,10 @@
                 $parent = $(this).closest('.sign-up-to-newsletter');
             }
 
+            isOpen = addClass = !isOpen;
+
+            $parent.toggleClass('open',addClass);
             $parent.trigger(JU.events.newsletterOpen);
-            isOpen = !open;
-
-            $parent.toggleClass('open',open);
-
         }
 
         function onModalOpen(e){
