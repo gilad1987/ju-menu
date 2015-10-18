@@ -38,7 +38,11 @@
             isOpen = addClass = !isOpen;
 
             $parent.toggleClass('open',addClass);
-            $parent.trigger(JU.events.newsletterOpen);
+
+            isOpen ?
+                $parent.trigger(JU.events.newsletterOpen) :
+                $parent.trigger(JU.events.newsletterClose);
+
         }
 
         function onModalOpen(e){
