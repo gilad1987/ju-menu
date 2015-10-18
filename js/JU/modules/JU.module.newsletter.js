@@ -5,15 +5,14 @@
 
 (function(JU){
 
-    var isOpen;
-
-    isOpen = false;
-
     if(typeof JU == 'undefined'){
         throw new Error('JU object is missing');
     }
 
     var $document;
+    var isOpen;
+
+    isOpen = false;
 
     $document = $(document);
 

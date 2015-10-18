@@ -4,6 +4,10 @@
 
 (function(JU){
 
+    if(typeof JU == 'undefined'){
+        throw new Error('JU object is missing');
+    }
+
     var $document;
 
     $document = $(document);
