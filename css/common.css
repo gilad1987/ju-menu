@@ -5,7 +5,6 @@ i.icon span{opacity: 0}
 i.icon.donate{background: url('../images/icons/navigationDonate.png'); width:30px; height:29px; }
 .table{height:100%; display:table;width: 100%;}
 .table .cell{    display: table-cell;vertical-align: middle;line-height: normal;}
-.only-mobile{display: none}
 .tablet-only{display: none}
 .mobile-only{display: none}
 .desktop-only{display: block}
@@ -53,13 +52,15 @@ i.icon.donate{background: url('../images/icons/navigationDonate.png'); width:30p
 /* end ju-logo */
 
 
+
 @media (max-width: 1002px) {
     .desktop-only{display: none !important;}
-    .only-mobile{display: block}
-    .mobile-only{display: block}
 }
 
 @media (min-width: 500px) and (max-width: 1002px) {
-    .tablet-only{display: block}
+    .tablet-only{display: inline-block !important;}
+}
+@media (max-width: 500px) {
+    .mobile-only{display: inline-block  !important;}
 }
 

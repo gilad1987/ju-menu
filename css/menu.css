@@ -34,15 +34,16 @@ nav ul{height: 100%;/* position: relative; *//* z-index: 1; */}
 nav.social-and-login ul li{border-right: 1px solid #1d6796;float: left;}
 nav.social-and-login ul li a{padding: 0 15px;-webkit-transition: all 400ms ease-out 100ms;      -moz-transition: all 400ms ease-out 100ms;      -o-transition: all 400ms ease-out 100ms;      transition: all 400ms ease-out 100ms;}
 
-nav.social-and-login ul li a.search-bar-close-button{display:none}
-.search-open nav.social-and-login ul li a.search-bar-open-button{display:none}
-.search-open nav.social-and-login ul li a.search-bar-close-button{display:inline-block}
+nav.social-and-login ul li.search a i.fa-times{display:none}
+nav.social-and-login ul li.search.ju-expanded a i.fa-search{display:none}
+nav.social-and-login ul li.search.ju-expanded a i.fa-times{display:inline-block}
+
 
 nav.social-and-login ul li a.search i{display:none}
 nav.social-and-login ul li a.search i.fa-search{display:inline-block}
 .search-open nav.social-and-login ul li a.search i.fa-search{display:none}
 .search-open nav.social-and-login ul li a.search i.fa-times{display:inline-block}
-nav.social-and-login ul li.open a,nav.social-and-login ul li a:hover{background:white; color:#194f9b}
+nav.social-and-login ul li.ju-expanded a,nav.social-and-login ul li a:hover{background:white; color:#194f9b}
 nav.social-and-login ul li a.twitter:hover{ color:#55ACEE}
 nav.social-and-login ul li a.facebook:hover{ color:#415E9B}
 nav.social-and-login ul li a.youtube:hover{ color:#DC2725}
@@ -52,16 +53,16 @@ nav.social-and-login ul.login{float:left;}
 nav.social-and-login ul.login i{margin: 0 7px 0 0;width: 15px;}
 nav.social-and-login ul.social{float:right;}
 nav.social-and-login ul.social li{float:right;}
-nav.social-and-login ul.social li.search{display:none}
+nav.social-and-login ul.social li.search{display: none !important;}
 nav.social-and-login ul.social li:first-child{border-left:0px solid #1d6796}
 
 nav.social-and-login .sign-up-to-newsletter{  width: 243px;  }
 .sign-up-to-newsletter .fa-times{display:none}
 .sign-up-to-newsletter .fa-times{display:none}
-.sign-up-to-newsletter.open i{display: none;}
-.sign-up-to-newsletter.open .fa-times{display: inline-block;}
+.sign-up-to-newsletter.ju-expanded i{display: none;}
+.sign-up-to-newsletter.ju-expanded .fa-times{display: inline-block;}
 .sign-up-to-newsletter .wrapper{  display: none;background-color: #ddd;  padding: 10px 10px;  box-sizing: border-box;  margin-top: -3px;  border-top: 1px solid #1D6796;  /* border: 1px solid #9A9A9A; */border-top: none;/* -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg); */      /* -webkit-transform-origin: 50% 0; */      /* -webkit-transition: 350ms; */      -moz-transition: 350ms;      -o-transition: 350ms;      /* transition: 350ms; */}
-.sign-up-to-newsletter.open .wrapper{display:block;/* -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0); *//* height: 96px; */}
+.sign-up-to-newsletter.ju-expanded .wrapper{display:block;/* -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0); *//* height: 96px; */}
 .sign-up-to-newsletter .wrapper input{  height: 30px;  width: 100%;  margin: 0px 0 10px 0px;  padding: 0;  border: none;  outline: none;text-indent: 5px;}
 .sign-up-to-newsletter .wrapper button{  width: 100%;  height: 33px;  line-height: 27px;  color: #5D6E83;  border: none;  text-transform: uppercase;  /* background-color: #E6E6E6; */color: white;}
 
@@ -148,20 +149,20 @@ nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
 .search-bar input[type=text]{  width: 99%;  height: 87%;  background-color: transparent;  border: none;  border-bottom: 1px solid #ADADAD;  outline: none;color: white;font-size: 28px;line-height: 28px;}
 .search-bar .input-wrapper{    margin-top: 10px;  height: 45px;  display: block;  overflow: hidden;}
 .search-bar .close-btn{position:absolute;background-color: white;top: 0;height: 100%;      width: 67px;color: #194F9B;opacity: 0;-webkit-transition: all 400ms ease-out;      -moz-transition: all 400ms ease-out 400ms;      -o-transition: all 400ms ease-out 400ms;      transition: all 400ms ease-out 400ms;right: -66px;font-size: 26px;cursor: pointer;}
-.search-open .search-bar .close-btn{opacity:1;/* top: 0; */}
+.search-bar.ju-expanded .close-btn{opacity:1;/* top: 0; */}
 .sticky .search-bar .input-wrapper{height: 35px;}
 .search-bar .center{    max-width: 20px;  margin: 0 auto;   }
 .open-search-btn{height: 100%;width: 67px;z-index: 100;position: relative;float: left;cursor: pointer;text-align: center;}
-.search-open .search-bar{  width: 100%;  height: 100%;  position: absolute;  right: 0;  background-color: #194f9b;    overflow: inherit;}
+.search-bar.ju-expanded{  width: 100%;  height: 100%;  position: absolute;  right: 0;  background-color: #194f9b;    overflow: inherit;}
 
-.mobile-search-bar{height: 67px;background-color: #eee;padding: 0 20px;box-sizing: border-box;color: #a9b0b0;}
+.mobile-search-bar{height: 67px;background-color: #eee;padding: 0 20px;box-sizing: border-box;color: #a9b0b0;width: 100%;}
 .mobile-search-bar .fa-search{  color: #194F9B;}
 .mobile-search-bar .fa-times-circle{  display: none;  font-size: 22px;  }
 .mobile-search-bar input{  background-color: transparent;  height: 100%;  line-height: 67px;  padding: 0;  border: none;  margin: 0 0px 0 10px;  font-size: 15px;  max-width: 181px;  }
-.social-and-login.mobile-only{}
+
 .social-and-login.mobile-only ul{  max-width: 80%;  margin: 0 auto;  }
 .social-and-login.mobile-only ul li{  width: 25%;  float: right;  padding: 20px 5px;  box-sizing: border-box;  color: white;  text-align: center;  border: none;  height: 80px;}
-.social-and-login.mobile-only ul li a{  color: white;  border-radius: 10px;  padding: 0;  text-align: center;  max-width: 39px;  margin: 0 auto;  height: 100%;}
+.social-and-login.mobile-only ul li a{  color: white;  border-radius: 10px;  padding: 0;  text-align: center;  max-width: 39px;  margin: 0 auto;  height: 100%;width: 37px;}
 .social-and-login.mobile-only ul li a.facebook{  background-color: #415E9B;  border-radius: 10px;  }
 .social-and-login.mobile-only ul li.facebook a{  background-color: #415E9B;  }
 .social-and-login.mobile-only ul li.twitter a{  background-color: #55ACEE;  }
@@ -231,16 +232,16 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .sticky.search-open .search-bar{ display:none }
     nav.links ul li.donate{border-right: 1px solid #c2c2c2;}
     .search-bar{right:0; width:0}
-    .open-search-btn{}
-    nav.social-and-login ul.social li.search{display:block}
-    .search-open nav.social-and-login ul.social li.search{  background-color: #194F9B;}
-    .search-open nav.social-and-login ul li.search a:hover{  background: #194f9b;  color: white;  }
+    nav.social-and-login ul.social li.search{display: block !important;}
+    nav.social-and-login ul.social li.search.ju-expanded a{  background-color: #194F9B; color:white}
+    nav.social-and-login ul li.search.ju-expanded a:hover{  background: #194f9b;  color: white;  }
     .search-bar .close-btn{right:0;display: none;}
     .search-bar .input-wrapper{}
 
 }
 
 @media (max-width: 1002px){
+    .social-and-login.mobile-only{   display: block !important;}
     nav.links ul li .sub-menu ul.child li:first-child a{line-height: 60px;      min-height: 60px;      height: 60px;}
     i.icon.donate{display: inline-block;position: relative;left: -5px;}
     header.mobile-menu .donate-btn{background-color: #eb7225;float: right;padding: 0 30px;height: 100%;line-height: 67px;text-decoration: none;text-transform: uppercase;}
@@ -331,7 +332,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.donate a span{line-height: 29px;}
 
     nav.links ul li.sign-up-to-newsletter{height:50px}
-    nav.links ul li.sign-up-to-newsletter.open{height: 140px;}
+    nav.links ul li.sign-up-to-newsletter.ju-expanded{height: 140px;}
     nav.links ul li.has-sub-menu i{float: right;}
     nav.links ul li .sub-menu ul li{display:block}
     nav.links ul li a{padding: 0 25px;color: #5D6E80;/* border-bottom: 1px solid #FFF; */display: block;height: 60px;}

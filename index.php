@@ -53,7 +53,7 @@ $version = rand(0,10000000000000);
 
             </li>
             <li  class="sign-up-to-newsletter ju-expandable">
-                <a href="#" class="close-btn newsletter-btn ju-expander">
+                <a href="#" class=" ju-expander">
                     <span class="table">
                         <span class="cell">
                             <i class="fa fa-envelope-o"></i>
@@ -119,14 +119,14 @@ $version = rand(0,10000000000000);
        <div class="main-menu">
            <div class="max-width-content">
 
-               <div class="mobile-search-bar only-mobile">
+               <div class="mobile-search-bar tablet-only mobile-only">
                    <i class="fa fa-search"></i>
                    <input name="q" placeholder="Search the site">
                    <i class="fa fa-times-circle"></i>
                </div>
 
-               <div id="search-bar" class="search-bar desktop-only expandable">
-                   <a href="#search"  class="search-bar-open-button open-search-btn expander" title="Search bar">
+               <div id="search-bar" class="search-bar desktop-only ju-expandable">
+                   <a href="#search"  class="search-bar-open-button open-search-btn ju-expander" title="Search bar">
                        <span class="table">
                            <span class="cell">
                                <span class="center">
@@ -140,7 +140,7 @@ $version = rand(0,10000000000000);
                        <input type="text" placeholder="Insert text to search....">
                    </div>
 
-                   <div id="close-btn" class="close-btn search-bar-close-button">
+                   <div id="close-btn" class="close-btn search-bar-close-button ju-expander">
                           <div class="table">
                               <div class="cell">
                                   <div class="center">
@@ -292,15 +292,15 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li  class="newsletter-btn sign-up-to-newsletter tablet-only mobile-only">
-                       <a href="#" class="close-btn">
-                    <span class="table">
-                        <span class="cell">
-                            <i class="fa fa-envelope-o"></i>
-                            <i class="fa fa-times"></i>
-                            <span>Sign Up for JU News</span>
-                        </span>
-                    </span>
+                   <li  class="ju-expandable sign-up-to-newsletter tablet-only mobile-only">
+                       <a href="#" class="ju-expander">
+                            <span class="table">
+                                <span class="cell">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <i class="fa fa-times"></i>
+                                    <span>Sign Up for JU News</span>
+                                </span>
+                            </span>
                        </a>
 
                        <div class="wrapper">

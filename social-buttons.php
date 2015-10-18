@@ -1,21 +1,22 @@
 <ul class="social">
 
-    <li class="search desktop-only">
-        <a href="#search" class="search search-bar-open-button">
+    <li class="search ju-expander ju-expandable desktop-only" data-dependencies-selectors="#search-bar.search-bar|">
+        <a href="#" class="search">
             <span class="table">
                 <span class="cell">
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search open"></i>
+                    <i class="fa fa-times close"></i>
                 </span>
             </span>
         </a>
 
-        <a  class="search search-bar-close-button">
-            <span class="table">
-                <span class="cell">
-                    <i class="fa fa-times"></i>
-                </span>
-            </span>
-        </a>
+<!--        <a class="search search-bar-close-button">-->
+<!--            <span class="table">-->
+<!--                <span class="cell">-->
+<!--                    <i class="fa fa-times"></i>-->
+<!--                </span>-->
+<!--            </span>-->
+<!--        </a>-->
     </li>
 
     <li class="youtube">
