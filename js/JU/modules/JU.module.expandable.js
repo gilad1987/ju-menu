@@ -17,7 +17,7 @@
 
     function onDOMReady(){
 
-        function expandable(e){
+        function JUExpandableModule(e){
 
             var $target,
                 targetNotExpandable;
@@ -46,7 +46,7 @@
             $elem.toggleClass(CLASS_NAMES.JUexpanded);
         }
 
-        $document.on('click',expandable);
+        $document.on('click',JUExpandableModule);
     }
 
 
