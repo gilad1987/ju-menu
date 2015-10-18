@@ -15,37 +15,37 @@
 
     $document = $(document);
 
-    function onDOMReady(){
+    function JUExpandableModule(e){
 
-        function JUExpandableModule(e){
+        var $target,
+            targetExpandable;
 
-            var $target,
-                targetExpandable;
+        targetExpandable = true;
+        $target = $(e.target);
 
-            targetExpandable = true;
-            $target = $(e.target);
+        if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
+            var $targetParent;
 
-            if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
-                var $targetParent;
-
-                $targetParent = $target.closest('.'+CLASS_NAMES.JUexpander);
-                if($targetParent.length==0){
-                    targetExpandable = false;
-                }else{
-                    var $parenExpander;
-                    $parenExpander = $targetParent.closest('.'+CLASS_NAMES.JUexpandable);
-                }
+            $targetParent = $target.closest('.'+CLASS_NAMES.JUexpander);
+            if($targetParent.length==0){
+                targetExpandable = false;
+            }else{
+                var $parenExpander;
+                $parenExpander = $targetParent.closest('.'+CLASS_NAMES.JUexpandable);
             }
-
-            if(targetExpandable==false){
-                return;
-            }
-
-            var $elem = (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
-            $('.expandable.expanded').not($elem).removeClass(CLASS_NAMES.JUexpanded);
-            $elem.toggleClass(CLASS_NAMES.JUexpanded);
         }
 
+        if(targetExpandable==false){
+            return;
+        }
+
+        var $elem = (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
+        $('.expandable.expanded').not($elem).removeClass(CLASS_NAMES.JUexpanded);
+        $elem.toggleClass(CLASS_NAMES.JUexpanded);
+    }
+
+
+    function onDOMReady(){
         $document.on('click',JUExpandableModule);
     }
 
