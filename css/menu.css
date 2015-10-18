@@ -316,7 +316,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.donate i.fa,
     nav.links ul li.sign-up-to-newsletter i.fa,
     nav.links ul li.login i.fa,
-    nav.links ul li.contact i.fa{  margin-right: 12px;  color: #218DD0;font-size: 20px;position: relative;top: 2px;}
+    nav.links ul li.contact i.fa{  margin-right: 12px;  color: #218DD0;font-size: 20px;position: relative;top: 2px;width: 21px;}
 
     nav.links ul li.donate a,
     nav.links ul li.sign-up-to-newsletter a,
