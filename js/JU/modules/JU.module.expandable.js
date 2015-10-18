@@ -22,9 +22,7 @@
             var $target,
                 targetNotExpandable;
 
-
             targetNotExpandable = false;
-
             $target = $(e.target);
 
             if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
