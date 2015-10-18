@@ -52,8 +52,8 @@ $version = rand(0,10000000000000);
                 </a>
 
             </li>
-            <li  class="sign-up-to-newsletter ">
-                <a href="#" class="close-btn newsletter-btn">
+            <li  class="sign-up-to-newsletter expandable">
+                <a href="#" class="close-btn newsletter-btn ">
                     <span class="table">
                         <span class="cell">
                             <i class="fa fa-envelope-o"></i>
@@ -125,7 +125,7 @@ $version = rand(0,10000000000000);
                    <i class="fa fa-times-circle"></i>
                </div>
 
-               <div id="search-bar" class="search-bar desktop-only">
+               <div id="search-bar" class="search-bar desktop-only expandable">
                    <a href="#search"  class="search-bar-open-button open-search-btn" title="Search bar">
                        <span class="table">
                            <span class="cell">
