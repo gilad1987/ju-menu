@@ -24,7 +24,9 @@
 
         function expandableOrCollapse(e,element){
 
-            var $target = typeof element != 'undefined' ? $(element) : typeof e != null && $(e.target);
+            var $target = typeof element != 'undefined' ?
+                          $(element) :
+                          typeof e != null && $(e.target);
             var i=0;
             var elem;
 
