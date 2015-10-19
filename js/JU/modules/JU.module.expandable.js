@@ -59,8 +59,8 @@
         $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded).not(exclude).removeClass(CLASS_NAMES.JUexpanded);
 
         $($elementToExclude).toggleClass(CLASS_NAMES.JUexpanded).promise().done(
-            function(){
-                console.log(this)
+            function($elem){
+                console.log($elem)
             }
         );
     }
