@@ -96,6 +96,7 @@
                 }
             }
 
+            //#TODO add option to change state only element as clicked
             $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded).not(exclude).removeClass(CLASS_NAMES.JUexpanded).promise().done(onFinish);
             $($elementToExclude).toggleClass(CLASS_NAMES.JUexpanded).promise().done(onFinish);
         }
