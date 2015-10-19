@@ -24,7 +24,7 @@
 
         function expandableOrCollapse(e,element){
 
-            var $target = $(e.target);
+            var $target = typeof element != 'undefined' ? $(element) : typeof e != null && $(e.target);
             var i=0;
             var elem;
 
@@ -103,13 +103,11 @@
 
 
         function expandable(element){
-            //#TODO implement expandable API function
-            console.log('Implement expandable');
+            expandableOrCollapse(null,element);
         }
 
         function collapse(element){
-            //#TODO implement collapse API function
-            console.log('Implement collapse');
+            expandableOrCollapse(null,element);
         }
 
         $document.on('click',expandableOrCollapse);

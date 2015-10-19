@@ -1,7 +1,7 @@
 <ul class="social">
 
     <li class="search ju-expander ju-expandable desktop-only" data-dependencies-selectors="#search-bar.search-bar|">
-        <a href="#" class="search">
+        <a  class="search">
             <span class="table">
                 <span class="cell">
                     <i class="fa fa-search open"></i>

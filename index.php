@@ -127,7 +127,7 @@ $version = rand(0,10000000000000);
                </div>
 
                <div id="search-bar" class="search-bar desktop-only ju-expandable">
-                   <a href="#search"  class="search-bar-open-button open-search-btn ju-expander" title="Search bar">
+                   <a   class="search-bar-open-button open-search-btn ju-expander" title="Search bar">
                        <span class="table">
                            <span class="cell">
                                <span class="center">
