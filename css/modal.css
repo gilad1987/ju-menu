@@ -34,5 +34,5 @@ article.login .following-project{display: none}
 @media (max-width: 1002px){
     .open-modal .ju-modal .inner .fa.fa-times{top:30px;right: 30px;}
     .open-modal .ju-modal article.content{  /* padding: 80px 0; */  }
-    .ju-modal{padding-top: 47px;}
+    .ju-modal{padding-top: 67px;}
 }
