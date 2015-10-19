@@ -17,22 +17,16 @@
 
     function JUExpandableModule(e){
 
-        var $target = $(e.target),
-            targetExpandable  = true;
+        var $target = $(e.target);
 
         if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
 
             var $targetParent = $target.closest('.'+CLASS_NAMES.JUexpander);
 
             if($targetParent.length==0){
-                targetExpandable = false;
-            }else{
-                var $parenExpander = $targetParent.closest('.'+CLASS_NAMES.JUexpandable);
+                return;
             }
-        }
-
-        if(targetExpandable==false){
-            return;
+            var $parenExpander = $targetParent.closest('.'+CLASS_NAMES.JUexpandable);
         }
 
         var $elem = (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
