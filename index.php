@@ -24,7 +24,7 @@ $version = rand(0,10000000000000);
 <!--    <script src="js/JU/modules/JU.module.search.js?v=--><?php //echo $version;?><!--"></script>-->
 
 </head>
-<body class="menu-open">
+<body>
 
 <div id="modal" class="ju-modal">
     <div class="inner">
@@ -42,7 +42,7 @@ $version = rand(0,10000000000000);
     <div class="max-width-content">
         <ul class="login">
             <li >
-                <a href="#!modal/forms/login" class="modal-button show-login" data-content-id="modal-forms">
+                <a href="#!modal/forms/login" class="modal-button show-login">
                     <span class="table">
                         <span class="cell">
                             <i class="fa fa-user"></i>
@@ -74,8 +74,8 @@ $version = rand(0,10000000000000);
     </div>
 </nav>
 
-<header class="mobile-menu">
-    <button id="open-mobile-menu-btn">
+<header class="mobile-menu ju-expandable" data-dependencies-selectors="nav.links|">
+    <button id="open-mobile-menu-btn" class="ju-expander" >
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
     </button>
@@ -114,7 +114,7 @@ $version = rand(0,10000000000000);
     </div>
 </header>
 
-<nav class="links">
+<nav class="links ju-expandable">
    <div class="relative">
        <div class="main-menu">
            <div class="max-width-content">
@@ -205,13 +205,13 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li class="films has-sub-menu ">
-                       <a href="#" class="main-menu-link">
-                    <span class="table">
-                        <span class="cell">
-                           Films <i class="fa fa-angle-down"></i>
-                        </span>
-                    </span>
+                   <li class="films has-sub-menu ju-expandable" data-exclude-expandable="header.mobile-menu|nav.links">
+                       <a href="#" class="main-menu-link ju-expander">
+                            <span class="table">
+                                <span class="cell">
+                                   Films <i class="fa fa-angle-down"></i>
+                                </span>
+                            </span>
                        </a>
 
                        <div class="sub-menu" >
@@ -223,13 +223,13 @@ $version = rand(0,10000000000000);
                        </div>
                    </li>
 
-                   <li class="video-course has-sub-menu ">
-                       <a href="#" class="main-menu-link">
-                    <span class="table">
-                        <span class="cell">
-                           Video Courses <i class="fa fa-angle-down"></i>
-                        </span>
-                    </span>
+                   <li class="video-course has-sub-menu ju-expandable" data-exclude-expandable="header.mobile-menu|nav.links">
+                       <a href="#" class="main-menu-link ju-expander">
+                            <span class="table">
+                                <span class="cell">
+                                   Video Courses <i class="fa fa-angle-down"></i>
+                                </span>
+                            </span>
                        </a>
 
                        <div class="sub-menu" >
@@ -292,7 +292,7 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li  class="ju-expandable sign-up-to-newsletter tablet-only mobile-only">
+                   <li  class="ju-expandable sign-up-to-newsletter tablet-only mobile-only" data-exclude-expandable="header.mobile-menu|nav.links">
                        <a href="#" class="ju-expander">
                             <span class="table">
                                 <span class="cell">
@@ -400,7 +400,7 @@ $version = rand(0,10000000000000);
 
 <div id="page">
     <div class="max-width-content">
-       <div style="    height: 700px;font-size: 50px;text-align: center;color: white; text-shadow: 3px 5px 0px #000;">
+       <div style="    height: 1200px;font-size: 50px;text-align: center;color: white; text-shadow: 3px 5px 0px #000;">
            <div class="table">
                <div class="cell">
                    Site under construction

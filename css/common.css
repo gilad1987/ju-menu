@@ -1,3 +1,7 @@
+.ju-expandable{}
+.ju-expander{}
+.ju-expanded{}
+
 input{outline: none}
 i{display: inline-block}
 i.icon{}

@@ -13,23 +13,12 @@
         this.cache = {};
         _this = this;
 
-
         $(document).ready(function(){
             _this.cache.$body = $('body');
         });
     }
 
-    JU.prototype.events = {
-        "modalOpen":"modal:open",
-        "modalClose":"modal:close",
-        "searchOpen":"search:open",
-        "searchClose":"search:close",
-        "newsletterOpen":"newsletter:open",
-        "newsletterClose":"newsletter:close",
-        "bodySticky":"body:sticky"
-    };
-
-
+    JU.prototype.module = {};
 
     window.JU = new JU();
 

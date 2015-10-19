@@ -112,9 +112,9 @@ $(document).ready(function(){
             }
         });
 
-        $('li.has-sub-menu').on('click',function(){
-            $(this).toggleClass('open');
-        });
+        //$('li.has-sub-menu').on('click',function(){
+        //    $(this).toggleClass('open');
+        //});
 
         //$('.open-sign-up-newsletter-box-btn').on('click',function(e){
         //    var toOpen = !$(this).hasClass('open') ||
