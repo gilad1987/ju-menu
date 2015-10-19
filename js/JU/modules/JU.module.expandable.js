@@ -15,19 +15,25 @@
 
     $document = $(document);
 
+    /**
+     *
+     * @returns {{collapse: collapse, expandable: expandable}}
+     * @constructor
+     */
     function JUExpandableModule(){
 
         function expandableOrCollapse(e){
+
             var $target = $(e.target);
 
             if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
 
-                var $targetParent = $target.closest('.'+CLASS_NAMES.JUexpander);
+                var $targetParentExpander = $target.closest('.'+CLASS_NAMES.JUexpander);
 
-                if($targetParent.length==0){
+                if($targetParentExpander.length==0){
                     return;
                 }
-                var $parenExpander = $targetParent.closest('.'+CLASS_NAMES.JUexpandable);
+                var $parenExpander = $targetParentExpander.closest('.'+CLASS_NAMES.JUexpandable);
             }
 
             var $elem = (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
@@ -92,8 +98,6 @@
         JU.module.JUExpandable = JUExpandableModule();
 
     }
-
-
     $document.ready(onDOMReady);
 
 
