@@ -122,9 +122,9 @@ nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
 nav.links .third-menu ul li.video-series .sub-menu ul.child .title a{  height: 100%;  display: inline-block;  padding: 0 10px;  color: white;padding-top: 14%;text-align: center;background: rgba(0, 0, 0, 0.25);}
 nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .title{  font-size: 26px;  font-weight: bold;  }
 nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .sub-title{  font-size: 16px;  }
-nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  border-right: 0;  }
+nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  border-right: 0;  height: 225px;}
 nav.links .third-menu ul li.video-series .sub-menu ul.parent .child > li{height:100%;background-position: center;      background-size: cover;}
-nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;}
+nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;/* overflow: hidden; */}
 
 #page{  padding-bottom: 350px;  background-color: #8A8A8A;}
 .sticky #page{  padding-top: 50px;  }
@@ -192,7 +192,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .sticky .main-menu{   height: 55px;}
     .sticky .third-menu{height: 45px;}
     nav.links ul li:hover .sub-menu{height:300px;box-shadow: 0px 1px 2px #616060;}
-    nav.links ul li.active .sub-menu{height:300px;box-shadow: 0px 1px 2px #616060;}
+    nav.links ul li.active .sub-menu{/* height:300px; */box-shadow: 0px 1px 2px #616060;}
     nav.links ul li.video-series:hover .sub-menu,
     nav.links ul li.video-series.active .sub-menu{  height: 225px;  }
     nav.links ul li .sub-menu .parent-ul-wrapper{  overflow: hidden;  padding: 28px 0;  height: 100%;  box-sizing: border-box;  }
@@ -222,7 +222,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
 }
 
 @media (min-width: 1002px) and (max-width: 1350px){
-    .sticky.search-open .search-bar{ display:none }
+    .sticky .ju-expanded.search-bar{ display:none }
     nav.links ul li.donate{border-right: 1px solid #c2c2c2;}
     .search-bar{right:0; width:0}
     nav.social-and-login ul.social li.search{display: block !important;}

@@ -22,9 +22,11 @@
      */
     function JUExpandableModule(){
 
-        function expandableOrCollapse(e){
+        function expandableOrCollapse(e,element){
 
             var $target = $(e.target);
+            var i=0;
+            var elem;
 
             if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
 
@@ -45,8 +47,8 @@
 
             if(typeof dependencies != 'undefined'){
                 dependencies = dependencies.split('|');
-                for(var i=0; i<dependencies.length; i++){
-                    var elem = $(dependencies[i]);
+                for(; i<dependencies.length; i++){
+                    elem = $(dependencies[i]);
                     if(elem.length!=0){
                         $elementToExclude.push(elem[0]);
                     }
@@ -58,31 +60,54 @@
             var elementToExcludeArr = [];
             if(typeof elementToExclude != 'undefined'){
                 elementToExclude = elementToExclude.split('|');
-                for(var i=0; i<elementToExclude.length; i++){
-                    var elem = $(elementToExclude[i]);
+                i=0;
+                for(; i<elementToExclude.length; i++){
+                    elem = $(elementToExclude[i]);
                     if(elem.length!=0){
                         elementToExcludeArr.push(elem[0]);
                     }
                 }
             }
 
+            var hasExcludeElements = elementToExcludeArr.length>0;
+
             function exclude(index,element){
-                if(elementToExcludeArr.length){
-                    console.log('g');
+                if(hasExcludeElements){
                     return $elementToExclude.indexOf(element) != -1 || elementToExcludeArr.indexOf(element) != -1;
                 }
                 return $elementToExclude.indexOf(element) != -1;
             }
 
-            $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded).not(exclude).removeClass(CLASS_NAMES.JUexpanded);
-            $($elementToExclude).toggleClass(CLASS_NAMES.JUexpanded);
+            //#TODO add option to run array of callback
+            function runCallback(elem){
+
+                var callback = $(elem).data('callback');
+                callback = eval(callback);
+                if(typeof callback == 'function'){
+                    callback(elem);
+                }
+            }
+
+            function onFinish(collectionDomElement){
+                i=0;
+                var len=collectionDomElement.length;
+                for(;i<len;i++){
+                    runCallback(collectionDomElement[i]);
+                }
+            }
+
+            $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded).not(exclude).removeClass(CLASS_NAMES.JUexpanded).promise().done(onFinish);
+            $($elementToExclude).toggleClass(CLASS_NAMES.JUexpanded).promise().done(onFinish);
         }
 
+
         function expandable(element){
+            //#TODO implement expandable API function
             console.log('Implement expandable');
         }
 
         function collapse(element){
+            //#TODO implement collapse API function
             console.log('Implement collapse');
         }
 

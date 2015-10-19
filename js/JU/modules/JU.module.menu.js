@@ -12,8 +12,19 @@
 
     $document = $(document);
 
-    function onDOMReady(){
+    function JUMenuModule(){
 
+        function onChangeSate(elem){
+            $('body').toggleClass('menu-open');
+        }
+
+        return{
+            onChangeSate:onChangeSate
+        }
+    }
+
+    function onDOMReady(){
+        JU.module.JUMenu = JUMenuModule();
     }
 
     $document.ready(onDOMReady);

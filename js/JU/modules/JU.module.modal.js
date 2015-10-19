@@ -12,16 +12,26 @@
 
     $document = $(document);
 
-    function onDOMReady(){
+    function JUModalModule(){
 
-        function onModalButtonClick(e){
+        function innerContent(e){
 
-            e.stopPropagation();
-            e.preventDefault();
+        }
+
+        function onChangeSate(elem){
+            $('body').toggleClass('open-modal');
         }
 
 
-        $('a.modal-button').on('click',onModalButtonClick);
+        $document.on('click',innerContent);
+
+        return{
+            onChangeSate:onChangeSate
+        }
+    }
+
+    function onDOMReady(){
+        JU.module.JUModal = JUModalModule();
     }
 
     $document.ready(onDOMReady);

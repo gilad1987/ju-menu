@@ -2,6 +2,7 @@
 .ju-expander{}
 .ju-expanded{}
 
+a{cursor: pointer}
 input{outline: none}
 i{display: inline-block}
 i.icon{}

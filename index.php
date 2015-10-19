@@ -20,15 +20,16 @@ $version = rand(0,10000000000000);
     <script src="login.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/JU.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.expandable.js?v=<?php echo $version;?>"></script>
-<!--    <script src="js/JU/modules/JU.module.newsletter.js?v=--><?php //echo $version;?><!--"></script>-->
+    <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
 <!--    <script src="js/JU/modules/JU.module.search.js?v=--><?php //echo $version;?><!--"></script>-->
 
 </head>
-<body>
+<body class="">
 
-<div id="modal" class="ju-modal">
+<div id="ju-modal" class="ju-modal ju-expandable">
     <div class="inner">
-        <i class="fa fa-times close-modal-area"></i>
+        <i class="fa fa-times close-modal-area ju-expandable"></i>
         <div id="content" class="wrapper-content">
             <?php require_once 'modal-content.php'; ?>
         </div>
@@ -41,8 +42,8 @@ $version = rand(0,10000000000000);
 <nav class="social-and-login">
     <div class="max-width-content">
         <ul class="login">
-            <li >
-                <a href="#!modal/forms/login" class="modal-button show-login">
+            <li class="ju-expandable test-login" data-dependencies-selectors="#ju-modal|" data-callback="JU.module.JUModal.onChangeSate">
+                <a class="ju-expander">
                     <span class="table">
                         <span class="cell">
                             <i class="fa fa-user"></i>
@@ -53,7 +54,7 @@ $version = rand(0,10000000000000);
 
             </li>
             <li  class="sign-up-to-newsletter ju-expandable">
-                <a href="#" class=" ju-expander">
+                <a class=" ju-expander">
                     <span class="table">
                         <span class="cell">
                             <i class="fa fa-envelope-o"></i>
@@ -74,7 +75,7 @@ $version = rand(0,10000000000000);
     </div>
 </nav>
 
-<header class="mobile-menu ju-expandable" data-dependencies-selectors="nav.links|">
+<header class="mobile-menu ju-expandable" data-dependencies-selectors="nav.links|" data-callback="JU.module.JUMenu.onChangeSate">
     <button id="open-mobile-menu-btn" class="ju-expander" >
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>
@@ -85,7 +86,7 @@ $version = rand(0,10000000000000);
     <div class="ju-logo">
         <div class="table">
             <div class="cell">
-                <a href="#">
+                <a>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 303.9" enable-background="new 0 0 262.3 303.9" xml:space="preserve">
                         <g>
                             <polygon fill="#228ACB" points="249,34.8 259.1,17.4 239,17.4 238.6,17.4 228.5,0 218.4,17.4 197.9,17.4 208.4,35.5 198.3,52.8
@@ -156,7 +157,7 @@ $version = rand(0,10000000000000);
                <div class="ju-logo">
                    <div class="table">
                        <div class="cell">
-                           <a href="#">
+                           <a>
                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 262.3 303.9" enable-background="new 0 0 262.3 303.9" xml:space="preserve">
                         <g>
                             <polygon fill="#228ACB" points="249,34.8 259.1,17.4 239,17.4 238.6,17.4 228.5,0 218.4,17.4 197.9,17.4 208.4,35.5 198.3,52.8
@@ -186,7 +187,7 @@ $version = rand(0,10000000000000);
 
                <ul class="main-menu-ul">
                    <li >
-                       <a href="#" class="main-menu-link">
+                       <a class="main-menu-link">
                             <span class="table">
                                 <span class="cell">
                                   Home
@@ -196,7 +197,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li >
-                       <a href="#" class="main-menu-link">
+                       <a class="main-menu-link">
                     <span class="table">
                         <span class="cell">
                           About us
@@ -206,7 +207,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li class="films has-sub-menu ju-expandable" data-exclude-expandable="header.mobile-menu|nav.links">
-                       <a href="#" class="main-menu-link ju-expander">
+                       <a class="main-menu-link ju-expander">
                             <span class="table">
                                 <span class="cell">
                                    Films <i class="fa fa-angle-down"></i>
@@ -224,7 +225,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li class="video-course has-sub-menu ju-expandable" data-exclude-expandable="header.mobile-menu|nav.links">
-                       <a href="#" class="main-menu-link ju-expander">
+                       <a class="main-menu-link ju-expander">
                             <span class="table">
                                 <span class="cell">
                                    Video Courses <i class="fa fa-angle-down"></i>
@@ -239,7 +240,7 @@ $version = rand(0,10000000000000);
                                <div class="blue title">Not sure where to Start?</div>
                                <div class="azure sub-title">Click here to find the <br/>best program for you</div>
 
-                               <a href="#">Find a Program <i class="fa fa-angle-right"></i> </a>
+                               <a>Find a Program <i class="fa fa-angle-right"></i> </a>
                            </div>
 
                            <div class="parent-ul-wrapper">
@@ -248,19 +249,19 @@ $version = rand(0,10000000000000);
                                        <li>
                                            <ul class="child">
                                                <li class="title blue">
-                                                   <a href="#">STIPEND 18-26</a>
+                                                   <a>STIPEND 18-26</a>
                                                </li>
                                                <li >
-                                                   <a href="#">Video Series</a>
+                                                   <a>Video Series</a>
                                                </li>
                                                <li >
-                                                   <a href="#">Video Series</a>
+                                                   <a>Video Series</a>
                                                </li>
                                                <li >
-                                                   <a href="#">Video Series</a>
+                                                   <a>Video Series</a>
                                                </li>
                                                <li >
-                                                   <a href="#">Video Series</a>
+                                                   <a>Video Series</a>
                                                </li>
 
                                            </ul>
@@ -272,7 +273,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li class="donate">
-                       <a href="#">
+                       <a>
                             <span class="table">
                                 <span class="cell">
                                   <i class="icon donate tablet-only mobile-only"><span>.</span></i>  Donate
@@ -281,8 +282,8 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li class="tablet-only mobile-only login">
-                       <a href="#" id="open-login-modal">
+                   <li class="tablet-only mobile-only login ju-expandable" data-dependencies-selectors="#ju-modal|">
+                       <a class="ju-expander">
                             <span class="table">
                                 <span class="cell">
                                     <i class="fa fa-user"></i>
@@ -293,7 +294,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li  class="ju-expandable sign-up-to-newsletter tablet-only mobile-only" data-exclude-expandable="header.mobile-menu|nav.links">
-                       <a href="#" class="ju-expander">
+                       <a class="ju-expander">
                             <span class="table">
                                 <span class="cell">
                                     <i class="fa fa-envelope-o"></i>
@@ -310,7 +311,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li class="contact tablet-only mobile-only ">
-                       <a href="#">
+                       <a>
                         <span class="table">
                             <span class="cell">
                                    <i class="fa fa-comments tablet-only mobile-only"></i>
@@ -332,7 +333,7 @@ $version = rand(0,10000000000000);
            <div class="max-width-content">
                <ul>
                    <li>
-                       <a href="#">
+                       <a>
                         <span class="table">
                             <span class="cell">
                               18-26
@@ -342,7 +343,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li class="video-series ">
-                       <a href="#">
+                       <a>
                         <span class="table">
                             <span class="cell">
                               Home <i class="fa fa-angle-down"></i>
@@ -359,7 +360,7 @@ $version = rand(0,10000000000000);
                                        <li>
                                            <ul class="child">
                                                <li class="title blue" style="background-image: url('images/menu/videos/third/CINEMA_THE_JEWISH_LENs.jpg')">
-                                                   <a href="#" >
+                                                   <a >
                                                        <span class="title">HABITS OF HAPPINESS</span>
                                                        <span class="sub-title">The Science of Happiness taught by Harvard's most popular professor </span>
                                                    </a>
@@ -374,7 +375,7 @@ $version = rand(0,10000000000000);
                    </li>
 
                    <li>
-                       <a href="#">
+                       <a>
                         <span class="table">
                             <span class="cell">
                               ju max
@@ -383,7 +384,7 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
                    <li>
-                       <a href="#">
+                       <a>
                         <span class="table">
                             <span class="cell">
                              gap your ...

@@ -5,7 +5,7 @@
     transition: all 600ms ease-out;
 }
 .open-modal{position: fixed;width: 100%;top: 0;left: 0;}
-.open-modal .ju-modal{top:0;opacity: 1;}
+.ju-expanded.ju-modal{top:0;opacity: 1;}
 .ju-modal .inner{background-color: #228cd0;width: 100%;height: 100%;/* padding-top: 50px; */      /* box-sizing: border-box; */position: relative;overflow: hidden;}
 .clean-forms-modal article.login .ju-logo,
 article.login .bottom-logos,
@@ -29,7 +29,7 @@ article.login .following-project{display: none}
     transform:rotate(90deg) scale(1.3);
     transition: all 500ms ease-out;
 }
-.open-modal .ju-modal .inner .fa.fa-times{top: 40px;  }
+.ju-modal.ju-expanded .inner .fa.fa-times{top: 40px;  }
 
 @media (max-width: 1002px){
     .open-modal .ju-modal .inner .fa.fa-times{top:30px;right: 30px;}
