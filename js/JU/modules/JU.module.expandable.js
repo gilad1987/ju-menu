@@ -36,6 +36,7 @@
      * - Isolated element - when you want this behavior apply only the element and isolate from other .ju-expandable elements,
      *   ELEMENT.data = '1'
      * - exclude element this behavior ignore from exclude elements when target has dataset 'exclude-expandable'
+     * - if the element has callback dataset all callback will be apply, can be pass string of function or array of callback
      *
      * @example
      * 1. <div class="ju-expandable"></div>
@@ -139,7 +140,12 @@
 
         }
 
-        
+        /**
+         * Remove class .ju-expanded from all elements .ju-expandable.ju-expanded
+         * and add ju-expanded class to current element (e.target|element)
+         * @param e
+         * @param element
+         */
         function expandableOrCollapse(e,element){
 
             var $elem,
