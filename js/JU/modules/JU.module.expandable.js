@@ -2,8 +2,8 @@
  * Created by giladtakoni on 10/17/15.
  */
 
-
-(function(JU){
+//# TODO write documentation with example
+(function(JU,$){
 
     var $document;
 
@@ -98,9 +98,17 @@
                 }
             }
 
-            //#TODO add option to change state only element as clicked
-            $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded).not(exclude).removeClass(CLASS_NAMES.JUexpanded).promise().done(onFinish);
-            $($elementToExclude).toggleClass(CLASS_NAMES.JUexpanded).promise().done(onFinish);
+            //#TODO add option to change state only element as clicked (isolated option)
+            $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded)
+                .not(exclude)
+                .removeClass(CLASS_NAMES.JUexpanded)
+                .promise()
+                .done(onFinish);
+
+            $($elementToExclude)
+                .toggleClass(CLASS_NAMES.JUexpanded)
+                .promise()
+                .done(onFinish);
         }
 
 
@@ -124,7 +132,7 @@
         JU.module.JUExpandable = JUExpandableModule();
 
     }
+
     $document.ready(onDOMReady);
 
-
-})(JU);
+})(JU,$);
