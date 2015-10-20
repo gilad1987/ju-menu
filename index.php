@@ -294,7 +294,7 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li  class="ju-expandable sign-up-to-newsletter tablet-only mobile-only" data-exclude-expandable="header.mobile-menu|nav.links">
+                   <li  class="ju-expandable sign-up-to-newsletter tablet-only mobile-only" data-exclude-expandable="header.mobile-menu|nav.links" >
                        <a class="ju-expander">
                             <span class="table">
                                 <span class="cell">
