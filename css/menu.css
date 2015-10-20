@@ -229,8 +229,8 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.social-and-login ul.social li.search.ju-expanded a{  background-color: #194F9B; color:white}
     nav.social-and-login ul li.search.ju-expanded a:hover{  background: #194f9b;  color: white;  }
     .search-bar .close-btn{right:0;display: none;}
-    .search-bar .input-wrapper{}
-
+    nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .title {font-size: 20px;}
+    nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .sub-title {font-size: 16px; line-height:19px}
 }
 
 @media (max-width: 1002px){

@@ -23,6 +23,7 @@ $version = rand(0,10000000000000);
     <script src="js/JU/modules/JU.module.expandable.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.tabs.js?v=<?php echo $version;?>"></script>
 <!--    <script src="js/JU/modules/JU.module.search.js?v=--><?php //echo $version;?><!--"></script>-->
 
 </head>
