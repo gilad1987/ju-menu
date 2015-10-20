@@ -34,13 +34,13 @@
 
             </div>
 
-            <div id="forms-wrapper" class="forms-wrapper login">
+            <div id="forms-wrapper" class="forms-wrapper login ju-tabset">
 
                 <img src="images/login-shadow.png" class="shadow">
 
                 <div class="inner">
 
-                    <div class="login-form form">
+                    <div class="login-form form ju-tabs-content active">
                         <div class="title">User Login</div>
 
                         <div class="input-wrapper">
@@ -56,13 +56,14 @@
                             <i class="fa fa-lock"></i>
                         </div>
 
-                        <div class="forgot-password">Forgot Password? <a id="show-reset-password">Click here to reset it</a></div>
+                        <div class="forgot-password">Forgot Password? <a id="show-reset-password" class="ju-tabs-button" data-ju-tabs-content-selector=".reset-password-form">Click here to reset it</a></div>
 
                         <button class="send btn orange"><span>Login</span></button>
                     </div>
 
-                    <div class="reset-password-form form">
-                        <i id="show-login" class="fa fa-arrow-left show-login"></i>
+                    <div class="reset-password-form form ju-tabs-content">
+                        <i id="show-login" class="fa fa-arrow-left show-login ju-tabs-button" data-ju-tabs-content-selector=".login-form"></i>
+                        <i id="signupForm" style="display: none" class="fa fa-arrow-left show-login ju-tabs-button" data-ju-tabs-content-selector=".signup-form"></i>
 
                         <div class="title">Request new password</div>
 
@@ -76,7 +77,7 @@
                         <button class="send btn orange"><span>Send</span></button>
                     </div>
 
-                    <div class="signup-form form">
+                    <div class="signup-form form ju-tabs-content">
                         <div class="title">Sign up</div>
 
                         <div class="input-wrapper">

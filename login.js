@@ -15,13 +15,13 @@ $(document).ready(function(){
         $('#login').removeClass('before-show');
     },100);
 
-    $('#show-reset-password').on('click',function(){
-        $('#forms-wrapper').removeClass('login').addClass('reset-password');
-    });
-
-    $('.show-login').on('click',function(){
-        $('#forms-wrapper').removeClass('reset-password').removeClass('signup').addClass('login');
-    });
+    //$('#show-reset-password').on('click',function(){
+    //    $('#forms-wrapper').removeClass('login').addClass('reset-password');
+    //});
+    //
+    //$('.show-login').on('click',function(){
+    //    $('#forms-wrapper').removeClass('reset-password').removeClass('signup').addClass('login');
+    //});
 
     var inputsManager = (function(){
 

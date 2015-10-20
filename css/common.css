@@ -3,6 +3,9 @@
 .ju-expander{}
 .ju-expanded{}
 .ju-modal-button{}
+.ju-tabs-set{}
+.ju-tabs-content{}
+.ju-tabs-button{}
 /** end ju module class **/
 
 a{cursor: pointer}
