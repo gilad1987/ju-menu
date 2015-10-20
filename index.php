@@ -18,9 +18,8 @@ $version = rand(0,10000000000000);
 
     <script src="jquery-1.11.3.min.js"></script>
     <script src="login.js?v=<?php echo $version;?>"></script>
-    <script src="js/JU/JU.setting.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/JU.settingApp.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/JU.js?v=<?php echo $version;?>"></script>
-    <script src="js/JU/JU.Utils.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.expandable.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
