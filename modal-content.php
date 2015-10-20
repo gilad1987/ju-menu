@@ -107,7 +107,7 @@
 
                         <button class="send btn orange"><span>Sign up Now</span></button>
 
-                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password"> Login</a></div>
+                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password" class="ju-tabs-button" data-ju-tabs-content-selector=".login-form"> Login</a></div>
 
                     </div>
                 </div>
