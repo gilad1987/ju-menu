@@ -19,6 +19,64 @@
 
     $document = $(document);
 
+
+    /**
+     * @JUdoc function
+     * @name JUExpandableModule
+     * @module JUExpandableModule
+     * @kind function
+     *
+     * @description
+     * - When call the document bind all click Event and when the target element has .ju-expandable | .ju-expander class
+     * or the parent of element has .ju-expander then .ju-expandable | .ju-expandable(parent) toggle class .ju-expanded
+     * when .ju-expanded you need in css to change state child element
+     * one element can be have 'ju-expanded' class
+     * - when the target element has dataset 'dependencies-selectors' This behavior will apply to the dependencies elements,
+     * the dependencies elements need to separate with | like - nav.links|#mainWrapper ect..
+     * - Isolated element - when you want this behavior apply only the element and isolate from other .ju-expandable elements,
+     *   ELEMENT.data = '1'
+     * - exclude element this behavior ignore from exclude elements when target has dataset 'exclude-expandable'
+     *
+     * @example
+     * 1. <div class="ju-expandable"></div>
+     *
+     * 2. <div class="ju-expandable">
+     *     <div class="ju-expander">
+     *         <i></i>
+     *     </div>
+     *     <div class="content"></div>
+     *    </div>
+     *
+     * 3. <div class="ju-expandable" data-exclude-expandable="header.mobile-menu|nav.links">
+     *     <div class="ju-expander">
+     *         <i></i>
+     *     </div>
+     *     <div class="content"></div>
+     *    </div>
+     *
+     *  4. <div class="ju-expandable" data-dependencies-selectors="nav.links|">
+     *     <div class="ju-expander">
+     *         <i></i>
+     *     </div>
+     *     <div class="content"></div>
+     *    </div>
+     *
+     *  6. <div class="ju-expandable" data-callback="JU.module.JUMenu.onChangeSate">
+     *     <div class="ju-expander">
+     *         <i></i>
+     *     </div>
+     *     <div class="content"></div>
+     *    </div>
+     *
+     *  7. <div class="ju-expandable" data-isolated="1">
+     *     <div class="ju-expander">
+     *         <i></i>
+     *     </div>
+     *     <div class="content"></div>
+     *    </div>
+     *
+     * @returns {{collapse: collapse, expandable: expandable}}
+     */
     function JUExpandableModule(){
 
         var i;
@@ -56,7 +114,13 @@
                 if($targetParentExpander.length==0){
                     return null;
                 }
-                var $parenExpander = $targetParentExpander.closest('.'+CLASS_NAMES.JUexpandable);
+                var $parenExpander;
+                if($targetParentExpander.hasClass('.'+CLASS_NAMES.JUexpandable)){
+                    $parenExpander = $targetParentExpander;
+                }else{
+                    $parenExpander = $targetParentExpander.closest('.'+CLASS_NAMES.JUexpandable);
+                }
+
             }
 
             return (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
@@ -83,6 +147,11 @@
             var hasExcludeElements = elementsToExclude.length>0;
 
             function exclude(index,element){
+
+                var isolatedElement  = element.dataset['isolated'];
+                if(isolatedElement && parseInt(isolatedElement) && (element != $elem[0])){
+                    return true;
+                }
 
                 if(hasExcludeElements){
                     return elementsToAddClass.indexOf(element) != -1 || elementsToExclude.indexOf(element) != -1;
