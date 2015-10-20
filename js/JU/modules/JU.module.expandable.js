@@ -22,62 +22,73 @@
      */
     function JUExpandableModule(){
 
-        function expandableOrCollapse(e,element){
+        var i;
 
+        function getCollectionElements(string){
+            
+            var collection = [];
+            
+            if(typeof string != 'undefined'){
+                var elem;
+
+                i=0;
+                
+                string = string.split('|');
+                
+                for(; i<string.length; i++){
+                    elem = $(string[i]);
+                    if(elem.length!=0){
+                        collection.push(elem[0]);
+                    }
+                }
+            }
+            return collection;
+        }
+
+        function getCurrentElement(e,element){
             var $target = typeof element != 'undefined' ?
-                          $(element) :
-                          typeof e != null && $(e.target);
-            var i=0;
-            var elem;
+                $(element) :
+                typeof e != null && $(e.target);
 
             if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
 
                 var $targetParentExpander = $target.closest('.'+CLASS_NAMES.JUexpander);
 
                 if($targetParentExpander.length==0){
-                    return;
+                    return null;
                 }
                 var $parenExpander = $targetParentExpander.closest('.'+CLASS_NAMES.JUexpandable);
             }
 
-            var $elem = (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
-            var $elementToExclude=[];
-            var dependencies;
+            return (typeof $parenExpander != 'undefined') ? $parenExpander : $target;
 
-            dependencies = $elem.data('dependencies-selectors');
-            $elementToExclude.push($elem[0]);
+        }
 
-            if(typeof dependencies != 'undefined'){
-                dependencies = dependencies.split('|');
-                for(; i<dependencies.length; i++){
-                    elem = $(dependencies[i]);
-                    if(elem.length!=0){
-                        $elementToExclude.push(elem[0]);
-                    }
-                }
-            }
+        
+        function expandableOrCollapse(e,element){
 
+            var $elem,
+                isIsolated;
 
-            var elementToExclude = $elem.data('exclude-expandable');
-            var elementToExcludeArr = [];
-            if(typeof elementToExclude != 'undefined'){
-                elementToExclude = elementToExclude.split('|');
-                i=0;
-                for(; i<elementToExclude.length; i++){
-                    elem = $(elementToExclude[i]);
-                    if(elem.length!=0){
-                        elementToExcludeArr.push(elem[0]);
-                    }
-                }
-            }
+            $elem = getCurrentElement(e,element);
+            if($elem==null) return;
 
-            var hasExcludeElements = elementToExcludeArr.length>0;
+            isIsolated = $elem.data('isolated');
+            isIsolated = (typeof isIsolated != 'undefined' && isIsolated);
+
+            var elementsToAddClass = getCollectionElements( $elem.data('dependencies-selectors') );
+            elementsToAddClass.push($elem[0]);
+            
+            var elementsToExclude = getCollectionElements( $elem.data('exclude-expandable') );
+
+            var hasExcludeElements = elementsToExclude.length>0;
 
             function exclude(index,element){
+
                 if(hasExcludeElements){
-                    return $elementToExclude.indexOf(element) != -1 || elementToExcludeArr.indexOf(element) != -1;
+                    return elementsToAddClass.indexOf(element) != -1 || elementsToExclude.indexOf(element) != -1;
                 }
-                return $elementToExclude.indexOf(element) != -1;
+                return elementsToAddClass.indexOf(element) != -1;
             }
 
             //#TODO add option to run array of callback
@@ -99,13 +110,16 @@
             }
 
             //#TODO add option to change state only element as clicked (isolated option)
-            $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded)
-                .not(exclude)
-                .removeClass(CLASS_NAMES.JUexpanded)
-                .promise()
-                .done(onFinish);
+            if(!isIsolated){
+                $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded)
+                    .not(exclude)
+                    .removeClass(CLASS_NAMES.JUexpanded)
+                    .promise()
+                    .done(onFinish);
+            }
 
-            $($elementToExclude)
+
+            $(elementsToAddClass)
                 .toggleClass(CLASS_NAMES.JUexpanded)
                 .promise()
                 .done(onFinish);

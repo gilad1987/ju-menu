@@ -43,7 +43,7 @@ $version = rand(0,10000000000000);
 <nav class="social-and-login">
     <div class="max-width-content">
         <ul class="login">
-            <li class="ju-expandable test-login" data-dependencies-selectors="#ju-modal|" data-callback="JU.module.JUModal.onChangeSate">
+            <li class="ju-expandable test-login" data-dependencies-selectors="#ju-modal|" data-callback="JU.module.JUModal.onChangeSate" >
                 <a class="ju-expander">
                     <span class="table">
                         <span class="cell">
@@ -54,7 +54,7 @@ $version = rand(0,10000000000000);
                 </a>
 
             </li>
-            <li  class="sign-up-to-newsletter ju-expandable">
+            <li  class="sign-up-to-newsletter ju-expandable" >
                 <a class=" ju-expander">
                     <span class="table">
                         <span class="cell">
