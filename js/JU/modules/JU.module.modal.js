@@ -14,6 +14,9 @@
 
     function JUModalModule(){
 
+        //#TODO alert if $modalWrapper.length == 0
+        var $modalWrapper = $('#ju-modal #content');
+
         function getCurrentElement(e,element){
             var $elem;
 
@@ -21,25 +24,38 @@
                 $elem =  $(element);
             }
 
+
             if(e!=null){
                 var $target = $(e.target);
-                if($target.hasClass('ju-modal')){
+                if($target.hasClass('ju-modal-button')){
                     return $target;
                 }
-                $elem = $target.closest('ju-modal');
+                $elem = $target.closest('.ju-modal-button');
             }
 
-            return $elem.hasClass('ju-modal') ? $elem : null;
+            return $elem.hasClass('ju-modal-button') ? $elem : null;
         }
 
         function innerContent(e,element){
             var $elem;
 
-            console.log('tt');
             $elem = getCurrentElement(e,element);
             if($elem==null)return;
 
-            console.log('t');
+            var contentSelector = $elem.data('modal-content-selector');
+            var $content;
+
+            if(typeof contentSelector == 'undefined'){
+                return;
+            }
+            $content = $(contentSelector);
+            if($content.length==0){
+                return;
+            }
+
+            //#TODO add function after add content
+            $modalWrapper.html('');
+            $modalWrapper.html($content);
 
         }
 

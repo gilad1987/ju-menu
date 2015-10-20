@@ -1,6 +1,9 @@
+/** ju module **/
 .ju-expandable{}
 .ju-expander{}
 .ju-expanded{}
+.ju-modal-button{}
+/** end ju module class **/
 
 a{cursor: pointer}
 input{outline: none}
