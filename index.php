@@ -32,7 +32,7 @@ $version = rand(0,10000000000000);
     <div class="inner">
         <i class="fa fa-times close-modal-area ju-expandable"></i>
         <div id="content" class="wrapper-content">
-            <?php require_once 'modal-content.php'; ?>
+
         </div>
     </div>
 </div>
@@ -283,7 +283,7 @@ $version = rand(0,10000000000000);
                        </a>
                    </li>
 
-                   <li class="tablet-only mobile-only login ju-expandable" data-dependencies-selectors="#ju-modal|">
+                   <li class="tablet-only mobile-only login ju-expandable ju-modal" data-dependencies-selectors="#ju-modal|" data-modal-cotent-id="login">
                        <a class="ju-expander">
                             <span class="table">
                                 <span class="cell">
@@ -414,7 +414,9 @@ $version = rand(0,10000000000000);
 </div>
 
 
-
+<div class="hideElements">
+    <?php require_once 'modal-content.php'; ?>
+</div>
 
 </body>
 </html>

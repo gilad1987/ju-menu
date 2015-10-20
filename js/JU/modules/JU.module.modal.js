@@ -14,7 +14,32 @@
 
     function JUModalModule(){
 
-        function innerContent(e){
+        function getCurrentElement(e,element){
+            var $elem;
+
+            if(typeof element != 'undefined'){
+                $elem =  $(element);
+            }
+
+            if(e!=null){
+                var $target = $(e.target);
+                if($target.hasClass('ju-modal')){
+                    return $target;
+                }
+                $elem = $target.closest('ju-modal');
+            }
+
+            return $elem.hasClass('ju-modal') ? $elem : null;
+        }
+
+        function innerContent(e,element){
+            var $elem;
+
+            console.log('tt');
+            $elem = getCurrentElement(e,element);
+            if($elem==null)return;
+
+            console.log('t');
 
         }
 

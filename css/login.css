@@ -31,7 +31,7 @@ article.login .ju-logo{  max-width: 660px;  margin: 25px  auto;  /* height: 86px
 article.login .ju-logo:hover .azure,
 article.login .ju-logo:hover .blue,
 article.login .ju-logo  span{color: white; }
-article.login .ju-logo  span{font-size: 45px;height: 100%;}
+article.login .ju-logo  span{font-size: 45px;}
 article.login .ju-logo svg g polygon,
 article.login .ju-logo svg g path{fill: #fff}
 article.login .ju-logo svg{  height: 86px;  }
