@@ -13,6 +13,10 @@
         JUexpanded:"ju-expanded"
     };
 
+    var DATA_SET = {
+
+    };
+
     $document = $(document);
 
     /**
@@ -109,7 +113,6 @@
                 }
             }
 
-            //#TODO add option to change state only element as clicked (isolated option)
             if(!isIsolated){
                 $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded)
                     .not(exclude)
