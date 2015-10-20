@@ -19,11 +19,6 @@
 
     $document = $(document);
 
-    /**
-     *
-     * @returns {{collapse: collapse, expandable: expandable}}
-     * @constructor
-     */
     function JUExpandableModule(){
 
         var i;
