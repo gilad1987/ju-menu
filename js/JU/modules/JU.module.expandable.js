@@ -81,6 +81,11 @@
 
         var i;
 
+        /**
+         * Parse string to selectors and return array of dom element (not jQuery)
+         * @param string
+         * @returns {Array}
+         */
         function getCollectionElements(string){
             
             var collection = [];
@@ -102,6 +107,13 @@
             return collection;
         }
 
+        /**
+         * Find the element to apply the behavior of module
+         * can call to function and pass in second argument DOM element the element need to .ju-expandable family
+         * @param e
+         * @param element
+         * @returns {*}
+         */
         function getCurrentElement(e,element){
             var $target = typeof element != 'undefined' ?
                 $(element) :
