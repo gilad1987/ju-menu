@@ -6,7 +6,7 @@
 
     var $body;
 
-    function JU(){
+    function JU(JUsettingApp){
 
         var _this;
 
@@ -20,6 +20,6 @@
 
     JU.prototype.module = {};
 
-    window.JU = new JU();
+    window.JU = new JU(JUsettingApp);
 
 })(window);
