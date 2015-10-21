@@ -26,7 +26,7 @@ nav.links .ju-logo {  float: left;  height: 100%;  position: relative;  overflow
 .sticky .scroll-top{bottom:40px}
 .scroll-top:hover{height: 60px;}
 
-nav ul li{display: inline-block;height: 100%;}
+nav ul li{display: inline-block;height: 100%;float: left;}
 nav ul li a{width:100%; height:100%;display: inline-block;box-sizing: border-box;text-decoration: none;}
 nav.social-and-login{background: #2a8ecd;height: 42px; font-size:15px;position: relative;z-index: 9;}
 
@@ -81,9 +81,16 @@ ul.has-sub-menu a:only-child{}
 nav.links ul li.donate a{  color: #EE7624;  }
 .main-menu-ul{float:right}
 
-nav.links ul li{border-right: 1px solid #c2c2c2;/* float: right; */}
+nav.links ul li{border-right: 1px solid #c2c2c2;/* float: right; *//* position: relative; */}
 nav.links ul li.donate{border:none}
-nav.links ul li .sub-menu{  position: absolute;  right: 0;  left: 0;  background-color: #f3f4f5;  height: 0px;  overflow: hidden;
+nav.links ul li .sub-menu{
+    position: absolute;
+    right: 0;
+    left: 0;
+    /* top: 68px; */
+    background-color: #f3f4f5;
+    height: 0px;
+    overflow: hidden;
     -webkit-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
     -moz-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
     -o-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
@@ -118,7 +125,10 @@ nav.links ul li .sub-menu ul li{  border: none;  float: none;  display: inline-b
 nav.links ul li .sub-menu ul.child li{float:none;/* display: block; *//* border: none; */height: auto;/* margin-bottom: 8px; */}
 nav.links ul li.films .sub-menu ul.child li:last-child a{border:none}
 nav.links ul li .sub-menu ul.child li:first-child a{border:none;            }
-.third-menu{display:none}
+.third-menu{display:none;position:relative}
+nav.links .third-menu ul li .sub-menu{
+    /* top: 50px; */
+}
 nav.links .third-menu ul li.video-series .sub-menu ul.child .title a{  height: 100%;  display: inline-block;  padding: 0 10px;  color: white;padding-top: 14%;text-align: center;background: rgba(0, 0, 0, 0.25);}
 nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .title{  font-size: 26px;  font-weight: bold;  }
 nav.links .third-menu ul li.video-series .sub-menu ul.child .title a .sub-title{  font-size: 16px;  }
@@ -170,7 +180,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .menu-open .mask, .sub-menu-open .mask{display: none}
     .sign-up-to-newsletter .wrapper {  margin-right: -1px;  margin-left: -1px;  border: 1px solid #9A9A9A;  border-top: 0;  }
     nav.links ul li .sub-menu{  margin-top: -2px; }
-    .main-menu-ul > li{ margin-left: -3px;}
+    .main-menu-ul > li{ /* margin-left: -3px; */}
     nav.links ul li .sub-menu ul.parent{width:25%;box-sizing: border-box;}
     nav.links ul li.films .sub-menu ul.parent:first-child{width: 20%;padding: 0px 25px;border: none;}
     nav.links .third-menu ul li{float:left}
