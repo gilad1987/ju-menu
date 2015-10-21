@@ -11,9 +11,12 @@
 
     $document = $(document);
 
+    //#TODO add ju class to input
     function JUinputModule(){
 
-
+        var CSS_CLASS_NAME = {
+            'ju_input':'ju-input'
+        };
 
         var inputsManager = (function(){
 
@@ -56,8 +59,8 @@
                             return;
                         }
 
-                        $wrapper.find('input').val('').trigger('change');
-                        $wrapper.find('textarea').val('').trigger('change');
+                        $wrapper.find('input'+'.'+CSS_CLASS_NAME.ju_input).val('').trigger('change');
+                        $wrapper.find('textarea'+'.'+CSS_CLASS_NAME.ju_input).val('').trigger('change');
 
                         return;
                     }
@@ -80,10 +83,13 @@
                 return;
             }
             var elem = e.target;
+            if(!$(elem).hasClass(CSS_CLASS_NAME.ju_input)){
+                return;
+            }
+
             inputsManager.setIsDirty.apply(elem);
         }
 
-        //$('input').on('keyup keydown input change',inputsManager.setIsDirty);
         $document.on('click keyup keydown input change',onClick);
 
         return{

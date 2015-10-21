@@ -44,13 +44,13 @@
                         <div class="title">User Login</div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="username" autocomplete="off">
+                            <input type="text" id="username" autocomplete="off" class="ju-input">
                             <label for="username">Username or Email</label>
                             <i class="fa fa-user"></i>
                         </div>
 
                         <div class="input-wrapper ">
-                            <input type="password" id="password" autocomplete="off">
+                            <input type="password" id="password" autocomplete="off" class="ju-input">
                             <label for="password">Password</label>
 
                             <i class="fa fa-lock"></i>
@@ -76,7 +76,7 @@
                         <div class="title">Request new password</div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="username-reset-password" name="username" autocomplete="off">
+                            <input type="text" id="username-reset-password" name="username" autocomplete="off" class="ju-input">
                             <label for="username">Username or Email</label>
                             <i class="fa fa-user"></i>
                         </div>
@@ -89,26 +89,26 @@
                         <div class="title">Sign up</div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="first_name" name="first_name" autocomplete="off">
+                            <input type="text" id="first_name" name="first_name" autocomplete="off" class="ju-input">
                             <label for="first_name">First name</label>
                             <i class="fa fa-user"></i>
                         </div>
 
                         <div class="input-wrapper ">
-                            <input type="password" id="last_name" name="last_name" autocomplete="off">
+                            <input type="password" id="last_name" name="last_name" autocomplete="off" class="ju-input">
                             <label for="last_name">Last name</label>
 
                             <i class="fa fa-user"></i>
                         </div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="sign_up_email" name="sign_up_email" autocomplete="off">
+                            <input type="text" id="sign_up_email" name="sign_up_email" autocomplete="off" class="ju-input">
                             <label for="sign_up_email">Email</label>
                             <i class="fa fa-envelope"></i>
                         </div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="sign_up_password" name="sign_up_password" autocomplete="off">
+                            <input type="text" id="sign_up_password" name="sign_up_password" autocomplete="off" class="ju-input">
                             <label for="sign_up_password">Password</label>
                             <i class="fa fa-lock"></i>
                         </div>
