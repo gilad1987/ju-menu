@@ -49,7 +49,7 @@
             return $elem;
         }
 
-        function toggeleTab(e,element){
+        function toggleTab(e,element){
 
             var $elem;
 
@@ -78,10 +78,10 @@
         }
 
         function open(element){
-            toggeleTab(null,element);
+            toggleTab(null,element);
         }
 
-        $document.on('click',toggeleTab);
+        $document.on('click',toggleTab);
 
         return{
             open:open

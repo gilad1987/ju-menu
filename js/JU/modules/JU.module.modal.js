@@ -15,7 +15,8 @@
     function JUModalModule(){
 
         //#TODO alert if $modalWrapper.length == 0
-        var $modalWrapper = $('#ju-modal #content');
+        var $modalWrapper = $('#ju-modal #content'),
+            modalContentCache = {};
 
         function getCurrentElement(e,element){
             var $elem;
@@ -49,6 +50,10 @@
                 return;
             }
             $content = $(contentSelector);
+            if(typeof modalContentCache[contentSelector] == 'undefined'){
+                modalContentCache[contentSelector] = $content;
+            }
+            $content = modalContentCache[contentSelector];
             if($content.length==0){
                 return;
             }
