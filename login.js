@@ -5,9 +5,9 @@
 
 $(document).ready(function(){
 
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (100000 - 100 + 1)) + 100;
-    }
+    //function getRandomInt(min, max) {
+    //    return Math.floor(Math.random() * (100000 - 100 + 1)) + 100;
+    //}
 
     /* --------------------- login ------------------*/
 
