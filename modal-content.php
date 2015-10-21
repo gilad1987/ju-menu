@@ -1,4 +1,4 @@
-<article id="login" class="login before-show content">
+<article id="login" class="login  content"><!-- .before-show -->
     <div class="table">
         <div class="cell close-modal-area">
 

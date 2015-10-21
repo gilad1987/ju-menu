@@ -17,13 +17,16 @@ $version = rand(0,10000000000000);
     <link rel="stylesheet" type="text/css" href="css/modal.css?v=<?php echo $version;?>">
 
     <script src="jquery-1.11.3.min.js"></script>
-    <script src="login.js?v=<?php echo $version;?>"></script>
+
     <script src="js/JU/JU.settingApp.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/JU.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/JU.Utils.js?v=<?php echo $version;?>"></script>
+
     <script src="js/JU/modules/JU.module.expandable.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.tabs.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.input.js?v=<?php echo $version;?>"></script>
 <!--    <script src="js/JU/modules/JU.module.search.js?v=--><?php //echo $version;?><!--"></script>-->
 
 </head>
@@ -218,8 +221,6 @@ $version = rand(0,10000000000000);
                        </a>
 
                        <div class="sub-menu" >
-
-
                            <div class="parent-ul-wrapper">
                                <?php require_once 'films-menu.php'; ?>
                            </div>

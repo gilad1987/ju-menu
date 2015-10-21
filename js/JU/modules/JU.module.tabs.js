@@ -12,19 +12,22 @@
 
     $document = $(document);
 
-    var JU_TAB_CLASS={
-      JUtabsSet:'ju-tabset',
-      JUtabsContent:'ju-tabs-content',
-      JUtabsButton:'ju-tabs-button'
-    };
 
-    var JU_TAB_DATASET={
-        JUtabsContentSelector:'ju-tabs-content-selector',
-        JUtabsButtonSelector:'ju-tabs-button-selector'
-    };
 
     //#TODO add reset functionality if no active tab no selected
     function JUtabsModule(){
+
+        var JU_TAB_CLASS={
+            JUtabsSet:'ju-tabset',
+            JUtabsContent:'ju-tabs-content',
+            JUtabsButton:'ju-tabs-button'
+        };
+
+        var JU_TAB_DATASET={
+            JUtabsContentSelector:'ju-tabs-content-selector',
+            JUtabsButtonSelector:'ju-tabs-button-selector'
+        };
+
 
         function getCurrentElement(e,element){
 
