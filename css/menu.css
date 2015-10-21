@@ -3,7 +3,7 @@
 body{margin: 0; padding: 0; /* background: #E6E6E6; *//* min-height: 3000px; *//* font-family: 'Lato'; */}
 ul{margin: 0; color: white;padding: 0;}
 .btn{cursor: pointer}
-a span{display: inline-block}
+a span{display: inline-block;webkit-user-select: none;  /* Chrome all / Safari all */    -moz-user-select: none;     /* Firefox all */    -ms-user-select: none;      /* IE 10+ */    user-select: none;          /* Likely future */}
 a{color: white;letter-spacing: .5px;}
 .clear{clear:both}
 
@@ -81,7 +81,7 @@ ul.has-sub-menu a:only-child{}
 nav.links ul li.donate a{  color: #EE7624;  }
 .main-menu-ul{float:right}
 
-nav.links ul li{border-right: 1px solid #c2c2c2;/* float: right; *//* position: relative; */}
+nav.links ul li{border-right: 1px solid #c2c2c2;}
 nav.links ul li.donate{border:none}
 nav.links ul li .sub-menu{
     position: absolute;
@@ -96,6 +96,12 @@ nav.links ul li .sub-menu{
     -o-transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
     transition: all .5s cubic-bezier(0, 0, 0.49, 1.06) 200ms;
 }
+.main-menu-ul > li{ -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
 
 nav.links ul li.films{}
 nav.links ul li.films li a{padding:0}
@@ -245,7 +251,15 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
 
 @media (max-width: 1002px){
     .social-and-login.mobile-only{   display: block !important;}
-    nav.links ul li .sub-menu ul.child li:first-child a{line-height: 60px;      min-height: 60px;      height: 60px;}
+    nav.links ul li .sub-menu ul.child li:first-child a{line-height: 60px;      /* min-height: 60px; */      height: 60px;}
+    nav.links  ul li  .sub-menu .films-gallery ul.child li a{line-height: initial; color: #585757;   font-weight: 400;}
+    nav.links  ul li  .sub-menu .parent-ul-wrapper .short-films{padding-bottom: 30px;}
+    nav.links  ul li  .sub-menu .parent-ul-wrapper .short-films  ul.child li:not(:first-child) a{    padding: 5px 0;margin: 0 27px;border-bottom: 1px solid #D6D4D4;line-height: 27px;/* color: #6F6F6F; */font-size: 15px;}
+    nav.links  ul li  .sub-menu .parent-ul-wrapper .short-films  ul.child li:last-child a{   border-bottom:0;}
+    nav.links  ul li  .sub-menu .films-gallery ul.child li  a span{
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
     i.icon.donate{display: inline-block;position: relative;left: -5px;}
     header.mobile-menu .donate-btn{background-color: #eb7225;float: right;padding: 0 30px;height: 100%;line-height: 67px;text-decoration: none;text-transform: uppercase;}
     nav.links ul li .sub-menu a{  color: #585757;  margin: 0 10px;  padding: 0;  width: auto;  display: block;  border-bottom: 1px solid #DEDCDC; /* margin-left: 20px; */  line-height: 60px;}
@@ -254,19 +268,20 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav ul{overflow-y: auto;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li,
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{height: auto;}
-    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{padding: 0 27px;border-bottom: 0;}
+    nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a{/* padding: 0 27px; */border-bottom: 0;}
     nav.links ul li.films .sub-menu .parent-ul-wrapper ul .child li a img{max-width:100%;display: block;}
 
-    nav.links ul li .sub-menu ul.child li{background-color:#fff;line-height: 35px;min-height: 35px;height: 35px;}
+    nav.links ul li .sub-menu ul.child li{line-height: 35px;min-height: 35px;height: 35px;}
     nav.links ul li .sub-menu ul.child li a{  line-height: 35px;  min-height: 35px;  height: 35px;  margin: 0;  padding: 0 27px;  }
     nav.links ul li .sub-menu ul.child li:first-child{  /* background-color: #DEDCDC; */  color: white;  line-height: 60px;height: 60px;}
 
     nav.links ul li .sub-menu ul.parent:first-child .child li:last-child{  box-sizing: border-box;  line-height: 20px;  }
     .parent-ul-wrapper ul:first-child{}
     nav.links ul li .sub-menu ul.parent{  display: block;  float: none;  padding: 0;  border: none;  }
+    nav.links ul li.films .sub-menu ul.parent:first-child .child li:last-child{padding: 0 27px 20px;}
     nav.links ul li.video-course .search-place{display:none}
     .max-width-content{/* overflow-y: auto; */}
-    nav.links ul li .sub-menu{/* display: block; */position: relative;/* height: auto; */}
+    nav.links ul li .sub-menu{/* display: block; */position: relative;/* height: auto; */background-color: white;}
     nav.links ul li.ju-expanded .sub-menu{height: auto;}
     #page{padding-top: 67px;-ms-transform: translateX(.01px);      -moz-transform: translateX(.01px);      -webkit-transform: translateX(.01px);      -o-transform: translateX(.01px);      transform: translateX(.01px);      -moz-transition: -ms-transform .3s;      -webkit-transition: -ms-transform .3s;      -o-transition: -ms-transform .3s;      transition: -ms-transform .3s;      -moz-transition: -webkit-transform .3s;      -webkit-transition: -webkit-transform .3s;      -o-transition: -webkit-transform .3s;      transition: -webkit-transform .3s;      -moz-transition: transform .3s;      -webkit-transition: transform .3s;      -o-transition: transform .3s;      transition: transform .3s;}
     .menu-open #page{
@@ -307,7 +322,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     .ju-logo .text .slogan{display:none}
     .ju-logo svg{height:35px}
     nav.links .ju-logo{height: 47px;width: 100%;padding-left: 10px;box-sizing: border-box;border-bottom: 1px solid #C1C0C0;border-right: 1px solid #C1C0C0;float: none;position: fixed;top: 0;background-color: white;display: none;}
-    nav.links ul li{  width: 100%;  /* background-color: #5D6E80; */  border-right: none;  /* height: 60px; */  display: block;border-bottom: 1px solid #c2c2c2;min-height: 60px;}
+    nav.links ul li{  width: 100%;    border-right: none;    display: block;border-bottom: 1px solid #c2c2c2;min-height: 60px;}
     nav.links ul li.ju-expanded >  a{  background-color: #EEE;  }
     nav.links ul li.films{  background-color: #EEE;  }
 

@@ -56,14 +56,22 @@
                             <i class="fa fa-lock"></i>
                         </div>
 
-                        <div class="forgot-password">Forgot Password? <a id="show-reset-password" class="ju-tabs-button" data-ju-tabs-content-selector=".reset-password-form">Click here to reset it</a></div>
+                        <div class="forgot-password">Forgot Password? <a id="show-reset-password" class="ju-tabs-button"
+                                                                         data-ju-tabs-content-selector=".reset-password-form"
+                                                                         data-ju-tabs-state="reset-password">Click here to reset it</a>
+                        </div>
 
                         <button class="send btn orange"><span>Login</span></button>
                     </div>
 
                     <div class="reset-password-form form ju-tabs-content">
-                        <i id="show-login" class="fa fa-arrow-left show-login ju-tabs-button" data-ju-tabs-content-selector=".login-form"></i>
-                        <i id="signupForm" style="display: none" class="fa fa-arrow-left show-login ju-tabs-button" data-ju-tabs-content-selector=".signup-form"></i>
+                        <i id="show-login" class="fa fa-arrow-left show-login ju-tabs-button"
+                           data-ju-tabs-content-selector=".login-form"
+                           data-ju-tabs-state="login"></i>
+
+                        <i id="signupForm" style="display: none" class="fa fa-arrow-left show-login ju-tabs-button"
+                           data-ju-tabs-content-selector=".signup-form"
+                           data-ju-tabs-state="signup"></i>
 
                         <div class="title">Request new password</div>
 
@@ -107,7 +115,9 @@
 
                         <button class="send btn orange"><span>Sign up Now</span></button>
 
-                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password" class="ju-tabs-button" data-ju-tabs-content-selector=".login-form"> Login</a></div>
+                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password" class="ju-tabs-button"
+                                                                                            data-ju-tabs-content-selector=".login-form"
+                                                                                            data-ju-tabs-state="login"> Login</a></div>
 
                     </div>
                 </div>

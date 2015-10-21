@@ -23,6 +23,7 @@
         JUtabsButtonSelector:'ju-tabs-button-selector'
     };
 
+    //#TODO add reset functionality if no active tab no selected
     function JUtabsModule(){
 
         function getCurrentElement(e,element){
@@ -70,21 +71,46 @@
                 return;
             }
 
-            $parentSet.find('.'+JU_TAB_CLASS.JUtabsButton).removeClass('active');
-            $parentSet.find('.'+JU_TAB_CLASS.JUtabsContent).removeClass('active');
+            //#TODO add to .tabset class name of state
+            //$TODO add callback open/close state
+            $parentSet.find('.'+JU_TAB_CLASS.JUtabsButton+'.active').removeClass('active');
+            $parentSet.find('.'+JU_TAB_CLASS.JUtabsContent+'.active').removeClass('active');
 
+            var currentState = $parentSet.data('ju-tabs-state');
+            var newState =  $elem.data('ju-tabs-state');
+            $parentSet
+                .removeClass(currentState)
+                .addClass(newState)
+                .data('ju-tabs-state',newState);
             $elem.addClass('active');
             $content.addClass('active');
         }
 
+        //var cache = {};
+        //cache.tabs = {
+        //    'key_of_id':{
+        //        currentState:'',
+        //        elem:{}, //jquery
+        //        content:{},//jquery
+        //        buttons:[]
+        //    }
+        //
+        //};
+
+        //#TODO add option to pass string as selector (selector|object)
         function open(element){
             toggleTab(null,element);
+        }
+
+        function reset(selector){
+
         }
 
         $document.on('click',toggleTab);
 
         return{
-            open:open
+            open:open,
+            reset:reset
         }
     }
 

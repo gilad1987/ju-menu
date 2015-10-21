@@ -54,6 +54,15 @@ i.icon.donate{background: url('../images/icons/navigationDonate.png'); width:30p
 .sticky .ju-logo .text{}
 .ju-logo .text .slogan{  color: #919191;  width: 159px;  font-size: 10px;  display: block;  top: 41px;  position: absolute;  -webkit-transition: all 200ms ease-out;            -moz-transition: all 200ms ease-out;           -o-transition: all 200ms ease-out;            transition: all 200ms ease-out;}
 
+.ju-logo {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .ju-logo .text .company-name{font-size: 28px;  -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;padding-top: 0px;}
 .ju-logo .text{height:100%}
 .ju-logo svg{  height: 46px;  float: left;  -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;}
