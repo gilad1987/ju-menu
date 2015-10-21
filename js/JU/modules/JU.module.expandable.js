@@ -23,7 +23,7 @@
     /**
      * @JUdoc function
      * @name JUExpandableModule
-     * @module JUExpandableModule
+     * @module JUExpandableModule write by Gilad Takoni
      * @kind function
      *
      * @description
