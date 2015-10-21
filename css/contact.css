@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,100italic,900,900italic);
+
+body{font-family: 'Lato';}
+.page.sub-title{  padding-bottom: 30px;  border-bottom: 1px solid #e5e5e5;  font-weight: 400;  margin: 0;}
+
+.contact-page{}
+.contact-page h1{  font-size: 73px;  margin: 30px 0 30px;  }
+.contact-page .form{  float: left;  width: 70%;  box-sizing: border-box;padding-right: 55px;}
+.contact-page .details-contact{  overflow: hidden;  }
+.contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  }
+.contact-page .form .title, .contact-page .details-contact .title{  margin: 25px 0;  font-size: 18px;  text-transform: uppercase;  font-weight: 700;  }
+.contact-page .form .form-wrapper{  background: #E5E5E5;  padding: 20px 10px 35px;overflow: hidden;}
+.contact-page .form .form-wrapper .ju-input-wrapper{margin: 0;float: left;width: 50%;padding: 10px 20px 0;box-sizing: border-box;}
+.contact-page .form .form-wrapper .ju-input-wrapper input{display: block;width: 100%;padding: 0;margin: 0;border: 1px solid #D2D2D2;height: 30px;}
+.contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;}
+.contact-page .form .form-wrapper .ju-input-wrapper.textarea{margin: 0;display: block;line-height: 29px;width: 100%;float: none;overflow: hidden;}
+.contact-page .form .form-wrapper .ju-input-wrapper textarea{display: block;width: 100%;height: 100px;margin: 0;padding: 0;border: 1px solid #D2D2D2;}
+.contact-page .note{  font-size: 18px;  margin: 30px 0;  overflow: hidden;  }
