@@ -23,44 +23,44 @@ $(document).ready(function(){
     //    $('#forms-wrapper').removeClass('reset-password').removeClass('signup').addClass('login');
     //});
 
-    var inputsManager = (function(){
-
-        var $this,
-            id,
-            isDirty,
-            inputsMap={};
-
-
-            return {
-                setIsDirty : function(){
-                    $this = $(this);
-                    isDirty = $this.val() != '';
-                    id = $this[0]['id'];
-
-                    if(id==''){
-                        id='id_'+getRandomInt();
-                    }
-
-                    if(typeof inputsMap[id] == 'undefined'){
-                        $this.attr('id',id);
-                        inputsMap[id] = {};
-                        inputsMap[id]['parent'] = $this.closest('.input-wrapper');
-                        inputsMap[id]['input'] = $this;
-                    }
-
-                    inputsMap[id].parent.toggleClass('dirty',isDirty);
-                },
-                reset:function (){
-                    var key;
-                    for(key in inputsMap){
-                        inputsMap[key].input.val('').trigger('change');
-                    }
-                }
-            };
-
-    })();
-
-    $('input').on('keyup keydown input change',inputsManager.setIsDirty);
+    //var inputsManager = (function(){
+    //
+    //    var $this,
+    //        id,
+    //        isDirty,
+    //        inputsMap={};
+    //
+    //
+    //        return {
+    //            setIsDirty : function(){
+    //                $this = $(this);
+    //                isDirty = $this.val() != '';
+    //                id = $this[0]['id'];
+    //
+    //                if(id==''){
+    //                    id='id_'+getRandomInt();
+    //                }
+    //
+    //                if(typeof inputsMap[id] == 'undefined'){
+    //                    $this.attr('id',id);
+    //                    inputsMap[id] = {};
+    //                    inputsMap[id]['parent'] = $this.closest('.input-wrapper');
+    //                    inputsMap[id]['input'] = $this;
+    //                }
+    //
+    //                inputsMap[id].parent.toggleClass('dirty',isDirty);
+    //            },
+    //            reset:function (){
+    //                var key;
+    //                for(key in inputsMap){
+    //                    inputsMap[key].input.val('').trigger('change');
+    //                }
+    //            }
+    //        };
+    //
+    //})();
+    //
+    //$('input').on('keyup keydown input change',inputsManager.setIsDirty);
 
     /* --------------------- end login ------------------*/
 

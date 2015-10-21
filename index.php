@@ -17,6 +17,7 @@ $version = rand(0,10000000000000);
     <link rel="stylesheet" type="text/css" href="css/modal.css?v=<?php echo $version;?>">
 
     <script src="jquery-1.11.3.min.js"></script>
+    <script src="login.js"></script>
 
     <script src="js/JU/JU.settingApp.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/JU.js?v=<?php echo $version;?>"></script>

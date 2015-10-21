@@ -5,18 +5,37 @@ $version = rand(0,10000000000000);
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>jerusalem U - Login</title>
+    <title>jerusalem U - Login </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/common.css?v=<?php echo $version;?>">
+
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css?v=<?php echo $version;?>">
+    <link rel="stylesheet" type="text/css" href="css/modal.css?v=<?php echo $version;?>">
     <link rel="stylesheet" type="text/css" href="css/login.css?v=<?php echo $version;?>">
+
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="login.js"></script>
+
+    <script src="js/JU/JU.settingApp.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/JU.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/JU.Utils.js?v=<?php echo $version;?>"></script>
+
+    <script src="js/JU/modules/JU.module.expandable.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.tabs.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.input.js?v=<?php echo $version;?>"></script>
+    <!--    <script src="js/JU/modules/JU.module.search.js?v=--><?php //echo $version;?><!--"></script>-->
 </head>
 
 <body>
 
-<article id="login" class="login before-show">
+<article id="login" class="login  content before-show"><!-- .before-show -->
     <div class="table">
-        <div class="cell">
+        <div class="cell close-modal-area">
 
             <div class="ju-logo">
                 <div class="table">
@@ -50,40 +69,49 @@ $version = rand(0,10000000000000);
 
             </div>
 
-            <div id="forms-wrapper" class="forms-wrapper login">
+            <div id="forms-wrapper" class="forms-wrapper login ju-tabset">
 
                 <img src="images/login-shadow.png" class="shadow">
 
                 <div class="inner">
 
-                    <div class="login-form form">
+                    <div class="login-form form ju-tabs-content active">
                         <div class="title">User Login</div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="username" autocomplete="off">
+                            <input type="text" id="username" autocomplete="off" class="ju-input">
                             <label for="username">Username or Email</label>
                             <i class="fa fa-user"></i>
                         </div>
 
                         <div class="input-wrapper ">
-                            <input type="password" id="password" autocomplete="off">
+                            <input type="password" id="password" autocomplete="off" class="ju-input">
                             <label for="password">Password</label>
 
                             <i class="fa fa-lock"></i>
                         </div>
 
-                        <div class="forgot-password">Forgot Password? <a id="show-reset-password">Click here to reset it</a></div>
+                        <div class="forgot-password">Forgot Password? <a id="show-reset-password" class="ju-tabs-button"
+                                                                         data-ju-tabs-content-selector=".reset-password-form"
+                                                                         data-ju-tabs-state="reset-password">Click here to reset it</a>
+                        </div>
 
                         <button class="send btn orange"><span>Login</span></button>
                     </div>
 
-                    <div class="reset-password-form form">
-                        <i id="show-login" class="fa fa-arrow-left show-login"></i>
+                    <div class="reset-password-form form ju-tabs-content">
+                        <i id="show-login" class="fa fa-arrow-left show-login ju-tabs-button"
+                           data-ju-tabs-content-selector=".login-form"
+                           data-ju-tabs-state="login"></i>
+
+                        <i id="signupForm" style="display: none" class="fa fa-arrow-left show-login ju-tabs-button"
+                           data-ju-tabs-content-selector=".signup-form"
+                           data-ju-tabs-state="signup"></i>
 
                         <div class="title">Request new password</div>
 
                         <div class="input-wrapper">
-                            <input type="text" id="username-reset-password" name="username" autocomplete="off">
+                            <input type="text" id="username-reset-password" name="username" autocomplete="off" class="ju-input">
                             <label for="username">Username or Email</label>
                             <i class="fa fa-user"></i>
                         </div>
@@ -92,6 +120,41 @@ $version = rand(0,10000000000000);
                         <button class="send btn orange"><span>Send</span></button>
                     </div>
 
+                    <div class="signup-form form ju-tabs-content">
+                        <div class="title">Sign up</div>
+
+                        <div class="input-wrapper">
+                            <input type="text" id="first_name" name="first_name" autocomplete="off" class="ju-input">
+                            <label for="first_name">First name</label>
+                            <i class="fa fa-user"></i>
+                        </div>
+
+                        <div class="input-wrapper ">
+                            <input type="password" id="last_name" name="last_name" autocomplete="off" class="ju-input">
+                            <label for="last_name">Last name</label>
+
+                            <i class="fa fa-user"></i>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input type="text" id="sign_up_email" name="sign_up_email" autocomplete="off" class="ju-input">
+                            <label for="sign_up_email">Email</label>
+                            <i class="fa fa-envelope"></i>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <input type="text" id="sign_up_password" name="sign_up_password" autocomplete="off" class="ju-input">
+                            <label for="sign_up_password">Password</label>
+                            <i class="fa fa-lock"></i>
+                        </div>
+
+                        <button class="send btn orange"><span>Sign up Now</span></button>
+
+                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password" class="ju-tabs-button"
+                                                                                            data-ju-tabs-content-selector=".login-form"
+                                                                                            data-ju-tabs-state="login"> Login</a></div>
+
+                    </div>
                 </div>
             </div>
 

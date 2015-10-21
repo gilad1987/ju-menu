@@ -44,6 +44,7 @@ article.login .following-project {
     -moz-transition: all 900ms ease-out 500ms;
     -o-transition: all 900ms ease-out 500ms;
     transition: all 900ms ease-out 500ms;
+    display: block;
 }
 article.login.before-show .ju-logo,
 article.login.before-show .bottom-logos,
