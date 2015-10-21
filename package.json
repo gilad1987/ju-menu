@@ -1,0 +1,23 @@
+{
+  "name": "ju-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-1.11.3.min.js",
+  "dependencies": {
+    "bower": "^1.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gilad1987/ju-menu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilad1987/ju-menu/issues"
+  },
+  "homepage": "https://github.com/gilad1987/ju-menu"
+}
