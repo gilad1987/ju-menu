@@ -27,6 +27,10 @@
 
 
             return {
+                /**
+                 * if his value of context (this) element not empty will add to parent with 'input-wrapper' class
+                 * 'dirty' class
+                 */
                 setIsDirty : function(){
                     $this = $(this);
                     isDirty = $this.val() != '';
@@ -51,6 +55,11 @@
 
                 },
 
+                /**
+                 * Clean all elements that have 'ju-input' class
+                 * if pass wrapper it is clean all only child have 'ju-input' class
+                 * @param wrapper
+                 */
                 reset:function (wrapper){
 
                     if(typeof wrapper == 'object'){
