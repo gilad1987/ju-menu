@@ -77,7 +77,7 @@ $version = rand(0,10000000000000);
             </li>
         </ul>
 
-        <?php require_once 'social-buttons.php'?>
+        <?php require_once 'tpl/social-buttons.php' ?>
     </div>
 </nav>
 
@@ -223,7 +223,7 @@ $version = rand(0,10000000000000);
 
                        <div class="sub-menu" >
                            <div class="parent-ul-wrapper">
-                               <?php require_once 'films-menu.php'; ?>
+                               <?php require_once 'tpl/films-menu.php'; ?>
                            </div>
                        </div>
                    </li>
@@ -327,7 +327,7 @@ $version = rand(0,10000000000000);
                </ul>
 
                <div class="social-and-login mobile-only">
-                   <?php require 'social-buttons.php'?>
+                   <?php require 'tpl/social-buttons.php' ?>
                </div>
 
            </div>
@@ -418,7 +418,7 @@ $version = rand(0,10000000000000);
 
 
 <div class="hideElements">
-    <?php require_once 'modal-content.php'; ?>
+    <?php require_once 'tpl/modal-content.php'; ?>
 </div>
 
 </body>
