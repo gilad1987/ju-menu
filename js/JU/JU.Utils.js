@@ -6,6 +6,8 @@
 (function(window){
 
 
+    var test;
+
     function Utils(){
 
         var _this;
