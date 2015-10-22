@@ -14,7 +14,9 @@ $version = rand(0,10000000000000);
 
     <link rel="stylesheet" type="text/css" href="css/menu.css?v=<?php echo $version;?>">
     <link rel="stylesheet" type="text/css" href="css/modal.css?v=<?php echo $version;?>">
+    <link rel="stylesheet" type="text/css" href="css/component.css?v=<?php echo $version;?>">
     <link rel="stylesheet" type="text/css" href="css/contact.css?v=<?php echo $version;?>">
+
 
     <script src="jquery-1.11.3.min.js"></script>
     <script src="login.js"></script>
@@ -103,6 +105,21 @@ $version = rand(0,10000000000000);
     <div class="clear"></div>
 
     <div class="note blue"><span class="bold">PLEASE NOTE:</span>  The answer to your question may already appear in our FAQ pages:</div>
+
+    <div class="faq-links">
+        <div>
+            <a href="http://orgs.jerusalemu.org/faq" target="_blank" class="ju-link-effect ju-effect-1" title="Israel Education  for Communities"><span>Israel Education  for Communities</span></a>
+        </div>
+        <div>
+            <a href="http://teens.jerusalemu.org/faq" target="_blank" class="ju-link-effect ju-effect-1" title="Israel Education  for Schools"><span>Israel Education  for Schools</span></a>
+        </div>
+        <div>
+            <a href="http://college.jerusalemu.org/faq" target="_blank" class="ju-link-effect ju-effect-1" title="Online Courses  for 18-26 y/o"><span>Online Courses  for 18-26 y/o</span></a>
+        </div>
+        <div>
+            <a href="http://adults.jerusalemu.org/faq" target="_blank" class="ju-link-effect ju-effect-1" title="Online Courses  for adults"><span>Online Courses  for adults</span></a>
+        </div>
+    </div>
 </article>
 </body>
 </html>
