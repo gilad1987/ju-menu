@@ -9,11 +9,14 @@ body{font-family: 'Lato', arial;}
 .contact-page .details-contact{  overflow: hidden;  }
 .contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  }
 .contact-page .form .title, .contact-page .details-contact .title{  margin: 25px 0;  font-size: 18px;  text-transform: uppercase;  font-weight: 700;  }
-.contact-page .form .form-wrapper{  background: #E5E5E5;  padding: 20px 10px 35px;overflow: hidden;}
-.contact-page .form .form-wrapper .ju-input-wrapper{margin: 0;float: left;width: 50%;padding: 10px 20px 0;box-sizing: border-box;}
-.contact-page .form .form-wrapper .ju-input-wrapper input{display: block;width: 100%;padding: 0;margin: 0;border: 1px solid #D2D2D2;height: 30px;}
+.contact-page .form .form-wrapper{  background: #E5E5E5;  padding: 20px 30px 35px;overflow: hidden;}
+.contact-page .form .form-wrapper .ju-input-wrapper{margin: 0;float: left;width: 50%;box-sizing: border-box;}
+.contact-page .form .form-wrapper .ju-input-wrapper:nth-child(odd){padding: 10px 15px 0 0;}
+.contact-page .form .form-wrapper .ju-input-wrapper:nth-child(even){padding: 10px 0px 0 15px;}
+.contact-page .form .form-wrapper .ju-input-wrapper input{display: block;width: 100%;padding: 0;margin: 0;border: 1px solid #D2D2D2;height: 40px;}
+.contact-page .form .form-wrapper .ju-input-wrapper input:focus{border-color: #8E8D8D;}
 .contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;}
-.contact-page .form .form-wrapper .ju-input-wrapper.textarea{margin: 0;display: block;line-height: 29px;width: 100%;float: none;overflow: hidden;}
+.contact-page .form .form-wrapper .ju-input-wrapper.textarea{margin: 0;display: block;line-height: 29px;width: 100%;float: none;overflow: hidden;padding-right: 0;box-sizing: border-box;}
 .contact-page .form .form-wrapper .ju-input-wrapper textarea{display: block;width: 100%;height: 100px;margin: 0;padding: 0;border: 1px solid #D2D2D2;}
 .contact-page .note{  font-size: 18px;  margin: 40px 0;  overflow: hidden;  }
 .contact-page .faq-links{}
@@ -27,3 +30,10 @@ body{font-family: 'Lato', arial;}
 .contact-page .faq-links .ju-effect-1:focus::before,
 .contact-page .faq-links .ju-effect-1:focus::after{background: #908F8F;background: #e55514;}
 .contact-page .faq-links .ju-effect-1::before{}
+.contact-page .send.btn{height: 50px;  line-height: 50px;  width: 100%;  margin: 20px auto 0;    display: block;color: white;font-size: 23px;}
+.contact-page .details-wrapper{position: relative;overflow: hidden;}
+.contact-page .social-button-wrapper{}
+.contact-page .social-button{  width: 291px;  margin: 30px 0 0;  font-size: 16px;  }
+.contact-page .social-button span{  position: relative;  bottom: 2px;  }
+.contact-page .social-button .fa-facebook-square{color:#39539e;}
+.contact-page .social-button .fa-twitter-square{color:#4cb8f7}

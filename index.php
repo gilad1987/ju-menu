@@ -7,6 +7,7 @@ $version = rand(0,10000000000000);
 
     <meta charset="UTF-8">
     <title>jerusalem U Menu</title>
+    <base href="/ju-menu/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
