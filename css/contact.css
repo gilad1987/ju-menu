@@ -25,5 +25,5 @@ body{font-family: 'Lato', arial;}
 .contact-page .faq-links .ju-effect-1:hover::before,
 .contact-page .faq-links .ju-effect-1:hover::after,
 .contact-page .faq-links .ju-effect-1:focus::before,
-.contact-page .faq-links .ju-effect-1:focus::after{background: #D8D8D8;}
+.contact-page .faq-links .ju-effect-1:focus::after{background: #908F8F;background: #e55514;}
 .contact-page .faq-links .ju-effect-1::before{}
