@@ -19,7 +19,7 @@ article.login .forms-wrapper{
     -o-transition: all 800ms ease-out 300ms;
     transition: all 800ms ease-out  300ms;
     background: url('../images/login-shadow.png') bottom center;
-    /* bottom: -12px; */
+    margin-bottom: 80px;
 }
 article.login .forms-wrapper.signup{max-width: 450px;-webkit-transition: all 800ms ease-out 700ms;      -moz-transition: all 800ms ease-out 700ms;      -o-transition: all 800ms ease-out 700ms;      transition: all 800ms ease-out 700ms;}
 article.login .forms-wrapper .inner{  width: 100%;  height: 100%;  background-color: white;  position: relative;}
