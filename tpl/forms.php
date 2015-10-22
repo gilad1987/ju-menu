@@ -36,7 +36,7 @@
 
             <div id="forms-wrapper" class="forms-wrapper login ju-tabset">
 
-                <img src="../images/login-shadow.png" class="shadow">
+                <img src="images/login-shadow.png" class="shadow">
 
                 <div class="inner">
 
@@ -123,12 +123,13 @@
                 </div>
             </div>
 
-            <div class="following-project">The following are all Jerusalem U projects:</div>
-
-            <a href="http://www.stepupforisrael.com/" class="bottom-logos"><img src="../images/logos/login/sufi.png" ></a>
-            <a href="http://ctl.stepupforisrael.com/" class="bottom-logos"><img src="../images/logos/login/crossing-the-line.png" ></a>
-            <a href="http://www.israelinsidethemovie.com/" class="bottom-logos"><img src="../images/logos/login/israel-inside.png" ></a>
-            <a href="http://www.beneathhelmet.com/" class="bottom-logos"><img src="../images/logos/login/bth-logo.png" ></a>
+            <?php if(isset($page)): ?>
+                <div class="following-project">The following are all Jerusalem U projects:</div>
+                <a href="http://www.stepupforisrael.com/" class="bottom-logos"><img src="images/logos/login/sufi.png" ></a>
+                <a href="http://ctl.stepupforisrael.com/" class="bottom-logos"><img src="images/logos/login/crossing-the-line.png" ></a>
+                <a href="http://www.israelinsidethemovie.com/" class="bottom-logos"><img src="images/logos/login/israel-inside.png" ></a>
+                <a href="http://www.beneathhelmet.com/" class="bottom-logos"><img src="images/logos/login/bth-logo.png" ></a>
+            <?php endif; ?>
         </div>
     </div>
 </article>
