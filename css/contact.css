@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,100italic,900,900italic);
 
-body{font-family: 'Lato';}
-.page.sub-title{  padding-bottom: 30px;  border-bottom: 1px solid #e5e5e5;  font-weight: 400;  margin: 0;}
+body{font-family: 'Lato', arial;}
+.page.sub-title{  padding-bottom: 30px;  border-bottom: 1px solid #e5e5e5;  font-weight: 400;  margin: 0;padding-right: 50px;}
 
 .contact-page{}
 .contact-page h1{  font-size: 73px;  margin: 30px 0 30px;  }
