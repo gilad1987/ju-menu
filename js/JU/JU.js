@@ -16,9 +16,17 @@
         $(document).ready(function(){
             _this.cache.$body = $('body');
         });
+
+        this.module = {};
     }
 
-    JU.prototype.module = {};
+    JU.prototype.registerModule = function register(key,_func){
+        if(typeof _func == 'function' && typeof key == 'string'){
+            this.module[key] = _func;
+        }
+    };
+
+
 
     window.JU = new JU(JUsettingApp);
 
