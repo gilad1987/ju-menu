@@ -78,15 +78,15 @@ $(document).ready(function(){
         var timeout;
 
         function onPageScroll(){
-            clearTimeout(timeout);
+            //clearTimeout(timeout);
 
-            timeout = setTimeout(function(){
-                $body.toggleClass('sticky',window.pageYOffset>42);
+            $body.toggleClass('sticky',window.pageYOffset>42);
 
-                // cancel in small screen
-                $menuWrapper.toggleClass('hide',window.pageYOffset > lastPageYOffset);
-                lastPageYOffset = window.pageYOffset;
-            },0);
+            // hide menu when scroll down
+            //timeout = setTimeout(function(){
+            //    $menuWrapper.toggleClass('hide',window.pageYOffset > lastPageYOffset);
+            //    lastPageYOffset = window.pageYOffset;
+            //},0);
         }
 
         $(document).on('scroll',onPageScroll);

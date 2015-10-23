@@ -18,6 +18,7 @@ nav.links .ju-logo {  float: left;  height: 100%;  position: relative;  overflow
 nav ul li{display: inline-block;height: 100%;float: left;}
 nav ul li a{width:100%; height:100%;display: inline-block;box-sizing: border-box;text-decoration: none;}
 nav.social-and-login{background: #2a8ecd;height: 42px; font-size:15px;position: relative;z-index: 9;}
+.sticky nav.social-and-login{top:-50px;}
 
 nav ul{height: 100%;/* position: relative; *//* z-index: 1; */}
 nav.social-and-login ul li{border-right: 1px solid #1d6796;float: left;}
@@ -131,8 +132,8 @@ nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  bord
 nav.links .third-menu ul li.video-series .sub-menu ul.parent .child > li{height:100%;background-position: center;      background-size: cover;}
 nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;/* overflow: hidden; */}
 
-#page{  /* padding-bottom: 350px; */  /* background-color: #8A8A8A; */}
-.sticky #page{  /* padding-top: 50px; */  }
+#page{  padding-bottom: 350px;  /* background-color: #8A8A8A; */}
+.sticky #page{  padding-top: 100px;  }
 .search-bar{
     width: 67px;
     height: 100%;
