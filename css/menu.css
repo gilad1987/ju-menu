@@ -343,7 +343,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li a{padding: 0 25px;color: #5D6E80;/* border-bottom: 1px solid #FFF; */display: block;height: 60px;}
     header.mobile-menu{  position: fixed;  top: 0;  width: 100%; z-index: 3;  height: 67px;  right: 0;  overflow: hidden;  /* box-shadow: 1px -6px 14px 1px #000; */border-bottom: 1px solid #C5C5C5;}
     .sticky header.mobile-menu{
-        /* box-shadow: 1px -6px 14px 1px #000; */
+        box-shadow: 1px -6px 14px 1px #000;
     }
     header.mobile-menu button{
         -ms-transform: translateX(0px);
