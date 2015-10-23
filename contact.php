@@ -55,26 +55,31 @@ $version = rand(0,10000000000000);
                 <div class="ju-input-wrapper">
                     <label>First name</label>
                     <input type="text">
+                    <div class="error">Please fill your first name</div>
                 </div>
 
                 <div class="ju-input-wrapper">
                     <label>Last name</label>
                     <input type="text">
+                    <div class="error"></div>
                 </div>
 
                 <div class="ju-input-wrapper">
                     <label>Email address</label>
                     <input type="text">
+                    <div class="error"></div>
                 </div>
 
                 <div class="ju-input-wrapper">
                     <label>Subject</label>
                     <input type="text">
+                    <div class="error"></div>
                 </div>
 
                 <div class="ju-input-wrapper textarea">
                     <label>Enter comment (1000 characters maximum)</label>
                     <textarea></textarea>
+                    <div class="error"></div>
                 </div>
 
                 <div class="btn send orange">
@@ -85,37 +90,45 @@ $version = rand(0,10000000000000);
 
         <div class="details-contact">
 
-            <div class="call-us">
-                <div class="title blue">
-                    Call us
+            <div class="wrapper-call-and-write">
+                <div class="call-us">
+                    <div class="title blue">
+                        Call us
+                    </div>
+                    <div>
+                        Call toll free at:
+                    </div>
+                    <div>
+                        (888) 515 5292
+                    </div>
                 </div>
-                <div>
-                    Call toll free at:
+
+                <div class="write-to-us">
+                    <div class="title blue">
+                        Write to us
+                    </div>
+
+                    <div>Jerusalem U</div>
+                    <div>11110 W Oakland Park Blvd Suite 288</div>
+                    <div>Sunrise, FL 33351 - 6808</div>
                 </div>
-                <div>
-                    (888) 515 5292
+            </div>
+            <div class="wrapper-social-buttons">
+                <div class="table">
+                    <div class="cell">
+                        <a class="social-button ju-link-effect ju-effect-2 facebook" title="facebook">
+                            <i class="fa fa-facebook-square"></i>
+                            <span>Ask us on FB</span>
+                        </a>
+
+                        <a class="social-button ju-link-effect ju-effect-2 twitter" title="twitter">
+                            <i class="fa fa-twitter-square"></i>
+                            <span>Tweet Us</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="write-to-us">
-                <div class="title blue">
-                    Write to us
-                </div>
-
-                <div>Jerusalem U</div>
-                <div>11110 W Oakland Park Blvd Suite 288</div>
-                <div>Sunrise, FL 33351 - 6808</div>
-            </div>
-
-            <div class="social-button">
-                <i class="fa fa-facebook-square"></i>
-                <span>Ask us on FB</span>
-            </div>
-
-            <div class="social-button">
-                <i class="fa fa-twitter-square"></i>
-                <span>Tweet Us</span>
-            </div>
         </div>
 
     </div>
