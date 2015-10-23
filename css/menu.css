@@ -340,7 +340,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.has-sub-menu i{float: right;}
     nav.links ul li .sub-menu ul li{display:block}
     nav.links ul li a{padding: 0 25px;color: #5D6E80;/* border-bottom: 1px solid #FFF; */display: block;height: 60px;}
-    header.mobile-menu{  position: fixed;  top: 0;  width: 100%; z-index: 3;  height: 67px;  right: 0;  overflow: hidden;  }
+    header.mobile-menu{  position: fixed;  top: 0;  width: 100%; z-index: 3;  height: 67px;  right: 0;  overflow: hidden;  box-shadow: 1px -3px 14px 1px #000;}
     header.mobile-menu button{
         -ms-transform: translateX(0px);
         -moz-transform: translateX(0px);
@@ -367,6 +367,6 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
         -o-transform: translateX(-280px);
         transform: translateX(-280px);
     }
-    header.mobile-menu .ju-logo{  float: left;  height: 100%;  }
+    header.mobile-menu .ju-logo{  float: left;  height: 100%;  margin-left: 15px;}
 }
 
