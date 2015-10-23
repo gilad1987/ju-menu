@@ -79,12 +79,12 @@
             <div class="wrapper-social-buttons">
                 <div class="table">
                     <div class="cell">
-                        <a class="social-button ju-link-effect ju-effect-2 facebook" title="facebook">
+                        <a href="https://www.facebook.com/Jerusalemu" class="social-button ju-link-effect ju-effect-2 facebook" title="facebook">
                             <i class="fa fa-facebook-square"></i>
                             <span>Ask us on FB</span>
                         </a>
 
-                        <a class="social-button ju-link-effect ju-effect-2 twitter" title="twitter">
+                        <a href="https://twitter.com/Jerusalem_U" class="social-button ju-link-effect ju-effect-2 twitter" title="twitter">
                             <i class="fa fa-twitter-square"></i>
                             <span>Tweet Us</span>
                         </a>
