@@ -75,12 +75,18 @@ $(document).ready(function(){
 
         var lastPageYOffset = 0;
 
-        function onPageScroll(){
-            $body.toggleClass('sticky',window.pageYOffset>42);
+        var timeout;
 
-            // cancel in small screen
-            $menuWrapper.toggleClass('hide',window.pageYOffset > lastPageYOffset);
-            lastPageYOffset = window.pageYOffset;
+        function onPageScroll(){
+            clearTimeout(timeout);
+
+            timeout = setTimeout(function(){
+                $body.toggleClass('sticky',window.pageYOffset>42);
+
+                // cancel in small screen
+                $menuWrapper.toggleClass('hide',window.pageYOffset > lastPageYOffset);
+                lastPageYOffset = window.pageYOffset;
+            },0);
         }
 
         $(document).on('scroll',onPageScroll);
