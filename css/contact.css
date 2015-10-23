@@ -8,6 +8,7 @@ body{font-family: 'Lato', arial;}
 .contact-page .form{  float: left;  width: 70%;  padding-right: 55px;}
 .contact-page .details-contact{  overflow: hidden;  }
 .contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  }
+.contact-page .write-to-us:hover, .contact-page .call-us:hover{border-bottom: 1px solid #969393;}
 .contact-page .form .title, .contact-page .details-contact .title{  margin: 25px 0;  font-size: 18px;  text-transform: uppercase;  font-weight: 700;  }
 .contact-page .form .form-wrapper{  background: #E5E5E5;  padding: 20px 30px 35px;overflow: hidden;border: solid 1px #E5E5E5;
     -webkit-transition: border 100ms ease-out 200ms;
