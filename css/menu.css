@@ -220,7 +220,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.donate:hover a{  color: #EE7624;  }
     nav.links ul li:hover .sub-menu a{color:black;}
     nav.links ul li.video-course:hover .search-place a{color:white}
-    .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px 1px 9px 1px #D6D5D5;}
+    .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px -3px 8px 1px #2B2B2B;}
     .sticky nav.links.hide{top: -104px;}
     .sticky .ju-logo .text .slogan{position:absolute; top: 55px;}
     .sticky .ju-logo svg{  height: 36px;   }
@@ -343,7 +343,8 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li a{padding: 0 25px;color: #5D6E80;/* border-bottom: 1px solid #FFF; */display: block;height: 60px;}
     header.mobile-menu{  position: fixed;  top: 0;  width: 100%; z-index: 3;  height: 67px;  right: 0;  overflow: hidden;  /* box-shadow: 1px -6px 14px 1px #000; */border-bottom: 1px solid #C5C5C5;}
     .sticky header.mobile-menu{
-        box-shadow: 1px -6px 14px 1px #000;}
+        /* box-shadow: 1px -6px 14px 1px #000; */
+    }
     header.mobile-menu button{
         -ms-transform: translateX(0px);
         -moz-transform: translateX(0px);
