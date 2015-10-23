@@ -4,8 +4,14 @@
 .contact-page h1{  font-size: 73px;  margin: 30px 0 30px;  }
 .contact-page .form{  float: left;  width: 70%;  padding-right: 55px;}
 .contact-page .details-contact{  overflow: hidden;  }
-.contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  }
-.contact-page .write-to-us:hover, .contact-page .call-us:hover{border-bottom: 1px solid #969393;}
+.contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  position:relative}
+.contact-page .write-to-us:after,
+.contact-page .call-us:after{content:''; height: 1px; width: 100%;  bottom: 0px; left: -100%; position:absolute;background: #2D8CC9;-webkit-transition: border 100ms ease-out 200ms;     -moz-transition: border 300ms ease-out 300ms;     -o-transition: border 100ms ease-out 200ms;     transition: left 200ms ease-out;}
+
+.contact-page .write-to-us:hover:after,
+.contact-page .call-us:hover:after{ left: 0;}
+
+.contact-page .write-to-us:hover, .contact-page .call-us:hover{/* border-bottom: 1px solid #969393; */}
 .contact-page .form .title, .contact-page .details-contact .title{  margin: 25px 0;  font-size: 18px;  text-transform: uppercase;  font-weight: 700;  }
 .contact-page .form .form-wrapper{  background: #E5E5E5;  padding: 20px 30px 35px;overflow: hidden;border: solid 1px #E5E5E5;
     -webkit-transition: border 100ms ease-out 200ms;
@@ -49,7 +55,7 @@
 .contact-page .social-button .fa-twitter-square{color:#4cb8f7}
 .contact-page .twitter.ju-effect-2::after{  border-color: #4CB8F7;  }
 .contact-page .facebook.ju-effect-2::after{  border-color: #39539E;  }
-.contact-page .wrapper-social-buttons{  /* height: 230px; */}
+.contact-page .wrapper-social-buttons{  /* height: 230px; */margin-top: 25px;}
 
 @media (max-width: 700px) {
     .contact-page .form{width: 100%;float: none;padding: 3px;}
