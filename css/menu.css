@@ -183,7 +183,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links .third-menu ul a{color:#685959;font-size: 14px;}
     nav.links .third-menu ul li:first-child a{color:#194f9b;font-size: 26px;padding-left: 0;-webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;}
     .sticky nav.links .third-menu ul li:first-child a{font-size: 22px;}
-    .main-menu{   height: 67px;   -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;   z-index: 2;   position: relative;}
+    .main-menu{   height: 67px;   -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;   z-index: 2;   position: relative;border-bottom: 1px solid #C2C2C2;}
     .third-menu{
         height: 50px;
         background-color: #f2f2f2;
@@ -192,7 +192,6 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
         -o-transition: all 200ms ease-out;
         transition: all 200ms ease-out;
         display: block;
-        border-top: 1px solid #C2C2C2;
         border-bottom: 1px solid #C2C2C2;
     }
     nav .third-menu ul{  position: initial;  }
