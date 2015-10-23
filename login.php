@@ -31,7 +31,7 @@ $version = rand(0,10000000000000);
     <!--    <script src="js/JU/modules/JU.module.search.js?v=--><?php //echo $version;?><!--"></script>-->
 </head>
 
-<body>
+<body class="login-page">
 <?php $page = '' ?>
 <?php require_once 'tpl/forms.php'; ?>
 

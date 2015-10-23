@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,100italic,900,900italic);
 
 html{height:100%;}
-body{height: 100%;margin: 0; padding: 0; background: #2a8ecd;/* min-height: 3000px; */font-family: 'Lato';}
+body.login-page{height: 100%;margin: 0; padding: 0; background: #2a8ecd;/* min-height: 3000px; */font-family: 'Lato';}
 
 article.login{height: 100%; color: white;text-align: center;}
 article.login .logo{display: block; margin: 0 auto 23px;}

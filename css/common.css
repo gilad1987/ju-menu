@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,100italic,900,900italic);
+
 /** ju module **/
 .ju-expandable{}
 .ju-expander{}
@@ -7,6 +9,8 @@
 .ju-tabs-content{}
 .ju-tabs-button{}
 /** end ju module class **/
+
+body{height: 100%;margin: 0; padding: 0;/* min-height: 3000px; */font-family: 'Lato';}
 
 *{box-sizing: border-box;font-family: 'Lato', arial;}
 a{cursor: pointer}

@@ -1,6 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,300italic,300,100italic,900,900italic);
-
-body{margin: 0; padding: 0; /* background: #E6E6E6; *//* min-height: 3000px; *//* font-family: 'Lato'; */}
 ul{margin: 0; color: white;padding: 0;}
 .btn{cursor: pointer}
 a span{display: inline-block;webkit-user-select: none;  /* Chrome all / Safari all */    -moz-user-select: none;     /* Firefox all */    -ms-user-select: none;      /* IE 10+ */    user-select: none;          /* Likely future */}
@@ -13,9 +10,9 @@ a{color: white;letter-spacing: .5px;}
 
 nav.links .ju-logo {  float: left;  height: 100%;  position: relative;  overflow: hidden;  z-index: 10;  }
 
-.mask{opacity: 0;background-color: #000;      position: fixed;      right: 0;      left: 0;      top: 0;      bottom: 0;      z-index: 3;      opacity: 0;      -moz-transition: opacity .3s;      -webkit-transition: opacity .3s;      -o-transition: opacity .3s;      transition: opacity .3s;}
+.mask{opacity: 0;background-color: #000;      position: fixed;      right: 0;      left: 100%;      top: 0;      bottom: 0;      z-index: 3;      opacity: 0;      -moz-transition: opacity .3s;      -webkit-transition: opacity .3s;      -o-transition: opacity .3s , right .3s;      transition: opacity 0.3s ease-in, left 0.1s ease-in .3s;}
 .menu-open .mask,
-.sub-menu-open .mask{opacity: 0.8;                        }
+.sub-menu-open .mask{opacity: 0.8;                        left: 0;transition: opacity .2s ease-in .1s, left .0s;}
 
 
 nav ul li{display: inline-block;height: 100%;float: left;}
@@ -134,7 +131,7 @@ nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  bord
 nav.links .third-menu ul li.video-series .sub-menu ul.parent .child > li{height:100%;background-position: center;      background-size: cover;}
 nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;/* overflow: hidden; */}
 
-#page{  padding-bottom: 350px;  background-color: #8A8A8A;}
+#page{  padding-bottom: 350px;  /* background-color: #8A8A8A; */}
 .sticky #page{  padding-top: 50px;  }
 .search-bar{
     width: 67px;
@@ -195,6 +192,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
         transition: all 200ms ease-out;
         display: block;
         border-top: 1px solid #C2C2C2;
+        border-bottom: 1px solid #C2C2C2;
     }
     nav .third-menu ul{  position: initial;  }
     .sticky .main-menu{   height: 55px;}
@@ -222,7 +220,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.donate:hover a{  color: #EE7624;  }
     nav.links ul li:hover .sub-menu a{color:black;}
     nav.links ul li.video-course:hover .search-place a{color:white}
-    .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px 1px 1px 1px #D6D5D5;}
+    .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px 1px 9px 1px #D6D5D5;}
     .sticky nav.links.hide{top: -104px;}
     .sticky .ju-logo .text .slogan{position:absolute; top: 55px;}
     .sticky .ju-logo svg{  height: 36px;   }

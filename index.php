@@ -16,6 +16,8 @@ $version = rand(0,10000000000000);
     <link rel="stylesheet" type="text/css" href="css/login.css?v=<?php echo $version;?>">
     <link rel="stylesheet" type="text/css" href="css/menu.css?v=<?php echo $version;?>">
     <link rel="stylesheet" type="text/css" href="css/modal.css?v=<?php echo $version;?>">
+    <link rel="stylesheet" type="text/css" href="css/component.css?v=<?php echo $version;?>">
+    <link rel="stylesheet" type="text/css" href="css/contact.css?v=<?php echo $version;?>">
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="login.js"></script>
@@ -405,16 +407,7 @@ $version = rand(0,10000000000000);
 
 
 <div id="page">
-    <div class="max-width-content">
-       <div style="    height: 1200px;font-size: 50px;text-align: center;color: white; text-shadow: 3px 5px 0px #000;">
-           <div class="table">
-               <div class="cell">
-                   Site under construction
-               </div>
-           </div>
-       </div>
-    </div>
-
+    <?php require_once 'tpl/contact.php'; ?>
 </div>
 
 
