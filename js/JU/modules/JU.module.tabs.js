@@ -12,9 +12,21 @@
 
     $document = $(document);
 
-
-
-    //#TODO add reset functionality if no active tab no selected
+    /**
+     * @JUdoc function
+     * @name JUtabsModule
+     * @module JUtabsModule
+     * @writeBy Gilad Takoni
+     * @kind function
+     *
+     * @description
+     *
+     * @example
+     *
+     *
+     * @returns {{open: open, reset: reset}}
+     * @constructor
+     */
     function JUtabsModule(){
 
         var JU_TAB_CLASS={
@@ -25,7 +37,8 @@
 
         var JU_TAB_DATASET={
             JUtabsContentSelector:'ju-tabs-content-selector',
-            JUtabsButtonSelector:'ju-tabs-button-selector'
+            JUtabsButtonSelector:'ju-tabs-button-selector',
+            defaultTab:'default-tab-selector'
         };
 
 
@@ -74,17 +87,19 @@
                 return;
             }
 
-            //#TODO add to .tabset class name of state
-            //$TODO add callback open/close state
+            //$TODO add callback close
             $parentSet.find('.'+JU_TAB_CLASS.JUtabsButton+'.active').removeClass('active');
             $parentSet.find('.'+JU_TAB_CLASS.JUtabsContent+'.active').removeClass('active');
 
+            //$TODO add callback change state
             var currentState = $parentSet.data('ju-tabs-state');
             var newState =  $elem.data('ju-tabs-state');
             $parentSet
                 .removeClass(currentState)
                 .addClass(newState)
                 .data('ju-tabs-state',newState);
+
+            //$TODO add callback open
             $elem.addClass('active');
             $content.addClass('active');
         }
@@ -100,13 +115,23 @@
         //
         //};
 
-        //#TODO add option to pass string as selector (selector|object)
         function open(element){
             toggleTab(null,element);
         }
 
-        function reset(selector){
+        function reset(tabSetSelector){
 
+            if(typeof tabSetSelector =='undefined' || tabSetSelector.length==0){
+                return;
+            }
+
+            var $button;
+            var defaultTabSelector = tabSetSelector.data(JU_TAB_DATASET.defaultTab);
+            $button = tabSetSelector.find('.'+JU_TAB_CLASS.JUtabsButton + defaultTabSelector);
+            if($button.length==0){
+                return
+            }
+            $button.trigger('click');
         }
 
         $document.on('click',toggleTab);
