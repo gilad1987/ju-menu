@@ -54,7 +54,15 @@ article.login .bottom-logos img{max-width:100%}
 
 article.login .inner{padding: 30px 40px; box-sizing: border-box; font-size: 30px;}
 article.login .inner .title{/* transform: scale(.1); */color: #2a4c93; text-align: center;margin-bottom: 30px;-webkit-transition: all 800ms ease-out;      -moz-transition: all 800ms ease-out;      -o-transition: all 800ms ease-out;      transition: all 800ms ease-out;}
-article.login .ju-input-wrapper{  position: relative;  height: 50px;  margin: 2px 0 28px;  }
+article.login .ju-input-wrapper{  position: relative;  height: 50px;  margin: 2px 0 28px;
+    -webkit-transition: all 200ms cubic-bezier(0, 0.82, 1, 1);
+    -moz-transition: all 200ms cubic-bezier(0, 0.82, 1, 1);
+    -o-transition: all 200ms cubic-bezier(0, 0.82, 1, 1);
+    transition: all 200ms cubic-bezier(0, 0.82, 1, 1);
+}
+article.login .ju-input-wrapper.error{
+    height: 70px;
+}
 article.login .ju-input-wrapper label,
 article.login .ju-input-wrapper input{
     color: #a7a7a7;
@@ -68,12 +76,29 @@ article.login .ju-input-wrapper input{
     transition: all 300ms cubic-bezier(0, 0.82, 1, 1);
 }
 article.login .ju-input-wrapper label{  position: absolute;  line-height: 50px;  padding-left: 10px;  }
-article.login .ju-input-wrapper input{  height: 100%;  width: 100%;  border: 1px solid #e1e1e1;  position: absolute;  background-color: transparent;  outline: none;box-sizing: border-box;z-index: 10;}
+article.login .ju-input-wrapper input{  height: 100%;  width: 100%;  max-height: 50px;border: 1px solid #e1e1e1;  position: absolute;  background-color: transparent;  outline: none;box-sizing: border-box;z-index: 10;}
 article.login .ju-input-wrapper.ju-dirty label{  font-size: 16px;  top: -36px;  padding: 0;  color: #807C7C;  }
 article.login .ju-input-wrapper.ju-dirty input{color: #807C7C;/* border-color: #228CD0; */}
 article.login .ju-input-wrapper input:hover{border-color:#807C7C}
 article.login .ju-input-wrapper input:focus{border-color: #228CD0;}
 article.login .ju-input-wrapper.error input{border-color: red;}
+article.login .ju-input-wrapper .error-message{
+    position: absolute;
+    bottom: 0;
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+article.login .ju-input-wrapper.error .error-message{
+    bottom: 2px;
+    z-index:3;
+    -webkit-transition: all 300ms cubic-bezier(0, 0.82, 1, 1) 100ms;
+    -moz-transition: all 300ms cubic-bezier(0, 0.82, 1, 1) 100ms;
+    -o-transition: all 300ms cubic-bezier(0, 0.82, 1, 1) 100ms;
+    transition: all 300ms cubic-bezier(0, 0.82, 1, 1) 100ms;
+    display: inherit;
+}
+
 
 article.login .forgot-password{  color: #a7a7a7;  font-size: 15px;  text-align: left;}
 article.login .forgot-password a{color: #228CD0;text-decoration: underline;cursor: pointer;}

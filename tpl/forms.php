@@ -47,6 +47,7 @@
                             <input type="text" id="username" autocomplete="off" class="ju-input">
                             <label for="username">Username or Email</label>
                             <i class="fa fa-user"></i>
+                            <div class="error-message">error message</div>
                         </div>
 
                         <div class="ju-input-wrapper ">

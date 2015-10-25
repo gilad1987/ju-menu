@@ -35,14 +35,26 @@
 
                 <div class="ju-input-wrapper">
                     <label>Subject</label>
-                    <select style="display: none;">
-                        <option value="info@jerusalemu.org">General Information</option>
-                        <option value="techsupport@jerusalemu.org">Technical Assistance</option>
-                        <option value="francine@jerusalemu.org">Marketing Material Assistance</option>
-                        <option value="press@jerusalemu.org">Press Inquiries</option>
-                        <option value="press@jerusalemu.org">Other...</option>
-                    </select>
-                    <input type="text">
+
+                   <div class="ju-expandable ju-select" data-isolated="1">
+
+                       <select>
+                           <option value="info@jerusalemu.org">General Information</option>
+                           <option value="techsupport@jerusalemu.org">Technical Assistance</option>
+                           <option value="francine@jerusalemu.org">Marketing Material Assistance</option>
+                           <option value="press@jerusalemu.org">Press Inquiries</option>
+                           <option value="press@jerusalemu.org">Other...</option>
+                       </select>
+
+                       <div class="ju-expander">Check subject</div>
+                       <div class="options">
+                           <div class="ju-option" data-value="info@jerusalemu.org">General Information</div>
+                           <div class="ju-option"  data-value="techsupport@jerusalemu.org">Technical Assistance</div>
+                           <div class="ju-option"  data-value="francine@jerusalemu.org">Marketing Material Assistance</div>
+                           <div class="ju-option"  data-value="press@jerusalemu.org">Press Inquiries</div>
+                           <div class="ju-option"  data-value="press@jerusalemu.org">Other...</div>
+                       </div>
+                   </div>
                     <div class="error"></div>
                 </div>
 

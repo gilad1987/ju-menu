@@ -30,7 +30,7 @@
 .contact-page  input,.contact-page  textarea{font-size: 14px;}
 .contact-page .form .form-wrapper .ju-input-wrapper input:focus,
 .contact-page .form .form-wrapper .ju-input-wrapper textarea:focus{border-color: #8E8D8D;-moz-box-shadow: inset 0 0 13px -5px #757575;     /* -webkit-box-shadow: inset 0 0 13px -5px #757575; */     /* box-shadow: inset 0 0 13px -5px #757575; */}
-.contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;}
+.contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;color: black;}
 .contact-page .form .form-wrapper .ju-input-wrapper.textarea{margin: 0;display: block;line-height: 29px;width: 100%;float: none;overflow: hidden;padding-right: 0;box-sizing: border-box;}
 .contact-page .form .form-wrapper .ju-input-wrapper textarea{display: block;width: 100%;height: 100px;margin: 0;padding: 10px;border: 1px solid #D2D2D2;}
 .contact-page .note{  font-size: 18px;  margin: 40px 0 20px;  overflow: hidden;  font-weight: 200;}
@@ -57,6 +57,40 @@
 .contact-page .facebook.ju-effect-2::after{  border-color: #39539E;  }
 .contact-page .wrapper-social-buttons{  /* height: 230px; */margin-top: 25px;}
 
+
+/* select */
+.ju-select{}
+.ju-select select{display: none}
+.ju-select .ju-expander:after{color: #E5E5E5;  font: normal normal normal 14px/1 FontAwesome;  content: "\f078";  float: right;  margin-top: 10px;  margin-right: 10px;
+    -webkit-transition: transform 300ms ease-out , color 200ms;
+    -moz-transition: transform 300ms ease-out , color 200ms;
+    -o-transition: transform 300ms ease-out , color 200ms;
+    transition: transform 300ms ease-out , color 200ms;
+}
+.ju-select.ju-expandable.ju-expanded .ju-expander:after{color: #7D7D7D;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform:rotate(180deg);
+}
+.ju-select.ju-expandable{width: 100%;height: 40px;overflow: hidden;cursor: pointer;z-index: 5000;}
+.ju-select.ju-expandable .options{  opacity: 0;  border: 1px solid #D2D2D2;  border-top: none;  border-color: #8E8D8D;
+    -webkit-transition: opacity 300ms ease-out ;
+    -moz-transition: opacity 300ms ease-out ;
+    -o-transition: opacity 300ms ease-out ;
+    transition: opacity 400ms ease-out;
+}
+.ju-select.ju-expandable .ju-option{  height: 40px;  line-height: 40px;  background: white;  border-bottom: 1px solid #D2D2D2;  padding-left: 10px;  z-index: 2;position: relative;}
+.ju-select.ju-expandable .ju-option.active{  background: #F5F5F5;  }
+.ju-select.ju-expandable .ju-option.active:after{    content: "\f00c"; color: #8E8D8D;  font: normal normal normal 14px/1 FontAwesome;margin-left: 10px;}
+.ju-select.ju-expandable .ju-option:hover{  background: #F7F7F7;  }
+.ju-select.ju-expandable.ju-expanded{overflow: visible;}
+.ju-select.ju-expandable.ju-expanded .options{  opacity: 1;  }
+.ju-select.ju-expandable .ju-expander{height: 40px;line-height: 40px;background: white;border: 1px solid #D2D2D2;padding-left: 10px;}
+.error .ju-select.ju-expandable .ju-expander{  border-color: red;  color: initial;  }
+.ju-select.ju-expandable.ju-expanded .ju-expander{  border-color: #8E8D8D;  border-bottom-color: #D2D2D2;  }
+
+/* end - select */
+
 @media (max-width: 700px) {
     .contact-page .form{width: 100%;float: none;padding: 3px;}
     .contact-page .details-contact{ height: 318px;}
@@ -68,13 +102,14 @@
     .contact-page .form .form-wrapper .ju-input-wrapper,
     .contact-page .form .form-wrapper .ju-input-wrapper:nth-child(even),
     .contact-page .form .form-wrapper .ju-input-wrapper:nth-child(odd){    float: none;    width: 100%;   padding: 0;}
-    .contact-page .form .form-wrapper{
-        padding: 20px 10px 35px;
-    }
+    .contact-page .form .form-wrapper{  padding: 20px 10px 35px;  }
     .contact-page .faq-links div{width:80%; margin:0 auto;float: none;display: block;}
     .contact-page .form .form-wrapper .ju-input-wrapper:nth-child(even):after{display:block}
     .contact-page .details-contact{height:auto}
     .contact-page .wrapper-call-and-write{  width: 100%;  float: none;  }
     .contact-page .wrapper-social-buttons{  float: none;width: 100%;}
     .contact-page .social-button{margin:20px auto; max-width:90%}
+    .ju-select.ju-expandable{height:auto}
+    .ju-select.ju-expandable .options{display:none}
+    .ju-select.ju-expandable.ju-expanded .options{display:inherit}
 }
