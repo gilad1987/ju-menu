@@ -2,7 +2,6 @@
  * Created by giladtakoni on 10/17/15.
  */
 
-//# TODO write documentation with example
 (function(JU,$){
 
     var $document;
@@ -13,9 +12,11 @@
         JUexpanded:"ju-expanded"
     };
 
-    //#TODO update JU dataset
     var DATA_SET = {
-
+        'isolated':'isolated',
+        'dependencies_selectors':'dependencies-selectors',
+        'exclude_expandable':'exclude-expandable',
+        'callback':'callback'
     };
 
     $document = $(document);
@@ -158,13 +159,13 @@
             $elem = getCurrentElement(e,element);
             if($elem==null) return;
 
-            isIsolated = $elem.data('isolated');
+            isIsolated = $elem.data(DATA_SET.isolated);
             isIsolated = (typeof isIsolated != 'undefined' && isIsolated);
 
-            var elementsToAddClass = getCollectionElements( $elem.data('dependencies-selectors') );
+            var elementsToAddClass = getCollectionElements( $elem.data(DATA_SET.dependencies_selectors) );
             elementsToAddClass.push($elem[0]);
             
-            var elementsToExclude = getCollectionElements( $elem.data('exclude-expandable') );
+            var elementsToExclude = getCollectionElements( $elem.data(DATA_SET.exclude_expandable) );
 
             var hasExcludeElements = elementsToExclude.length>0;
 
@@ -181,11 +182,19 @@
                 return elementsToAddClass.indexOf(element) != -1;
             }
 
-            //#TODO add option to run array of callback
+            //#TODO part between open | close ask Yuval
             function runCallback(elem){
-
-                var callback = $(elem).data('callback');
+                var callback = $(elem).data(DATA_SET.callback);
                 callback = eval(callback);
+                if(typeof callback == 'object'){
+                    var i= 0,len=callback.length;
+                    for(;i<len;i++){
+                        var currentCallback = callback[i];
+                        if(typeof currentCallback == 'function'){
+                            currentCallback(elem);
+                        }
+                    }
+                }
                 if(typeof callback == 'function'){
                     callback(elem);
                 }
