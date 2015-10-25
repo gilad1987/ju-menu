@@ -19,7 +19,7 @@ $version = rand(0,10000000000000);
     <link rel="stylesheet" type="text/css" href="css/contact.css?v=<?php echo $version;?>">
 
 
-    <script src="jquery-1.11.3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="login.js"></script>
 
     <script src="js/JU/JU.settingApp.js?v=<?php echo $version;?>"></script>

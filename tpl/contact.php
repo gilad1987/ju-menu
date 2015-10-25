@@ -88,7 +88,7 @@
                     <div class="cell">
                         <a href="https://www.facebook.com/Jerusalemu" target="_blank" class="social-button ju-link-effect ju-effect-2 facebook" title="facebook">
                             <i class="fa fa-facebook-square"></i>
-                            <span>Ask us on FB</span>
+                            <span>Ask us on Facebook</span>
                         </a>
 
                         <a href="https://twitter.com/Jerusalem_U" target="_blank" class="social-button ju-link-effect ju-effect-2 twitter" title="twitter">

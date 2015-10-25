@@ -92,6 +92,10 @@ i.icon.donate{background: url('../images/icons/navigationDonate.png'); width:30p
 .social-button{  border: 1px solid #a1a1a1;  padding: 15px 0px 15px 15px;  }
 .social-button i{font-size: 22px;margin-right: 9px;}
 
+.input-wrapper.dirty label{  font-size: 16px;  top: -36px;  padding: 0;  color: #807C7C;  }
+.input-wrapper.dirty input{color: #807C7C;/* border-color: #228CD0; */}
+.input-wrapper.error input{border-color: red;}
+
 @media (max-width: 1002px) {
     .desktop-only{display: none !important;}
 }

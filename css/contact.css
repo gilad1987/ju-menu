@@ -1,10 +1,10 @@
-.page.sub-title{  padding-bottom: 30px;  border-bottom: 1px solid #e5e5e5;  font-weight: 400;  margin: 0;padding-right: 50px;}
+.page.sub-title{  padding-bottom: 30px;  border-bottom: 1px solid #e5e5e5;  font-weight: 200;  margin: 0;padding-right: 50px;line-height: 27px;}
 
 .contact-page{  overflow: hidden;  }
-.contact-page h1{  font-size: 73px;  margin: 30px 0 30px;  }
+.contact-page h1{  font-size: 73px;  margin: 30px 0 13px;  }
 .contact-page .form{  float: left;  width: 70%;  padding-right: 55px;}
 .contact-page .details-contact{  overflow: hidden;  }
-.contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  position:relative}
+.contact-page .write-to-us, .contact-page .call-us{  overflow: hidden;  padding-bottom: 25px;  border-bottom: 1px solid #e5e5e5;  position:relative;line-height: 25px;}
 .contact-page .write-to-us:after,
 .contact-page .call-us:after{content:''; height: 1px; width: 100%;  bottom: 0px; left: -100%; position:absolute;background: #2D8CC9;-webkit-transition: border 100ms ease-out 200ms;     -moz-transition: border 300ms ease-out 300ms;     -o-transition: border 100ms ease-out 200ms;     transition: left 200ms ease-out;}
 
@@ -12,7 +12,7 @@
 .contact-page .call-us:hover:after{ left: 0;}
 
 .contact-page .write-to-us:hover, .contact-page .call-us:hover{/* border-bottom: 1px solid #969393; */}
-.contact-page .form .title, .contact-page .details-contact .title{  margin: 25px 0;  font-size: 18px;  text-transform: uppercase;  font-weight: 700;  }
+.contact-page .form .title, .contact-page .details-contact .title{  margin: 25px 0;  font-size: 18px;  text-transform: uppercase;  font-weight: 700;  line-height: 18px;}
 .contact-page .form .form-wrapper{  background: #E5E5E5;  padding: 20px 30px 35px;overflow: hidden;border: solid 1px #E5E5E5;
     -webkit-transition: border 100ms ease-out 200ms;
     -moz-transition: border 300ms ease-out 300ms;
@@ -33,19 +33,19 @@
 .contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;}
 .contact-page .form .form-wrapper .ju-input-wrapper.textarea{margin: 0;display: block;line-height: 29px;width: 100%;float: none;overflow: hidden;padding-right: 0;box-sizing: border-box;}
 .contact-page .form .form-wrapper .ju-input-wrapper textarea{display: block;width: 100%;height: 100px;margin: 0;padding: 10px;border: 1px solid #D2D2D2;}
-.contact-page .note{  font-size: 18px;  margin: 40px 0;  overflow: hidden;  }
+.contact-page .note{  font-size: 18px;  margin: 40px 0 20px;  overflow: hidden;  font-weight: 200;}
 .contact-page .faq-links{}
 .contact-page .faq-links div{ width: 25%; display:inline-block;float: left;}
 .contact-page .faq-links div a{color: black;box-sizing: border-box;text-align: center;font-size: 17px;line-height: 21px;padding: 20px;}
 .contact-page .faq-links div a span{position:relative; z-index:4}
 .contact-page .faq-links div a:hover{color: #194F9B;}
-.contact-page .faq-links .ju-effect-1::before, .ju-effect-1::after{  background: #888888;  width: 30%;  }
+.contact-page .faq-links .ju-effect-1::before, .ju-effect-1::after{  background: #000000;  /* width: 30%; */  }
 .contact-page .faq-links .ju-effect-1:hover::before,
 .contact-page .faq-links .ju-effect-1:hover::after,
 .contact-page .faq-links .ju-effect-1:focus::before,
-.contact-page .faq-links .ju-effect-1:focus::after{background: #908F8F;background: #e55514;}
+.contact-page .faq-links .ju-effect-1:focus::after{background: #908F8F;background: #e55514;width: 30%;}
 .contact-page .faq-links .ju-effect-1::before{}
-.contact-page .send.btn{height: 50px;  line-height: 50px;  width: 100%;  margin: 20px auto 0;    display: block;color: white;font-size: 23px;}
+.contact-page .send.btn{height: 50px;  line-height: 46px;  width: 100%;  max-width: 200px;margin: 20px 0 0;    display: block;color: white;font-size: 19px;}
 .contact-page .details-wrapper{position: relative;overflow: hidden;}
 .contact-page .social-button-wrapper{}
 .contact-page .social-button{  max-width: 291px;  margin: 25px 10px 25px 0;  font-size: 16px;  color: black;/* overflow: hidden; */border: none;padding: 15px 20px;display: block;}

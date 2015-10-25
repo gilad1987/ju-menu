@@ -11,13 +11,39 @@
 
     $document = $(document);
 
-    //#TODO add ju class to input
+    /**
+     * @JUdoc function
+     * @name JUinputModule
+     * @module JUinputModule
+     * @writeBy Gilad Takoni
+     * @kind function
+     *
+     * @description
+     * Check if the input|textarea (only element has 'ju-input' class) not empty if the condition is true add to parent '.input-wrapper'
+     * 'dirty' class
+     *
+     * @example
+     * <div class="ju-input-wrapper">
+     *      <input class='ju-input'>
+     * </div>
+     *
+     * @returns {{reset: Function}}
+     * @constructor
+     */
     function JUinputModule(){
 
         var CSS_CLASS_NAME = {
-            'ju_input':'ju-input'
+            'input':'ju-input',
+            'dirty':'ju-dirty',
+            'input_wrapper':'ju-input-wrapper'
         };
 
+        /**
+         *
+         * @returns {{ setIsDirty:Function , reset: Function }}
+         * setIsDirty: context must be input|textarea
+         * reset: optional to pass wrapper to reset only his child
+         */
         var inputsManager = (function(){
 
             var $this,
@@ -44,13 +70,13 @@
                         $this.attr('id',id);
                         inputsMap[id] = {};
                         inputsMap[id]['isDirty'] = false;
-                        inputsMap[id]['parent'] = $this.closest('.input-wrapper');
+                        inputsMap[id]['parent'] = $this.closest('.'+CSS_CLASS_NAME.input_wrapper);
                         inputsMap[id]['input'] = $this;
                     }
 
                     if(inputsMap['isDirty'] == isDirty){return}
 
-                    inputsMap[id].parent.toggleClass('dirty',isDirty);
+                    inputsMap[id].parent.toggleClass(CSS_CLASS_NAME.dirty,isDirty);
                     inputsMap[id]['isDirty'] = isDirty;
 
                 },
@@ -68,8 +94,8 @@
                             return;
                         }
 
-                        $wrapper.find('input'+'.'+CSS_CLASS_NAME.ju_input).val('').trigger('change');
-                        $wrapper.find('textarea'+'.'+CSS_CLASS_NAME.ju_input).val('').trigger('change');
+                        $wrapper.find('input'+'.'+CSS_CLASS_NAME.input).val('').trigger('change');
+                        $wrapper.find('textarea'+'.'+CSS_CLASS_NAME.input).val('').trigger('change');
 
                         return;
                     }
@@ -92,7 +118,7 @@
                 return;
             }
             var elem = e.target;
-            if(!$(elem).hasClass(CSS_CLASS_NAME.ju_input)){
+            if(!$(elem).hasClass(CSS_CLASS_NAME.input)){
                 return;
             }
 

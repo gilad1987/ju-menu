@@ -13,6 +13,7 @@
         JUexpanded:"ju-expanded"
     };
 
+    //#TODO update JU dataset
     var DATA_SET = {
 
     };
@@ -57,9 +58,7 @@
      *    </div>
      *
      *  4. <div class="ju-expandable" data-dependencies-selectors="nav.links|">
-     *     <div class="ju-expander">
-     *         <i></i>
-     *     </div>
+     *     <div class="ju-expander"></div>
      *     <div class="content"></div>
      *    </div>
      *
@@ -110,8 +109,10 @@
         }
 
         /**
+         * @description
          * Find the element to apply the behavior of module
          * can call to function and pass in second argument DOM element the element need to .ju-expandable family
+         *
          * @param e
          * @param element
          * @returns {*}
@@ -123,7 +124,7 @@
 
             if(!$target.hasClass(CLASS_NAMES.JUexpandable)){
 
-                var $targetParentExpander = $target.closest('.'+CLASS_NAMES.JUexpander);
+                var $targetParentExpander = $target.hasClass(CLASS_NAMES.JUexpander) ? $target : $target.closest('.'+CLASS_NAMES.JUexpander);
 
                 if($targetParentExpander.length==0){
                     return null;
@@ -142,8 +143,10 @@
         }
 
         /**
+         * @description
          * Remove class .ju-expanded from all elements .ju-expandable.ju-expanded
          * and add ju-expanded class to current element (e.target|element)
+         *
          * @param e
          * @param element
          */

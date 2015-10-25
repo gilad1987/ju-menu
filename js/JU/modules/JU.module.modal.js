@@ -12,6 +12,7 @@
 
     $document = $(document);
 
+    //#TODO add description
     function JUModalModule(){
 
         //#TODO alert if $modalWrapper.length == 0
