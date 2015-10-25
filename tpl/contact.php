@@ -35,6 +35,13 @@
 
                 <div class="ju-input-wrapper">
                     <label>Subject</label>
+                    <select style="display: none;">
+                        <option value="info@jerusalemu.org">General Information</option>
+                        <option value="techsupport@jerusalemu.org">Technical Assistance</option>
+                        <option value="francine@jerusalemu.org">Marketing Material Assistance</option>
+                        <option value="press@jerusalemu.org">Press Inquiries</option>
+                        <option value="press@jerusalemu.org">Other...</option>
+                    </select>
                     <input type="text">
                     <div class="error"></div>
                 </div>
