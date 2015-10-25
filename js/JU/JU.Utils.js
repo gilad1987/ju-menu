@@ -15,7 +15,7 @@
         function register(key,_func){
 
             if(typeof _func == 'function' && typeof key == 'string'){
-                _this.prototype[key] = _func;
+                _this[key] = _func;
             }
         }
 

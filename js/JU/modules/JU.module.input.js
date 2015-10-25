@@ -96,7 +96,6 @@
 
                         $wrapper.find('input'+'.'+CSS_CLASS_NAME.input).val('').trigger('change');
                         $wrapper.find('textarea'+'.'+CSS_CLASS_NAME.input).val('').trigger('change');
-
                         return;
                     }
 

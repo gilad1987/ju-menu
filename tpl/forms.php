@@ -1,4 +1,4 @@
-<article id="login" class="login  content"><!-- .before-show -->
+<article id="login" class="login  content" data-inserthtml-callback="onModalFormsOpen"><!-- .before-show -->
     <div class="table">
         <div class="cell close-modal-area">
 
@@ -34,7 +34,7 @@
 
             </div>
 
-            <div id="forms-wrapper" class="forms-wrapper login ju-tabset">
+            <div id="forms-wrapper" class="forms-wrapper login ju-tabset" data-default-tab-selector=".login">
 
                 <img src="images/login-shadow.png" class="shadow">
 
@@ -115,7 +115,7 @@
 
                         <button class="send btn orange"><span>Sign up Now</span></button>
 
-                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password" class="ju-tabs-button"
+                        <div class="forgot-password show-login">Already have an account? <a id="show-reset-password" class="ju-tabs-button login"
                                                                                             data-ju-tabs-content-selector=".login-form"
                                                                                             data-ju-tabs-state="login"> Login</a></div>
 

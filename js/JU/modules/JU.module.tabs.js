@@ -20,9 +20,25 @@
      * @kind function
      *
      * @description
+     * On click event if target has '.ju-tabs-button' get parent has '.ju-tabset'
+     * 1. remove all active class from contents & buttons
+     * 2. add active to button and to content ( data-ju-tabs-content-selector )
+     * 3. update state of parent (.ju-tabset) - remove class of lass state and add current state(with class)
      *
      * @example
+     * <div class="ju-tabset" data-default-tab-selector=".login">
+     *     <a id="show-reset-password" class="ju-tabs-button"
+     *                                 data-ju-tabs-content-selector=".reset-password-form"
+     *                                 data-ju-tabs-state="reset-password">Click here to reset it</a>
      *
+     *     <div class="reset-password-form form ju-tabs-content"></div>
+     *
+     *     <div class="login-form form ju-tabs-content active">
+     *         <a id="show-reset-password" class="ju-tabs-button"
+     *                                     data-ju-tabs-content-selector=".reset-password-form"
+     *                                     data-ju-tabs-state="reset-password">Click here to reset it</a>
+     *         </div>
+     * </div>
      *
      * @returns {{open: open, reset: reset}}
      * @constructor
@@ -66,6 +82,14 @@
             return $elem;
         }
 
+        /**
+         * 1. Remove active class
+         * 2. Add active to button & content
+         * 3. Update state of tabset parent
+         *
+         * @param e
+         * @param element
+         */
         function toggleTab(e,element){
 
             var $elem;
@@ -104,6 +128,7 @@
             $content.addClass('active');
         }
 
+        //#TODO add cache
         //var cache = {};
         //cache.tabs = {
         //    'key_of_id':{
@@ -120,7 +145,6 @@
         }
 
         function reset(tabSetSelector){
-
             if(typeof tabSetSelector =='undefined' || tabSetSelector.length==0){
                 return;
             }

@@ -59,10 +59,28 @@
                 return;
             }
 
-            //#TODO add function after add content
-            $modalWrapper.html('');
-            $modalWrapper.html($content);
+            function runCallback(elem){
+                var callback = $(elem).data('inserthtml-callback');
+                callback = eval(callback);
+                if(typeof callback == 'object'){
+                    var i= 0,len=callback.length;
+                    for(;i<len;i++){
+                        var currentCallback = callback[i];
+                        if(typeof currentCallback == 'function'){
+                            currentCallback(elem);
+                        }
+                    }
+                }
+                if(typeof callback == 'function'){
+                    callback(elem);
+                }
+            }
 
+            runCallback($content);
+            //#TODO add callback after add content
+            $modalWrapper
+                .html('')
+                .html($content);
         }
 
         function onChangeSate(elem){

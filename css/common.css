@@ -96,6 +96,15 @@ i.icon.donate{background: url('../images/icons/navigationDonate.png'); width:30p
 .input-wrapper.dirty input{color: #807C7C;/* border-color: #228CD0; */}
 .input-wrapper.error input{border-color: red;}
 
+/* expandable module */
+.ju-expander{ -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;}
+
+/* end - expandable module */
 @media (max-width: 1002px) {
     .desktop-only{display: none !important;}
 }
