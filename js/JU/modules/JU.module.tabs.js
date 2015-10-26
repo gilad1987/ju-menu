@@ -108,7 +108,7 @@
                 return;
             }
             var $content = $(contentSelector);
-            if($content.length==0){
+            if($content.length==0 || ($content.length!=0 && $content.hasClass('active'))){
                 return;
             }
 
@@ -129,11 +129,13 @@
                 .addClass(newState)
                 .data('ju-tabs-state',newState);
 
-            //$TODO add callback open
+            //#TODO add callback open
             $elem.addClass('active');
             $content.addClass('active').promise().done(function(){
                 _target = $(this);
             });
+
+
         }
 
         //#TODO add cache
@@ -168,17 +170,17 @@
 
         $document.on('click',toggleTab);
 
-        //$document.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
-        //    function(e) {
-        //
-        //        if(!$(e.target).hasClass('ju-tabs-content') || e.target != _target[0] || e.originalEvent.propertyName == 'height'){
-        //            return;
-        //        }
-        //        var _this = _target;
-        //        setTimeout(function(){
-        //            _this.addClass('after-amination');
-        //        },0);
-        //    });
+        $document.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
+            function(e) {
+
+                if(!$(e.target).hasClass('ju-tabs-content') || e.target != _target[0] || e.originalEvent.propertyName == 'height'){
+                    return;
+                }
+                var _this = _target;
+                setTimeout(function(){
+                    _this.addClass('after-amination');
+                },0);
+            });
 
         return{
             open:open,
