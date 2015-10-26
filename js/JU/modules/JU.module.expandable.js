@@ -81,7 +81,7 @@
      */
     function JUExpandableModule(){
 
-        var i;
+        var i,openElement=[];
 
         /**
          * Parse string to selectors and return array of dom element (not jQuery)
@@ -157,7 +157,20 @@
                 isIsolated;
 
             $elem = getCurrentElement(e,element);
-            if($elem==null) return;
+            if($elem==null) {
+                var _elem = e? e.target:element;
+                var index = openElement.indexOf(_elem);
+                if($(_elem).closest('.ju-expandable').length==0 && openElement.length  && index == -1){
+                    var i=0,
+                        len=openElement.length;
+                    for(;i<len;i++){
+                        var temp = openElement[i];
+                        openElement.splice(openElement[i],1);
+                        JU.module.JUExpandable.collapse(temp);
+                    }
+                }
+                return;
+            }
 
             isIsolated = $elem.data(DATA_SET.isolated);
             isIsolated = (typeof isIsolated != 'undefined' && isIsolated);
@@ -217,10 +230,22 @@
             }
 
 
+
             $(elementsToAddClass)
                 .toggleClass(CLASS_NAMES.JUexpanded)
                 .promise()
                 .done(onFinish);
+
+            if($(elementsToAddClass).data('close-onclick-outside')){
+                var index = openElement.indexOf(elementsToAddClass[0]);
+                if(index == -1 && $(elementsToAddClass).hasClass('ju-expanded')){
+                    openElement.push(elementsToAddClass[0]);
+                }
+                if(index != -1 && !$(elementsToAddClass).hasClass('ju-expanded')){
+                    openElement.splice(index,1);
+                }
+
+            }
         }
 
 

@@ -15,58 +15,60 @@
             </div>
 
             <div class="form-wrapper">
-                <div class="ju-input-wrapper">
-                    <label>First name</label>
-                    <input type="text">
-                    <div class="error">Please fill your first name</div>
-                </div>
+                <form action="/">
+                    <div class="ju-input-wrapper">
+                        <label>First name</label>
+                        <input type="text">
+                        <div class="error">Please fill your first name</div>
+                    </div>
 
-                <div class="ju-input-wrapper">
-                    <label>Last name</label>
-                    <input type="text">
-                    <div class="error"></div>
-                </div>
+                    <div class="ju-input-wrapper">
+                        <label>Last name</label>
+                        <input type="text">
+                        <div class="error"></div>
+                    </div>
 
-                <div class="ju-input-wrapper">
-                    <label>Email address</label>
-                    <input type="text">
-                    <div class="error"></div>
-                </div>
+                    <div class="ju-input-wrapper">
+                        <label>Email address</label>
+                        <input type="text">
+                        <div class="error"></div>
+                    </div>
 
-                <div class="ju-input-wrapper">
-                    <label>Subject</label>
+                    <div class="ju-input-wrapper">
+                        <label>Subject</label>
 
-                   <div class="ju-expandable ju-select" data-isolated="1">
+                        <div class="ju-expandable ju-select" data-isolated="1" data-close-onclick-outside="1">
 
-                       <select>
-                           <option value="info@jerusalemu.org">General Information</option>
-                           <option value="techsupport@jerusalemu.org">Technical Assistance</option>
-                           <option value="francine@jerusalemu.org">Marketing Material Assistance</option>
-                           <option value="press@jerusalemu.org">Press Inquiries</option>
-                           <option value="press@jerusalemu.org">Other...</option>
-                       </select>
+                            <select>
+                                <option value="info@jerusalemu.org">General Information</option>
+                                <option value="techsupport@jerusalemu.org">Technical Assistance</option>
+                                <option value="francine@jerusalemu.org">Marketing Material Assistance</option>
+                                <option value="press@jerusalemu.org">Press Inquiries</option>
+                                <option value="press@jerusalemu.org">Other...</option>
+                            </select>
 
-                       <div class="ju-expander">Check subject</div>
-                       <div class="options">
-                           <div class="ju-option" data-value="info@jerusalemu.org">General Information</div>
-                           <div class="ju-option"  data-value="techsupport@jerusalemu.org">Technical Assistance</div>
-                           <div class="ju-option"  data-value="francine@jerusalemu.org">Marketing Material Assistance</div>
-                           <div class="ju-option"  data-value="press@jerusalemu.org">Press Inquiries</div>
-                           <div class="ju-option"  data-value="press@jerusalemu.org">Other...</div>
-                       </div>
-                   </div>
-                    <div class="error"></div>
-                </div>
+                            <div class="ju-expander">Check subject</div>
+                            <div class="options">
+                                <div class="ju-option" data-value="info@jerusalemu.org">General Information</div>
+                                <div class="ju-option"  data-value="techsupport@jerusalemu.org">Technical Assistance</div>
+                                <div class="ju-option"  data-value="francine@jerusalemu.org">Marketing Material Assistance</div>
+                                <div class="ju-option"  data-value="press@jerusalemu.org">Press Inquiries</div>
+                                <div class="ju-option"  data-value="press@jerusalemu.org">Other...</div>
+                            </div>
+                        </div>
+                        <div class="error"></div>
+                    </div>
 
-                <div class="ju-input-wrapper textarea">
-                    <label>Enter comment (1000 characters maximum)</label>
-                    <textarea></textarea>
-                    <div class="error"></div>
-                </div>
+                    <div class="ju-input-wrapper textarea">
+                        <label>Enter comment (1000 characters maximum)</label>
+                        <textarea></textarea>
+                        <div class="error"></div>
+                    </div>
 
-                <div class="btn send orange">
-                    <span>Send</span>
-                </div>
+                    <button type="submit" class="btn send orange">
+                        <span>Send</span>
+                    </button>
+                </form>
             </div>
         </div>
 

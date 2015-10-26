@@ -30,6 +30,7 @@ $version = rand(0,10000000000000);
     <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.tabs.js?v=<?php echo $version;?>"></script>
+    <script src="js/JU/modules/JU.module.form.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.input.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.select.js?v=<?php echo $version;?>"></script>
 
@@ -54,7 +55,7 @@ $version = rand(0,10000000000000);
 <nav class="social-and-login">
     <div class="max-width-content">
         <ul class="login">
-            <li class="ju-expandable test-login ju-modal-button" data-dependencies-selectors="#ju-modal|" data-callback="[JU.module.JUModal.onChangeSate]" data-modal-content-selector="#login">
+            <li class="ju-expandable test-login ju-modal-button" data-dependencies-selectors="#ju-modal|" data-callback="[JU.module.JUModal.onChangeSate]" data-modal-content-selector="#login" >
                 <a class="ju-expander">
                     <span class="table">
                         <span class="cell">

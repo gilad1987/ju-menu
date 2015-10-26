@@ -16,6 +16,8 @@
     //#TODO  add cache
     function JUSelectModule(){
 
+        var selectOpen = [];
+
         function onSelectClick(e){
 
             var $target = $(e.target);

@@ -61,13 +61,7 @@
 /* select */
 .ju-select{}
 .ju-select select{display: none}
-.ju-select .ju-expander:after{
-    position: absolute;
-    color: #E5E5E5;
-    right: 13px;
-    top: 12px;
-    font: normal normal normal 14px/1 FontAwesome;
-    content: "\f078";
+.ju-select .ju-expander:after{  position: absolute;  color: #E5E5E5;  right: 13px;  top: 12px;  font: normal normal normal 14px/1 FontAwesome;  content: "\f078";
     -webkit-transition: transform 300ms ease-out , color 200ms;
     -moz-transition: transform 300ms ease-out , color 200ms;
     -o-transition: transform 300ms ease-out , color 200ms;
@@ -86,9 +80,9 @@
     transition: opacity 400ms ease-out;
 }
 .ju-select.ju-expandable .ju-option{  height: 40px;  line-height: 40px;  background: white;  border-bottom: 1px solid #D2D2D2;  padding-left: 10px;  z-index: 2;position: relative;}
-.ju-select.ju-expandable .ju-option.active{  background: #F5F5F5;  }
+.ju-select.ju-expandable .ju-option.active{  background: #F5F5F5;  color: #194F9B;}
 .ju-select.ju-expandable .ju-option.active:after{    content: "\f00c"; color: #8E8D8D;  font: normal normal normal 14px/1 FontAwesome;margin-left: 10px;}
-.ju-select.ju-expandable .ju-option:hover{  background: #F7F7F7;  }
+.ju-select.ju-expandable .ju-option:hover{  background: #F7F7F7;  color: #194F9B;}
 .ju-select.ju-expandable.ju-expanded{overflow: visible;}
 .ju-select.ju-expandable.ju-expanded .options{  opacity: 1;  }
 .ju-select.ju-expandable .ju-expander{height: 40px;position: relative;line-height: 40px;background: white;border: 1px solid #D2D2D2;padding-left: 10px;}
