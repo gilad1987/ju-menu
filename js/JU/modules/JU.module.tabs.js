@@ -82,6 +82,7 @@
             return $elem;
         }
 
+        var _target;
         /**
          * 1. Remove active class
          * 2. Add active to button & content
@@ -113,7 +114,12 @@
 
             //$TODO add callback close
             $parentSet.find('.'+JU_TAB_CLASS.JUtabsButton+'.active').removeClass('active');
-            $parentSet.find('.'+JU_TAB_CLASS.JUtabsContent+'.active').removeClass('active');
+            $parentSet.find('.'+JU_TAB_CLASS.JUtabsContent+'.active').removeClass('after-amination').promise().done(function(){
+                var _this = $(this);
+                setTimeout(function(){
+                    _this.removeClass('active');
+                },50);
+            });
 
             //$TODO add callback change state
             var currentState = $parentSet.data('ju-tabs-state');
@@ -125,7 +131,9 @@
 
             //$TODO add callback open
             $elem.addClass('active');
-            $content.addClass('active');
+            $content.addClass('active').promise().done(function(){
+                _target = $(this);
+            });
         }
 
         //#TODO add cache
@@ -159,6 +167,18 @@
         }
 
         $document.on('click',toggleTab);
+
+        $document.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd',
+            function(e) {
+
+                if(!$(e.target).hasClass('ju-tabs-content') || e.target != _target[0] || e.originalEvent.propertyName == 'height'){
+                    return;
+                }
+                var _this = _target;
+                setTimeout(function(){
+                    _this.addClass('after-amination');
+                },0);
+            });
 
         return{
             open:open,

@@ -61,7 +61,13 @@
 /* select */
 .ju-select{}
 .ju-select select{display: none}
-.ju-select .ju-expander:after{color: #E5E5E5;  font: normal normal normal 14px/1 FontAwesome;  content: "\f078";  float: right;  margin-top: 10px;  margin-right: 10px;
+.ju-select .ju-expander:after{
+    position: absolute;
+    color: #E5E5E5;
+    right: 13px;
+    top: 12px;
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f078";
     -webkit-transition: transform 300ms ease-out , color 200ms;
     -moz-transition: transform 300ms ease-out , color 200ms;
     -o-transition: transform 300ms ease-out , color 200ms;
@@ -85,7 +91,7 @@
 .ju-select.ju-expandable .ju-option:hover{  background: #F7F7F7;  }
 .ju-select.ju-expandable.ju-expanded{overflow: visible;}
 .ju-select.ju-expandable.ju-expanded .options{  opacity: 1;  }
-.ju-select.ju-expandable .ju-expander{height: 40px;line-height: 40px;background: white;border: 1px solid #D2D2D2;padding-left: 10px;}
+.ju-select.ju-expandable .ju-expander{height: 40px;position: relative;line-height: 40px;background: white;border: 1px solid #D2D2D2;padding-left: 10px;}
 .error .ju-select.ju-expandable .ju-expander{  border-color: red;  color: initial;  }
 .ju-select.ju-expandable.ju-expanded .ju-expander{  border-color: #8E8D8D;  border-bottom-color: #D2D2D2;  }
 

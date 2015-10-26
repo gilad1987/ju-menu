@@ -100,7 +100,7 @@ article.login .ju-input-wrapper.error .error-message{
 }
 
 
-article.login .forgot-password{  color: #a7a7a7;  font-size: 15px;  text-align: left;}
+article.login .forgot-password{  color: #a7a7a7;  font-size: 15px;  text-align: left;margin: 20px 0 0 0;}
 article.login .forgot-password a{color: #228CD0;text-decoration: underline;cursor: pointer;}
 article.login .send.btn{max-width: 314px;display: block;width: 80%;height: 55px;margin: 28px auto 0;color: white;font-size: 25px;line-height: 46px;overflow: hidden;}
 article.login .fa{  position: absolute;  right: 14px;  top: 14px; /* z-index: 5; */  color: #e1e1e1;  font-size: 26px;
@@ -122,10 +122,13 @@ article.login input:focus ~ .fa{color: #228CD0;}
     -o-transition: all 800ms ease-out;
     transition: all 800ms ease-out;
 }
-article.login .forms-wrapper .login-form.active{height: 332px;opacity: 1;}
-article.login .forms-wrapper .signup-form.active{height: 481px;opacity: 1;}
+article.login .forms-wrapper .login-form.active.after-amination{height: auto;opacity: 1;}
+article.login .forms-wrapper .login-form.active{height: 323px;opacity: 1;}
+article.login .forms-wrapper .signup-form.active.after-amination{height: auto;opacity: 1;}
+article.login .forms-wrapper .signup-form.active{height: 471px;opacity: 1;}
 article.login .forms-wrapper .forgot-password.active{  text-align:center; margin:10px 0}
-article.login .forms-wrapper .reset-password-form.active{height: 218px; opacity: 1;}
+article.login .forms-wrapper .reset-password-form.active{height: 199px; opacity: 1;}
+article.login .forms-wrapper .reset-password-form.active.after-amination{height: auto; opacity: 1;}
 article.login .forms-wrapper .reset-password-form.active .fa-arrow-left{  color: #807C7C;  cursor: pointer;  opacity: 1;
     -ms-transform: rotate(180deg);/* IE 9 */
     -webkit-transform: rotate(0deg);/* Chrome, Safari, Opera */
