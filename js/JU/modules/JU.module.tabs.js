@@ -122,12 +122,16 @@
             });
 
             //$TODO add callback change state
-            var currentState = $parentSet.data('ju-tabs-state');
-            var newState =  $elem.data('ju-tabs-state');
-            $parentSet
-                .removeClass(currentState)
-                .addClass(newState)
-                .data('ju-tabs-state',newState);
+            function updateState(){
+                var currentState = $parentSet.data('ju-tabs-state');
+                var newState =  $elem.data('ju-tabs-state');
+                $parentSet
+                    .removeClass(currentState)
+                    .addClass(newState)
+                    .data('ju-tabs-state',newState);
+            }
+
+            updateState();
 
             //#TODO add callback open
             $elem.addClass('active');

@@ -158,7 +158,7 @@
 
             $elem = getCurrentElement(e,element);
             if($elem==null) {
-                var _elem = e? e.target:element;
+                var _elem = e ? e.target:element;
                 var index = openElement.indexOf(_elem);
                 if($(_elem).closest('.ju-expandable').length==0 && openElement.length  && index == -1){
                     var i=0,

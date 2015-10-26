@@ -15,22 +15,22 @@
             </div>
 
             <div class="form-wrapper">
-                <form action="/">
+                <form action="/" class="ju-form" name="contact">
                     <div class="ju-input-wrapper">
                         <label>First name</label>
-                        <input type="text">
-                        <div class="error">Please fill your first name</div>
+                        <input type="text" name="first_name" id="first_name" class="ju-validate" data-ju-vtype="string" data-ju-messages='{"error":"Error message"}' data-ju-pattern="">
+                        <div class="error"></div>
                     </div>
 
                     <div class="ju-input-wrapper">
                         <label>Last name</label>
-                        <input type="text">
+                        <input type="text" name="last_name" id="last_name" data-ju-vtype="string" class="ju-validate">
                         <div class="error"></div>
                     </div>
 
                     <div class="ju-input-wrapper">
                         <label>Email address</label>
-                        <input type="text">
+                        <input type="text" name="email" id="email" data-ju-vtype="email" class="ju-validate">
                         <div class="error"></div>
                     </div>
 

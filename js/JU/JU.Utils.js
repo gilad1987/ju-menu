@@ -28,5 +28,9 @@
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
+    Utils.prototype.runCallback = function runCallback(data){
+
+    };
+
     window.JU.Utils = Utils();
 })(window);
