@@ -34,7 +34,8 @@
 .contact-page .form .form-wrapper .ju-input-wrapper input:focus,
 .contact-page .form .form-wrapper .ju-input-wrapper textarea:focus{border-color: #8E8D8D;-moz-box-shadow: inset 0 0 13px -5px #757575;     /* -webkit-box-shadow: inset 0 0 13px -5px #757575; */     /* box-shadow: inset 0 0 13px -5px #757575; */}
 .contact-page .form .form-wrapper .ju-input-wrapper.error input:focus,
-.contact-page .form .form-wrapper .ju-input-wrapper.error textarea:focus{
+.contact-page .form .form-wrapper .ju-input-wrapper.error textarea:focus,
+.contact-page .form .form-wrapper .ju-input-wrapper.error textarea{
     border: 1px solid #EF0000;
 }
 .contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;color: black;}

@@ -132,7 +132,7 @@ nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  bord
 nav.links .third-menu ul li.video-series .sub-menu ul.parent .child > li{height:100%;background-position: center;      background-size: cover;}
 nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;/* overflow: hidden; */}
 
-#page{  padding-bottom: 350px;  /* background-color: #8A8A8A; */}
+#page{  padding-bottom: 50px;  /* background-color: #8A8A8A; */}
 .sticky #page{  padding-top: 100px;  }
 .search-bar{
     width: 67px;
