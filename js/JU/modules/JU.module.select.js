@@ -29,7 +29,7 @@
             var $select = $parent.find('select');
             var $expander = $parent.find('.ju-expander');
 
-            $select.val($target.data('value'));
+            $select.val($target.data('value')).trigger('change');
             $parent.find('.ju-option').removeClass('active');
             $target.addClass('active');
             $expander.text($target.text());

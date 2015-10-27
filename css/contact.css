@@ -19,7 +19,7 @@
     -o-transition: border 100ms ease-out 200ms;
     transition: border 100ms ease-out 200ms;
 }
-.contact-page .error{font-size: 14px;}
+.contact-page .error-message{font-size: 14px;}
 .contact-page .form .form-wrapper:hover{border: solid 1px #8E8F90;}
 .contact-page .form .form-wrapper .ju-input-wrapper{margin: 0;float: left;width: 50%;box-sizing: border-box;}
 .contact-page .form .form-wrapper .ju-input-wrapper:nth-child(odd){padding: 10px 15px 0 0;}
@@ -27,9 +27,16 @@
 .contact-page .form .form-wrapper .ju-input-wrapper:nth-child(even){padding: 10px 0px 0 15px;}
 .contact-page .form .form-wrapper .ju-input-wrapper input{display: block;width: 100%;padding:  0 5px;margin: 0;border: 1px solid #D2D2D2;height: 40px;line-height: 40px;
     /* -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: box-shadow 200ms ease-out 100ms;       transition: box-shadow 200ms ease-out 100ms; */}
+.contact-page .form .form-wrapper .ju-input-wrapper.error input{
+    border: 1px solid #EF0000;
+}
 .contact-page  input,.contact-page  textarea{font-size: 14px;}
 .contact-page .form .form-wrapper .ju-input-wrapper input:focus,
 .contact-page .form .form-wrapper .ju-input-wrapper textarea:focus{border-color: #8E8D8D;-moz-box-shadow: inset 0 0 13px -5px #757575;     /* -webkit-box-shadow: inset 0 0 13px -5px #757575; */     /* box-shadow: inset 0 0 13px -5px #757575; */}
+.contact-page .form .form-wrapper .ju-input-wrapper.error input:focus,
+.contact-page .form .form-wrapper .ju-input-wrapper.error textarea:focus{
+    border: 1px solid #EF0000;
+}
 .contact-page .form .form-wrapper .ju-input-wrapper label{margin: 0;display: block;line-height: 29px;color: black;}
 .contact-page .form .form-wrapper .ju-input-wrapper.textarea{margin: 0;display: block;line-height: 29px;width: 100%;float: none;overflow: hidden;padding-right: 0;box-sizing: border-box;}
 .contact-page .form .form-wrapper .ju-input-wrapper textarea{display: block;width: 100%;height: 100px;margin: 0;padding: 10px;border: 1px solid #D2D2D2;}

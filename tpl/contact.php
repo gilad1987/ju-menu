@@ -18,20 +18,23 @@
                 <form action="/" class="ju-form" name="contact">
                     <div class="ju-input-wrapper">
                         <label>First name</label>
-                        <input type="text" name="first_name" id="first_name" class="ju-validate" data-ju-vtype="string" data-ju-messages='{"error":"Error message"}' data-ju-pattern="">
-                        <div class="error"></div>
+                        <input type="text" name="first_name" id="first_name" class="ju-validate"
+                               data-ju-vtype="alpha"
+                               data-ju-messages='{"error":"Incorrect first name","empty":"fill first name"}'
+                               data-ju-pattern="">
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="ju-input-wrapper">
                         <label>Last name</label>
-                        <input type="text" name="last_name" id="last_name" data-ju-vtype="string" class="ju-validate">
-                        <div class="error"></div>
+                        <input type="text" name="last_name" id="last_name" data-ju-vtype="alpha" class="ju-validate">
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="ju-input-wrapper">
                         <label>Email address</label>
                         <input type="text" name="email" id="email" data-ju-vtype="email" class="ju-validate">
-                        <div class="error"></div>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="ju-input-wrapper">
@@ -39,7 +42,11 @@
 
                         <div class="ju-expandable ju-select" data-isolated="1" data-close-onclick-outside="1">
 
-                            <select>
+                            <select class="ju-validate" name="subject"
+                                    data-ju-required="1"
+                                    data-ju-messages='{"error":"","empty":"Please choose subject"}'
+                                    data-ju-pattern="">
+                                <option value="noValid" checked>General Information</option>
                                 <option value="info@jerusalemu.org">General Information</option>
                                 <option value="techsupport@jerusalemu.org">Technical Assistance</option>
                                 <option value="francine@jerusalemu.org">Marketing Material Assistance</option>
@@ -56,13 +63,16 @@
                                 <div class="ju-option"  data-value="press@jerusalemu.org">Other...</div>
                             </div>
                         </div>
-                        <div class="error"></div>
+                        <div class="error-message"></div>
                     </div>
 
                     <div class="ju-input-wrapper textarea">
                         <label>Enter comment (1000 characters maximum)</label>
-                        <textarea></textarea>
-                        <div class="error"></div>
+                        <textarea class="ju-validate" name="comment" data-ju-required="0"
+                                  data-ju-vtype="alpha"
+                                  data-ju-messages='{"error":"Incorrect comment","empty":"fill first name"}'
+                                  data-ju-pattern=""></textarea>
+                        <div class="error-message"></div>
                     </div>
 
                     <button type="submit" class="btn send orange">
