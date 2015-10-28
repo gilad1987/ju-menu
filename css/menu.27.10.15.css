@@ -132,7 +132,7 @@ nav.links .third-menu ul li.video-series .sub-menu ul.parent{  width: 20%;  bord
 nav.links .third-menu ul li.video-series .sub-menu ul.parent .child > li{height:100%;background-position: center;      background-size: cover;}
 nav.links .third-menu ul li.video-series .sub-menu .parent-ul-wrapper{padding: 0;/* overflow: hidden; */}
 
-#page{  padding-bottom: 50px;  /* background-color: #8A8A8A; */padding-top: 50px;}
+#page{  padding-bottom: 50px;  /* background-color: #8A8A8A; */}
 .sticky #page{  padding-top: 100px;  }
 .search-bar{
     width: 67px;
@@ -180,10 +180,10 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li .sub-menu ul.parent{width:25%;box-sizing: border-box;}
     nav.links ul li.films .sub-menu ul.parent:first-child{width: 20%;padding: 0px 25px;border: none;}
     nav.links .third-menu ul li{float:left}
-    nav.links .third-menu ul a{color: #FFFFFF;font-size: 14px;}
-    nav.links .third-menu ul li:first-child a{color: #FFFFFF;font-size: 26px;padding-left: 0;-webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;}
+    nav.links .third-menu ul a{color:#685959;font-size: 14px;}
+    nav.links .third-menu ul li:first-child a{color:#194f9b;font-size: 26px;padding-left: 0;-webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;}
     .sticky nav.links .third-menu ul li:first-child a{font-size: 22px;}
-    .main-menu{   background: white;height: 67px;   -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;   z-index: 2;   position: relative;border-bottom: 1px solid #C2C2C2;}
+    .main-menu{   height: 67px;   -webkit-transition: all 200ms ease-out;      -moz-transition: all 200ms ease-out;      -o-transition: all 200ms ease-out;      transition: all 200ms ease-out;   z-index: 2;   position: relative;border-bottom: 1px solid #C2C2C2;}
     .third-menu{
         height: 50px;
         background-color: #f2f2f2;
@@ -193,15 +193,10 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
         transition: all 200ms ease-out;
         display: block;
         border-bottom: 1px solid #C2C2C2;
-        top: 67px;
-        position: absolute;
-        width: 100%;
-        background: #77CA85;
-        /* color: white !important; */
     }
     nav .third-menu ul{  position: initial;  }
     .sticky .main-menu{   height: 55px;}
-    .sticky .third-menu{height: 45px;top: 55px;}
+    .sticky .third-menu{height: 45px;}
     nav.links ul li:hover .sub-menu{height:300px;box-shadow: 0px 1px 2px #616060;}
     nav.links ul li.active .sub-menu{/* height:300px; */box-shadow: 0px 1px 2px #616060;}
     nav.links ul li.video-series:hover .sub-menu,
@@ -226,10 +221,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li:hover .sub-menu a{color:black;}
     nav.links ul li.video-course:hover .search-place a{color:white}
     .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px -3px 8px 1px #2B2B2B;}
-    .sticky nav.links.hide .third-menu{top: 15px;position: absolute;width: 100%;-webkit-transition: all 200ms ease-out;     -moz-transition: all 200ms ease-out;     -o-transition: all 200ms ease-out;     transition: all 200ms ease-out;}
-    .sticky nav.links.hide ul li{
-        border-color: #77CA85;
-    }
+    .sticky nav.links.hide{top: -104px;}
     .sticky .ju-logo .text .slogan{position:absolute; top: 55px;}
     .sticky .ju-logo svg{  height: 36px;   }
     .sticky .ju-logo .text .company-name{font-size: 25px;padding-top: 3px;}
