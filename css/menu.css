@@ -219,7 +219,8 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li.films .sub-menu ul.films-gallery a{color:#2a8ecd;}
     nav.links ul li.films .sub-menu li a span{display:block; padding-left:10px; font-weight:normal}
 
-    nav.links ul li:hover a{  color: #194f9b;  background-color: #f3f4f5;  }
+    nav.links ul li:hover{background-color: #f3f4f5; }
+    nav.links ul li:hover a{  color: #194f9b;  /* background-color: #f3f4f5; */  }
     nav.links ul li a.main-menu-link{   position: relative;top: 1px;border-bottom: 1px solid #C2C2C2;z-index: 3;}
     nav.links ul li.has-sub-menu:hover a.main-menu-link{   border-bottom: 1px solid #F3F4F5;}
     nav.links ul li.donate:hover a{  color: #EE7624;  }
