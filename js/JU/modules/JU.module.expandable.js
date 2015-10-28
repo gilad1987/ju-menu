@@ -143,6 +143,14 @@
 
         }
 
+        function getDependenciesElements($element){
+            return getCollectionElements( $element.data(DATA_SET.dependencies_selectors) )
+        }
+
+        function getExcludeElements($element){
+            return getCollectionElements( $element.data(DATA_SET.exclude_expandable) )
+        }
+
         /**
          * @description
          * Remove class .ju-expanded from all elements .ju-expandable.ju-expanded
@@ -175,10 +183,10 @@
             isIsolated = $elem.data(DATA_SET.isolated);
             isIsolated = (typeof isIsolated != 'undefined' && isIsolated);
 
-            var elementsToAddClass = getCollectionElements( $elem.data(DATA_SET.dependencies_selectors) );
+            var elementsToAddClass = getDependenciesElements( $elem );
             elementsToAddClass.push($elem[0]);
             
-            var elementsToExclude = getCollectionElements( $elem.data(DATA_SET.exclude_expandable) );
+            var elementsToExclude = getExcludeElements( $elem );
 
             var hasExcludeElements = elementsToExclude.length>0;
 
@@ -238,10 +246,11 @@
 
             if($(elementsToAddClass).data('close-onclick-outside')){
                 var index = openElement.indexOf(elementsToAddClass[0]);
-                if(index == -1 && $(elementsToAddClass).hasClass('ju-expanded')){
+                var hasClassExpanded = $(elementsToAddClass).hasClass('ju-expanded');
+                if(index == -1 && hasClassExpanded){
                     openElement.push(elementsToAddClass[0]);
                 }
-                if(index != -1 && !$(elementsToAddClass).hasClass('ju-expanded')){
+                if(index != -1 && !hasClassExpanded){
                     openElement.splice(index,1);
                 }
 
