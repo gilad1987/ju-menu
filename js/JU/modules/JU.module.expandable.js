@@ -143,10 +143,20 @@
 
         }
 
+        /**
+         *
+         * @param $element jQuery
+         * @returns {Array}
+         */
         function getDependenciesElements($element){
             return getCollectionElements( $element.data(DATA_SET.dependencies_selectors) )
         }
 
+        /**
+         *
+         * @param $element jQuery
+         * @returns {Array}
+         */
         function getExcludeElements($element){
             return getCollectionElements( $element.data(DATA_SET.exclude_expandable) )
         }
