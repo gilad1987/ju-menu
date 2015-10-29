@@ -227,7 +227,7 @@ nav.links ul li.donate a img{  max-width: 30px;  display: inline-block;  positio
     nav.links ul li:hover .sub-menu a{color:black;}
     nav.links ul li.video-course:hover .search-place a{color:white}
     .sticky nav.links{position: fixed; top: 0;/* height: 50px; */box-shadow: 1px -3px 8px 1px #2B2B2B;}
-    .sticky nav.links.hide .third-menu{top: 15px;position: absolute;width: 100%;-webkit-transition: all 200ms ease-out;     -moz-transition: all 200ms ease-out;     -o-transition: all 200ms ease-out;     transition: all 200ms ease-out;}
+    .sticky nav.links.hide .third-menu{top: 15px;position: absolute;width: 100%;-webkit-transition: all 200ms ease-out;     -moz-transition: all 200ms ease-out;     -o-transition: all 200ms ease-out;     transition: all 200ms ease-out;border-bottom: 1px solid #77CA85;}
     .sticky nav.links.hide .third-menu ul li{
         border-color: #77CA85;
     }
