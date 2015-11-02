@@ -85,7 +85,7 @@ $(document).ready(function(){
 
             // hide menu when scroll down
             //timeout = setTimeout(function(){
-                $menuWrapper.toggleClass('hide',window.pageYOffset>150 && window.pageYOffset > lastPageYOffset);
+                $menuWrapper.toggleClass('hide',window.pageYOffset>150 && (window.pageYOffset > (lastPageYOffset)));
                 lastPageYOffset = window.pageYOffset;
             //},0);
         }

@@ -162,6 +162,16 @@
         }
 
         /**
+         *
+         * @param $elem
+         * @returns {*|boolean|isIsolated}
+         */
+        function isIsolated($elem){
+            var _isIsolated;
+            return (_isIsolated = $elem.data(DATA_SET.isolated)) && (typeof _isIsolated != 'undefined' && _isIsolated);
+        }
+
+        /**
          * @description
          * Remove class .ju-expanded from all elements .ju-expandable.ju-expanded
          * and add ju-expanded class to current element (e.target|element)
@@ -172,7 +182,7 @@
         function expandableOrCollapse(e,element){
 
             var $elem,
-                isIsolated;
+                _isIsolated;
 
             $elem = getCurrentElement(e,element);
             if($elem==null) {
@@ -190,8 +200,7 @@
                 return;
             }
 
-            isIsolated = $elem.data(DATA_SET.isolated);
-            isIsolated = (typeof isIsolated != 'undefined' && isIsolated);
+            _isIsolated = isIsolated($elem);
 
             var elementsToAddClass = getDependenciesElements( $elem );
             elementsToAddClass.push($elem[0]);
@@ -239,7 +248,7 @@
                 }
             }
 
-            if(!isIsolated){
+            if(!_isIsolated){
                 $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded)
                     .not(exclude)
                     .removeClass(CLASS_NAMES.JUexpanded)
