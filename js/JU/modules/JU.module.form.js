@@ -2,7 +2,6 @@
  * Created by gtakoni on 25/10/2015.
  */
 
-var validationTyps;
  (function(JU){
  
      if(typeof JU == 'undefined'){
@@ -19,22 +18,22 @@ var validationTyps;
      function JUFormModule(){
 
          var forms = {};
-         validationTyps = {};
-         validationTyps.rule  = new RegExp("^(.+?)\[(.+)\]$");
-         validationTyps.ip  = new RegExp("^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})$","i");
-         validationTyps.numeric  = new RegExp("^[0-9]+$");
-         validationTyps.integer  =new RegExp( "^\-?[0-9]+$");
-         validationTyps.decimal  = new RegExp("^\-?[0-9]*\.?[0-9]+$");
-         validationTyps.email  =new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
-         validationTyps.alpha  = new RegExp("^[a-z]+$","i");
-         validationTyps.alphaNumeric  =new RegExp( "^[a-z0-9]+$","i");
-         validationTyps.alphaDash  =new RegExp( "^[a-z0-9_\-]+$","i");
-         validationTyps.natural  =new RegExp("^[0-9]+$","i");
-         validationTyps.naturalNoZero = new RegExp("^[1-9][0-9]*$","i");
-         validationTyps.base64  =new RegExp( "[^a-zA-Z0-9\/\+=]","i");
-         validationTyps.numericDash  = new RegExp("^[\d\-\s]+$");
-         validationTyps.url  =new RegExp( "^((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$");
-         validationTyps.date  =new RegExp("\d{4}-\d{1,2}-\d{1,2}");
+         var validationTypes = {};
+         validationTypes.rule  = new RegExp("^(.+?)\[(.+)\]$");
+         validationTypes.ip  = new RegExp("^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})$","i");
+         validationTypes.numeric  = new RegExp("^[0-9]+$");
+         validationTypes.integer  =new RegExp( "^\-?[0-9]+$");
+         validationTypes.decimal  = new RegExp("^\-?[0-9]*\.?[0-9]+$");
+         validationTypes.email  =new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
+         validationTypes.alpha  = new RegExp("^[a-z]+$","i");
+         validationTypes.alphaNumeric  =new RegExp( "^[a-z0-9]+$","i");
+         validationTypes.alphaDash  =new RegExp( "^[a-z0-9_\-]+$","i");
+         validationTypes.natural  =new RegExp("^[0-9]+$","i");
+         validationTypes.naturalNoZero = new RegExp("^[1-9][0-9]*$","i");
+         validationTypes.base64  =new RegExp( "[^a-zA-Z0-9\/\+=]","i");
+         validationTypes.numericDash  = new RegExp("^[\d\-\s]+$");
+         validationTypes.url  =new RegExp( "^((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$");
+         validationTypes.date  =new RegExp("\d{4}-\d{1,2}-\d{1,2}");
 
          function getFormByName(name,$form){
              if(typeof forms[name] == 'undefined'){
@@ -95,11 +94,11 @@ var validationTyps;
              var lastTime = field.isValid;
              field.isValid=true;
 
-             if(field.element.nodeName.toLocaleLowerCase() == "select" && value=="noValid"){
+             if(( field.element.nodeName.toLocaleLowerCase() == "select" ) && value=="noValid"){
                  field.isValid =  false;
              }
 
-             if(field.rules &&  validationTyps[field.rules].exec(value)==null){
+             if(field.rules &&  validationTypes[field.rules].exec(value)==null){
                  if(field.required || ( field.required==0 && value !='' ))
                  field.isValid =  false;
              }
