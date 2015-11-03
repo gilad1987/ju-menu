@@ -59,40 +59,23 @@
                 return;
             }
 
-            function runCallback(elem){
-                var callback = $(elem).data('inserthtml-callback');
-                callback = eval(callback);
-                if(typeof callback == 'object'){
-                    var i= 0,len=callback.length;
-                    for(;i<len;i++){
-                        var currentCallback = callback[i];
-                        if(typeof currentCallback == 'function'){
-                            currentCallback(elem);
-                        }
-                    }
-                }
-                if(typeof callback == 'function'){
-                    callback(elem);
-                }
-            }
+            JU.module.event.trigger({
+                name:'modal.beforeOpen',
+                target:$content[0]
+            });
 
-            runCallback($content);
-            //#TODO add callback after add content
             $modalWrapper
                 .html('')
-                .html($content);
+                .html($content).promise().done(function(){
+                    JU.module.event.trigger({
+                        name:'modal.open',
+                        target:$content[0]
+                    });
+                });
         }
-
-        function onChangeSate(elem){
-            $('body').toggleClass('open-modal');
-        }
-
 
         $document.on('click',innerContent);
 
-        return{
-            onChangeSate:onChangeSate
-        }
     }
 
     function onDOMReady(){

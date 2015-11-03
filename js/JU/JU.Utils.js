@@ -16,8 +16,13 @@
             }
         }
 
+        function isArray(_var){
+            return Object.prototype.toString.call( _var ) === '[object Array]';
+        }
+
         return {
-            register:register
+            register:register,
+            isArray:isArray
         }
     }
 

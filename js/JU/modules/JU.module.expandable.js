@@ -171,6 +171,19 @@
             return (_isIsolated = $elem.data(DATA_SET.isolated)) && (typeof _isIsolated != 'undefined' && _isIsolated);
         }
 
+
+        function onFinishChangeState(event,elements){
+            var i= 0,
+                len=elements.length;
+
+            for(;i<len;i++){
+                JU.module.event.trigger({
+                    name:event,
+                    target:elements[i]
+                });
+            }
+        }
+
         /**
          * @description
          * Remove class .ju-expanded from all elements .ju-expandable.ju-expanded
@@ -222,38 +235,16 @@
                 return elementsToAddClass.indexOf(element) != -1;
             }
 
-            //#TODO part between open | close ask Yuval
-            function runCallback(elem){
-                var callback = $(elem).data(DATA_SET.callback);
-                callback = eval(callback);
-                if(typeof callback == 'object'){
-                    var i= 0,len=callback.length;
-                    for(;i<len;i++){
-                        var currentCallback = callback[i];
-                        if(typeof currentCallback == 'function'){
-                            currentCallback(elem);
-                        }
-                    }
-                }
-                if(typeof callback == 'function'){
-                    callback(elem);
-                }
-            }
-
-            function onFinish(collectionDomElement){
-                i=0;
-                var len=collectionDomElement.length;
-                for(;i<len;i++){
-                    runCallback(collectionDomElement[i]);
-                }
-            }
 
             if(!_isIsolated){
                 $('.'+CLASS_NAMES.JUexpandable + '.' + CLASS_NAMES.JUexpanded)
                     .not(exclude)
                     .removeClass(CLASS_NAMES.JUexpanded)
                     .promise()
-                    .done(onFinish);
+                    .done(function(elements){
+                        onFinishChangeState('expanded.close',elements);
+
+                    });
             }
 
 
@@ -261,7 +252,9 @@
             $(elementsToAddClass)
                 .toggleClass(CLASS_NAMES.JUexpanded)
                 .promise()
-                .done(onFinish);
+                .done(function(elements){
+                    onFinishChangeState('expanded.open',elements);
+                });
 
             if($(elementsToAddClass).data('close-onclick-outside')){
                 var index = openElement.indexOf(elementsToAddClass[0]);

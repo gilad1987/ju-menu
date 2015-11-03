@@ -16,19 +16,20 @@
      //#TODO add description
      function JUEventModule(){
 
-         var evetns = {};
+         var _evetns = {};
 
-         function on(key,func,context){
+         function on(key,func,context,target){
              if(typeof func != 'function'){
                  console.info(func);
                  console.info('Not a function');
              }
-             if(typeof evetns[key] == 'undefined'){
-                 evetns[key]=[];
+             if(typeof _evetns[key] == 'undefined'){
+                 _evetns[key]=[];
              }
-             evetns[key].push({
+             _evetns[key].push({
                  func:func,
-                 context:context
+                 context:context,
+                 target:target
              });
          }
 
@@ -37,18 +38,24 @@
          }
 
          function trigger(event){
-             if(typeof events[event] == 'undefined') {
+             if(typeof _evetns[event.name] == 'undefined') {
                  return;
              }
-
-             var callbacks = evetns[event],
+             var callbacks = _evetns[event.name],
                  len=callbacks.length,
                  i = 0,
-                 arg = arguments.splice(-1,1);
+                 arg = arguments,
+                 _target = event.target;
 
              for(;i<len;i++){
+                 var currentTarget = callbacks[i]['target'];
+
+                 if(_target !== currentTarget){
+                     continue;
+                 }
+
                  var context = callbacks[i]['context'] ? callbacks[i]['context'] : callbacks[i]['func'];
-                 callbacks.apply(context,arg);
+                 callbacks[i]['func'].apply(context,arg);
              }
          }
 
