@@ -142,18 +142,6 @@
 
         }
 
-        //#TODO add cache
-        //var cache = {};
-        //cache.tabs = {
-        //    'key_of_id':{
-        //        currentState:'',
-        //        elem:{}, //jquery
-        //        content:{},//jquery
-        //        buttons:[]
-        //    }
-        //
-        //};
-
         function open(element){
             toggleTab(null,element);
         }

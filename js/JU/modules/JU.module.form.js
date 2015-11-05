@@ -134,15 +134,28 @@
 
              var isValid = true;
              for(key in fields){
-                 isValid = validateField(fields[key]);
+                 if(fields[key].isValid){
+                     if(!validateField(fields[key])){
+                         isValid=false;
+                     }
+                 }
              }
+
 
             return false;
          }
 
          function onKeyDown(e){
              var $elem = $(e.target);
+             if(!$elem.hasClass('ju-validate')){
+                 return;
+             }
+
              var form = getFormByName(e.currentTarget.forms[0].name,$(e.currentTarget.forms[0]));
+             if(!form){
+                 return;
+             }
+
              var key;
              for(key in form.fields){
                  if(form.fields[key].element === $elem[0]){
@@ -150,8 +163,6 @@
                      break;
                  }
              }
-
-
          }
 
          $document.on('submit',onSubmit);

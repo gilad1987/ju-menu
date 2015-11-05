@@ -5,22 +5,7 @@
 (function(JU,$){
 
     var $document;
-
-    var CLASS_NAMES = {
-        JUexpandable:"ju-expandable",
-        JUexpander:"ju-expander",
-        JUexpanded:"ju-expanded"
-    };
-
-    var DATA_SET = {
-        'isolated':'isolated',
-        'dependencies_selectors':'dependencies-selectors',
-        'exclude_expandable':'exclude-expandable',
-        'callback':'callback'
-    };
-
     $document = $(document);
-
 
     /**
      * @JUdoc function
@@ -82,6 +67,21 @@
     function JUExpandableModule(){
 
         var i,openElement=[];
+
+        var CLASS_NAMES = {
+            JUexpandable:"ju-expandable",
+            JUexpander:"ju-expander",
+            JUexpanded:"ju-expanded"
+        };
+
+        var DATA_SET = {
+            'isolated':'isolated',
+            'dependencies_selectors':'dependencies-selectors',
+            'exclude_expandable':'exclude-expandable',
+            'callback':'callback'
+        };
+
+
 
         /**
          * Parse string to selectors and return array of dom element (not jQuery)
@@ -172,6 +172,11 @@
         }
 
 
+        /**
+         * Trigger event for collection
+         * @param event
+         * @param elements
+         */
         function onFinishChangeState(event,elements){
             var i= 0,
                 len=elements.length;
@@ -183,6 +188,23 @@
                 });
             }
         }
+
+        /**
+         *
+         * @param element
+         */
+        function expandable(element){
+            expandableOrCollapse(null,element);
+        }
+
+        /**
+         *
+         * @param element
+         */
+        function collapse(element){
+            expandableOrCollapse(null,element);
+        }
+
 
         /**
          * @description
@@ -243,7 +265,6 @@
                     .promise()
                     .done(function(elements){
                         onFinishChangeState('expanded.close',elements);
-
                     });
             }
 
@@ -267,15 +288,6 @@
                 }
 
             }
-        }
-
-
-        function expandable(element){
-            expandableOrCollapse(null,element);
-        }
-
-        function collapse(element){
-            expandableOrCollapse(null,element);
         }
 
         $document.on('click',expandableOrCollapse);
