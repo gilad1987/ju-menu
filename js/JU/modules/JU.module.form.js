@@ -82,6 +82,14 @@
              return ex.exec(value)==null;
          };
 
+         validationTypes.radio = function(name){
+
+         };
+
+         validationTypes.checkbox = function(name){
+
+         };
+
          validationTypes.select = function(value){
              return  value!="noValid";
          };
@@ -154,6 +162,12 @@
 
              switch (nodeType){
                  case "select-one":
+                     field.isValid =  validationTypes['select'](value,field);
+                     break;
+                 case "radio":
+                     field.isValid =  validationTypes['select'](value,field);
+                     break;
+                 case "checkbox":
                      field.isValid =  validationTypes['select'](value,field);
                      break;
                  default :
