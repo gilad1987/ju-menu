@@ -28,13 +28,14 @@ $version = rand(0,10000000000000);
     <script src="js/JU/JU.settingApp.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/JU.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/JU.Utils.js?v=<?php echo $version;?>"></script>
-    <script src="js/lib/validate.js?v=<?php echo $version;?>"></script>
+<!--    <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>-->
 
     <script src="js/JU/modules/JU.module.expandable.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.modal.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.menu.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.tabs.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.form.js?v=<?php echo $version;?>"></script>
+<!--    <script src="js/JU/modules/JU.module.form.v2.js?v=--><?php //echo $version;?><!--"></script>-->
     <script src="js/JU/modules/JU.module.input.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.select.js?v=<?php echo $version;?>"></script>
     <script src="js/JU/modules/JU.module.event.js?v=<?php echo $version;?>"></script>

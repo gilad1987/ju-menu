@@ -19,21 +19,72 @@
 
          var forms = {};
          var validationTypes = {};
-         validationTypes.rule  = new RegExp("^(.+?)\[(.+)\]$");
-         validationTypes.ip  = new RegExp("^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})$","i");
-         validationTypes.numeric  = new RegExp("^[0-9]+$");
-         validationTypes.integer  =new RegExp( "^\-?[0-9]+$");
-         validationTypes.decimal  = new RegExp("^\-?[0-9]*\.?[0-9]+$");
-         validationTypes.email  =new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
-         validationTypes.alpha  = new RegExp("^[a-z]+$","i");
-         validationTypes.alphaNumeric  =new RegExp( "^[a-z0-9]+$","i");
-         validationTypes.alphaDash  =new RegExp( "^[a-z0-9_\-]+$","i");
-         validationTypes.natural  =new RegExp("^[0-9]+$","i");
-         validationTypes.naturalNoZero = new RegExp("^[1-9][0-9]*$","i");
-         validationTypes.base64  =new RegExp( "[^a-zA-Z0-9\/\+=]","i");
-         validationTypes.numericDash  = new RegExp("^[\d\-\s]+$");
-         validationTypes.url  =new RegExp( "^((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$");
-         validationTypes.date  =new RegExp("\d{4}-\d{1,2}-\d{1,2}");
+         validationTypes.rule  = function(value){
+             var ex = new RegExp("^(.+?)\[(.+)\]$");
+             return ex.exec(value)==null;
+         };
+
+         validationTypes.ip  = function(value){
+             var ex =  new RegExp("^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})$","i");
+             return ex.exec(value)==null;
+         };
+
+         validationTypes.numeric  = function(value){
+             var ex =  new RegExp("^[0-9]+$");
+             return ex.exec(value)==null;
+         };
+         validationTypes.integer  = function(value){
+             var ex =  new RegExp( "^\-?[0-9]+$");
+             return ex.exec(value)==null;
+         };
+         validationTypes.decimal  = function(value){
+             var ex =  new RegExp("^\-?[0-9]*\.?[0-9]+$");
+             return ex.exec(value)==null;
+         };
+         validationTypes.email  = function(value,field){
+             var ex =  new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
+             return  (field.required==0 && value =='') || (field.required  && (ex.exec(value) != null) );
+         };
+         validationTypes.alpha  = function(value,field){
+             var ex =  new RegExp("^[a-z]+$","i");
+             return (field.required==0 && value =='') || (field.required  && (ex.exec(value) != null) );
+         };
+         validationTypes.alphaNumeric  = function(value){
+             var ex =  new RegExp( "^[a-z0-9]+$","i");
+             return ex.exec(value)==null;
+         };
+         validationTypes.alphaDash  = function(value){
+             var ex =  new RegExp( "^[a-z0-9_\-]+$","i");
+             return ex.exec(value)==null;
+         };
+         validationTypes.natural  = function(value){
+             var ex =  new RegExp("^[0-9]+$","i");
+             return ex.exec(value)==null;
+         };
+         validationTypes.naturalNoZero  = function(value){
+             var ex =  new RegExp("^[1-9][0-9]*$","i");
+             return ex.exec(value)==null;
+         };
+         validationTypes.base64  = function(value){
+             var ex =  new RegExp( "[^a-zA-Z0-9\/\+=]","i");
+             return ex.exec(value)==null;
+         };
+         validationTypes.numericDash  = function(value){
+             var ex =   new RegExp("^[\d\-\s]+$");
+             return ex.exec(value)==null;
+         };
+         validationTypes.url  = function(value){
+             var ex =   new RegExp( "^((http|https):\/\/(\w+:{0,1}\w*@)?(\S+)|)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$");
+             return ex.exec(value)==null;
+         };
+         validationTypes.date  = function(value){
+             var ex =   new RegExp("\d{4}-\d{1,2}-\d{1,2}");
+             return ex.exec(value)==null;
+         };
+
+         validationTypes.select = function(value){
+             return  value!="noValid";
+         };
 
          function getFormByName(name,$form){
              if(typeof forms[name] == 'undefined'){
@@ -50,10 +101,11 @@
                      }
                      var $elem = $(f[i]);
                      var field = {};
+                     var vtype = $elem.data('ju-vtype');
                      field['wrapper'] = $elem.closest('.ju-input-wrapper');
                      field['isValid']=true;
                      field['element'] = f[i];
-                     field['rules'] = $elem.data('ju-vtype');
+                     field['rules'] = typeof vtype != 'undefined' ? vtype : 'alpha';
                      field['messages'] = eval( $elem.data('ju-messages') );
                      field['required'] = parseInt( typeof $elem.data('ju-required') != 'undefined' ? $elem.data('ju-required') : 1 );
                      field['pattern'] = $elem.data('ju-pattern');
@@ -89,18 +141,19 @@
          }
 
          function validateField(field){
-             var $elem = $(field.element);
-             var value = $.trim( $elem.val() );
-             var lastTime = field.isValid;
+             var $elem = $(field.element),
+                 value = $.trim( $elem.val()),
+                 isValidLastTime = field.isValid,
+                 nodeType = field.element.type;
+
              field.isValid=true;
 
-             if(( field.element.nodeName.toLocaleLowerCase() == "select" ) && value=="noValid"){
-                 field.isValid =  false;
-             }
-
-             if(field.rules &&  validationTypes[field.rules].exec(value)==null){
-                 if(field.required || ( field.required==0 && value !='' ))
-                 field.isValid =  false;
+             switch (nodeType){
+                 case "select-one":
+                     field.isValid =  validationTypes['select'](value,field);
+                     break;
+                 default :
+                     field.isValid =   validationTypes[field.rules](value,field);
              }
 
              if(!field.isValid){
@@ -108,15 +161,11 @@
                  callback.call(field,field);
              }
 
-             if(lastTime==false && field.isValid==true){
+             if(isValidLastTime==false && field.isValid==true){
                  resetField(field);
              }
 
-             return field.isValid;
-         }
-
-         function validate(){
-
+             return false;
          }
 
          function onSubmit(e){
