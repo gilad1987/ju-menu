@@ -81,7 +81,7 @@
              field['wrapper'].toggleClass('error',!field.isValid);
          }
 
-         function defaultCleanErrorField(field){
+         function resetField(field){
              if(field['errorElement'].length){
                  field['errorElement'].text('');
              }
@@ -108,8 +108,8 @@
                  callback.call(field,field);
              }
 
-             if(lastTime != field.isValid && lastTime==false && field.isValid==true){
-                 defaultCleanErrorField(field);
+             if(lastTime==false && field.isValid==true){
+                 resetField(field);
              }
 
              return field.isValid;
