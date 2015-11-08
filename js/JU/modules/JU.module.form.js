@@ -86,6 +86,10 @@
              return  value!="noValid";
          };
 
+         function getByName(name){
+
+         }
+
          function getFormByName(name,$form){
              if(typeof forms[name] == 'undefined'){
                  forms[name] = {};
@@ -182,15 +186,13 @@
              var key;
 
              var isValid = true;
-             for(key in fields){
-                 if(fields[key].isValid){
-                     if(!validateField(fields[key])){
-                         isValid=false;
+             for(key in fields) {
+                 if (fields[key].isValid) {
+                     if (!validateField(fields[key])) {
+                         isValid = false;
                      }
                  }
              }
-
-
             return false;
          }
 
