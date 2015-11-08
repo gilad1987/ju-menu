@@ -165,10 +165,10 @@
                      field.isValid =  validationTypes['select'](value,field);
                      break;
                  case "radio":
-                     field.isValid =  validationTypes['select'](value,field);
+                     field.isValid =  validationTypes['radio'](value,field);
                      break;
                  case "checkbox":
-                     field.isValid =  validationTypes['select'](value,field);
+                     field.isValid =  validationTypes['checkbox'](value,field);
                      break;
                  default :
                      field.isValid =   validationTypes[field.rules](value,field);
