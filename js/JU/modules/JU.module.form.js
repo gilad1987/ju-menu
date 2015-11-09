@@ -82,8 +82,8 @@
              return ex.exec(value)==null;
          };
 
-         validationTypes.radio = function(name){
-
+         validationTypes.radio = function(name,form){
+             return $(form.formElement).find('input[name='+name+']:checked').length>0;
          };
 
          validationTypes.checkbox = function(field){
@@ -98,8 +98,8 @@
              return  value!="noValid";
          };
 
-         function getByName(name){
-
+         function getByName(name,form){
+             return $(form.formElement).find('input[name='+name+']');
          }
 
          /**
@@ -111,6 +111,7 @@
          function getFormByName(name,$form){
              if(typeof forms[name] == 'undefined'){
                  forms[name] = {};
+                 forms[name].formElement = $form[0];
                  forms[name]['fields'] = {};
                  var i=0,
                      f=$form.find('.ju-validate'),
@@ -161,7 +162,7 @@
              field['wrapper'].toggleClass('error',!field.isValid);
          }
 
-         function validateField(field){
+         function validateField(field,form){
              var $elem = $(field.element),
                  value = $.trim( $elem.val()),
                  isValidLastTime = field.isValid,
@@ -175,7 +176,7 @@
                      field.isValid =  validationTypes.select(value,field);
                      break;
                  case "radio":
-                     field.isValid =  validationTypes.radio(field);
+                     field.isValid =  validationTypes.radio(field['element']['name'],form);
                      break;
                  case "checkbox":
                      field.isValid =  validationTypes.checkbox(field);
@@ -211,7 +212,7 @@
 
              var isValid = true;
              for(key in fields) {
-                 if (!validateField(fields[key])) {
+                 if (!validateField(fields[key],currentForm)) {
                      isValid = false;
                  }
              }
@@ -232,7 +233,7 @@
              var key;
              for(key in form.fields){
                  if(form.fields[key].element === $elem[0]){
-                     validateField(form.fields[key]);
+                     validateField(form.fields[key],form);
                      break;
                  }
              }
