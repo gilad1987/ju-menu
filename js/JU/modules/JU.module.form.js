@@ -47,7 +47,7 @@
          };
          validationTypes.alpha  = function(value,field){
              var ex =  new RegExp("^[a-z]+$","i");
-             return (field.required==0 && value =='') || (field.required  && (ex.exec(value) != null) );
+             return (field.required==0 && value =='') || (field.required==0 && value !='' && (ex.exec(value) != null)) || (field.required  && (ex.exec(value) != null) );
          };
          validationTypes.alphaNumeric  = function(value){
              var ex =  new RegExp( "^[a-z0-9]+$","i");
@@ -86,8 +86,12 @@
 
          };
 
-         validationTypes.checkbox = function(name){
+         validationTypes.checkbox = function(field){
+             if(field.required==0){
+                 return true;
+             }
 
+             return $(field.element).is(':checked');
          };
 
          validationTypes.select = function(value){
@@ -98,6 +102,12 @@
 
          }
 
+         /**
+          *
+          * @param name
+          * @param $form
+          * @returns field
+          */
          function getFormByName(name,$form){
              if(typeof forms[name] == 'undefined'){
                  forms[name] = {};
@@ -138,7 +148,6 @@
                      return;
                  }
 
-
                  var errorMessage = ( val=="" ) ? field.messages['empty'] : field.messages['error'] ;
                  field.errorElement.text( errorMessage );
              }
@@ -158,17 +167,18 @@
                  isValidLastTime = field.isValid,
                  nodeType = field.element.type;
 
+
              field.isValid=true;
 
              switch (nodeType){
                  case "select-one":
-                     field.isValid =  validationTypes['select'](value,field);
+                     field.isValid =  validationTypes.select(value,field);
                      break;
                  case "radio":
-                     field.isValid =  validationTypes['radio'](value,field);
+                     field.isValid =  validationTypes.radio(field);
                      break;
                  case "checkbox":
-                     field.isValid =  validationTypes['checkbox'](value,field);
+                     field.isValid =  validationTypes.checkbox(field);
                      break;
                  default :
                      field.isValid =   validationTypes[field.rules](value,field);
@@ -201,10 +211,8 @@
 
              var isValid = true;
              for(key in fields) {
-                 if (fields[key].isValid) {
-                     if (!validateField(fields[key])) {
-                         isValid = false;
-                     }
+                 if (!validateField(fields[key])) {
+                     isValid = false;
                  }
              }
             return false;
