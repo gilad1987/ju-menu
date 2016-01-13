@@ -94,7 +94,7 @@ $version = rand(0,10000000000000);
     </div>
 </nav>
 
-<header class="mobile-menu ju-expandable" data-dependencies-selectors="nav.links|" data-callback="JU.module.JUMenu.onChangeSate">
+<header class="mobile-menu ju-expandable" data-dependencies-selectors="nav.links|" >
     <button id="open-mobile-menu-btn" class="ju-expander" >
         <i class="fa fa-bars"></i>
         <i class="fa fa-times"></i>

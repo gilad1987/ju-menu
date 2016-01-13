@@ -55,6 +55,10 @@
      *     <div class="content"></div>
      *    </div>
      *
+     *      Callback need to bind the event for run callback
+     *      JU.module.event.on('expanded.open',JU.module.JUMenu.onChangeSate,openMobileMenuElement,openMobileMenuElement);
+
+     *
      *  7. <div class="ju-expandable" data-isolated="1">
      *     <div class="ju-expander">
      *         <i></i>
