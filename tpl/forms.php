@@ -40,7 +40,7 @@
 
                 <div class="inner">
 
-                    <div class="login-form form ju-tabs-content ">
+                    <div class="login-form form ju-tabs-content active">
                         <div class="title">User Login</div>
 
                         <div class="ju-input-wrapper">
